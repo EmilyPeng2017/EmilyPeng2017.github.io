@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>艾美尼的博客</title>
+    <link>https://emilypeng2017.github.io/</link>
+    
+    <image>
+      <url>https://emilypeng2017.github.io/img/icon.png</url>
+      <title>艾美尼的博客</title>
+      <link>https://emilypeng2017.github.io/</link>
+    </image>
+    
+    <atom:link href="https://emilypeng2017.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    
+    <description>艾美尼自我学习的地方。</description>
+    <pubDate>Mon, 15 Feb 2021 14:26:23 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>test</title>
+      <link>https://emilypeng2017.github.io/post/test.html</link>
+      <guid>https://emilypeng2017.github.io/post/test.html</guid>
+      <pubDate>Mon, 15 Feb 2021 14:25:37 GMT</pubDate>
+      
+      <description>test</description>
+      
+      
+      
+      
+      <category domain="https://emilypeng2017.github.io/categories/test/">test</category>
+      
+      
+      <category domain="https://emilypeng2017.github.io/tags/tset/">tset</category>
+      
+      
+      <comments>https://emilypeng2017.github.io/post/test.html#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>about</title>
+      <link>https://emilypeng2017.github.io/post/about.html</link>
+      <guid>https://emilypeng2017.github.io/post/about.html</guid>
+      <pubDate>Mon, 15 Feb 2021 10:52:54 GMT</pubDate>
+      
+      
+      
+      
+      
+      
+      <comments>https://emilypeng2017.github.io/post/about.html#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Lecture 1</title>
+      <link>https://emilypeng2017.github.io/post/Lecture1.html</link>
+      <guid>https://emilypeng2017.github.io/post/Lecture1.html</guid>
+      <pubDate>Mon, 15 Feb 2021 10:41:24 GMT</pubDate>
+      
+      <description>C语言学习，MIT 6.087课程。</description>
+      
+      
+      
+      
+      <category domain="https://emilypeng2017.github.io/categories/MIT-%E8%AF%BE%E7%A8%8B/">MIT 课程</category>
+      
+      
+      <category domain="https://emilypeng2017.github.io/tags/C%E8%AF%AD%E8%A8%80/">C语言</category>
+      
+      <category domain="https://emilypeng2017.github.io/tags/MIT-%E8%AF%BE%E7%A8%8B/">MIT 课程</category>
+      
+      
+      <comments>https://emilypeng2017.github.io/post/Lecture1.html#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Hello World</title>
+      <link>https://emilypeng2017.github.io/post/hello-world.html</link>
+      <guid>https://emilypeng2017.github.io/post/hello-world.html</guid>
+      <pubDate>Sun, 14 Feb 2021 13:28:21 GMT</pubDate>
+      
+        
+        
+      <description>&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</description>
+        
+      
+      
+      
+      
+      
+      
+      <comments>https://emilypeng2017.github.io/post/hello-world.html#disqus_thread</comments>
+      
+    </item>
+    
+  </channel>
+</rss>
