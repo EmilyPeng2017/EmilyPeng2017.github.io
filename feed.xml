@@ -15,7 +15,7 @@
     <atom:link href="https://emilypeng2017.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>艾美尼自我学习的地方。</description>
-    <pubDate>Tue, 16 Feb 2021 08:19:25 GMT</pubDate>
+    <pubDate>Tue, 16 Feb 2021 08:26:59 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -30,6 +30,8 @@
 &lt;p&gt;I would like to install gdb. While there was no brew on my computer. I tried to download it using the official </description>
         
       
+      
+      <enclosure url="https://emilypeng2017.github.io/post/Download-Homebrew/homebrew.png" type="image"/>
       
       
       
