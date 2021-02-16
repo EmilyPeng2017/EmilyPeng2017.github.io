@@ -15,17 +15,17 @@
   <!-- if page has tags, then add tags to keyword -->
   
   
-  <meta name="keywords" content="艾美尼，博客,">
+  <meta name="keywords" content="艾美尼，博客,Mac,">
   <!-- page.description has higher priority -->
   <meta name="description" content="艾美尼自我学习的地方。">
   <link rel="shortcut icon" href="/img/icon.png">
   <title>
     
-    艾美尼的博客
+    Download Homebrew | 艾美尼的博客
     
   </title>
 
-  <link rel="canonical" href="https://emilypeng2017.github.io/categories/test/">
+  <link rel="canonical" href="https://emilypeng2017.github.io/post/Download-Homebrew.html">
   
 <link rel="stylesheet" href="/css/geektutu.css">
 
@@ -89,8 +89,8 @@
                     
                 </li>
                 
-                <li class="gkt-cate-name float-left ">
-                    <a class="float-left" href="/post/test.html">stete</a>
+                <li class="gkt-cate-name float-left active">
+                    <a class="float-left" href="/post/Download-Homebrew.html">Daily Troubleshooting</a>
                     
                 </li>
                 
@@ -126,47 +126,223 @@
 <main class="col-xs-12 padding-0 markdown-it">
     <!-- Post Container -->
     
-    <style>
-        @media (min-width: 1200px) {
-            .main-container {
-                width: 1000px !important;
-            }
-        }
-    </style>
-    <div class="float-left post-container box-shadow">
+    
+    <!-- Post Content -->
+<div class="float-left post-container box-shadow">
+    <div class="u-arrow-wrapper hidden-xs">
         
-<!-- Main Content -->
-<div class="post-list">
-    <!-- 专题列表 -->
-    <ul>
-        
-        <li class="post-item-parent post-item-color-0">
-            <a class="post-text-parent" id="MIT 课程">MIT 课程</a>
-        </li>
-        
-        <li>
-            <a class="post-item-title" href="/post/Lecture1.html">Lecture 1</a>
-            <span class="post-item-date">(Feb 15, 2021)</span>
-        </li>
+        <a class="float-left" href="/post/about.html"><i class="u-arrow-left"></i></a>
         
         
-        <li class="post-item-parent post-item-color-1">
-            <a class="post-text-parent" id="test">test</a>
-        </li>
-        
-        <li>
-            <a class="post-item-title" href="/post/test.html">test</a>
-            <span class="post-item-date">(Feb 15, 2021)</span>
-        </li>
+    </div>
+    <article class="col-xs-12">
+        <h1> Download Homebrew </h1>
         
         
-    </ul>
+        <div class="hidden-lg hidden-md series_links">
+            <p> <strong> Mac系列文章链接：</strong></p>
+            <ul>
+                
+                <li>
+                    <a href="/post/Download-Homebrew.html">Download Homebrew</a>
+                    <span class="post-item-date">(Feb 16, 2021)</span>
+                </li>
+                
+            </ul>
+        </div>
+        
+        
+        <div class="gkt-article-start"></div>
+        <p>The problem I met:</p>
+<p>I would like to install gdb. While there was no brew on my computer. I tried to download it using the official way as below:</p>
+<blockquote>
+<p>/usr/bin/ruby -e “$(curl -fsSL <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/Homebrew/install/&gt;master/install">https://raw.githubusercontent.com/Homebrew/install/&gt;master/install</a>)</p>
+</blockquote>
+<p>then the issue occured:</p>
+<blockquote>
+<p>curl: (7) Failed to connect to raw.githubusercontent.com port 443: Connection refused</p>
+</blockquote>
+<p>I searched and tried all kinds of methods</p>
+<p><del>1. change hosts file under /etc folder.</del></p>
+<p><del>2. sudo gem install reids.</del></p>
+<p><del>3. use brew_install.rb file.</del></p>
+<p>but failed.</p>
+<p>Finally, I changed the DNS of my WiFi to 8.8.8.8, it saved my day!!!</p>
+<p>image: post/Download-Homebrew/homebrew.png</p>
+
+        
+<script src="/js/qrious.min.js"></script>
+
+
+        <hr style="margin-top: 2rem;">
+        <div>
+            
+            <p>
+                <span>专题: </span>
+                
+                <a href="/series/#Mac">
+                    <code key="Mac" class="post-label">Mac</code>
+                </a>
+                
+            </p>
+            
+            <p>
+                <span>本文发表于 2021-02-16，最后修改于 2021-02-16。</span>
+            </p>
+            <!-- 文章末尾的提示 start -->
+            
+            
+                
+            <!-- 文章末尾的提示 end -->
+        </div>
+        <hr />
+        <p name="pagination" style="font-size: 1.2em">
+    
+    <a class="float-left" href="/post/about.html">上一篇 « about</a>
+    
+    
+</p>
+    </article>
+    <!-- 赞赏 -->
+    <!--打赏-->
+
+    
+<div class="col-xs-12 text-center" style="margin-top: 30px;">
+    
+    <a style="display:inline-block;" target="_blank" rel="noopener" href="https://github.com/EmilyPeng2017" title=""><img style="padding:5px;width:30px;margin-left:0;transform:none;-webkit-transform:none;" src="/img/related_links/github.png" /></a>
+    
+    <a style="display:inline-block;" target="_blank" rel="noopener" href="https://github.com/EmilyPeng2017" title=""><img style="padding:5px;width:30px;margin-left:0;transform:none;-webkit-transform:none;" src="/img/related_links/geekcircle.png" /></a>
+    
+    <a style="display:inline-block;" href="mailto:Emily&lt;pursue16@163.com&gt;?subject=From Emily&#39;s Blog" title=""><img style="padding:5px;width:30px;margin-left:0;transform:none;-webkit-transform:none;" src="/img/related_links/email.png" /></a>
+    
+</div>
+
+    <!-- 推荐阅读三篇文章 -->
+    <div class="col-xs-12">
+        <h3>推荐阅读</h3>
+        
+        <div class="post-preview">
+    <div class="post-img" style="background-image: url('/')"></div>
+    <div class="post-info">
+        <div class="post-info-center">
+            <div class="hidden-xs">
+                
+                
+            </div>
+            <a href="/post/about.html" class="title">
+                about
+            </a>
+            <p class="text-gray">
+                <small>
+                    <span>发表于2021-02-15，</span>
+                    <span class="hidden-xs">全文21字，</span>
+                    <span>阅读约1分钟</span>
+                </small>
+            </p>
+        </div>
+    </div>
+</div>
+        
+        <div class="post-preview">
+    <div class="post-img" style="background-image: url('/')"></div>
+    <div class="post-info">
+        <div class="post-info-center">
+            <div class="hidden-xs">
+                
+                
+                <span>/</span>
+                
+                <a class="text-gray" href="/tags/#C语言"
+                    title="C语言">C语言</a>
+                <span>/</span>
+                
+                <a class="text-gray" href="/tags/#MIT 课程"
+                    title="MIT 课程">MIT 课程</a>
+                <span>/</span>
+                
+                
+            </div>
+            <a href="/post/Lecture1.html" class="title">
+                Lecture 1
+            </a>
+            <p class="text-gray">
+                <small>
+                    <span>发表于2021-02-15，</span>
+                    <span class="hidden-xs">全文1735字，</span>
+                    <span>阅读约6分钟</span>
+                </small>
+            </p>
+        </div>
+    </div>
+</div>
+        
+        <div class="post-preview">
+    <div class="post-img" style="background-image: url('/')"></div>
+    <div class="post-info">
+        <div class="post-info-center">
+            <div class="hidden-xs">
+                
+                
+            </div>
+            <a href="/post/hello-world.html" class="title">
+                Hello World
+            </a>
+            <p class="text-gray">
+                <small>
+                    <span>发表于2021-02-14，</span>
+                    <span class="hidden-xs">全文838字，</span>
+                    <span>阅读约3分钟</span>
+                </small>
+            </p>
+        </div>
+    </div>
+</div>
+        
+    </div>
+    <div class="col-xs-12">
+        <!-- 标签列表 -->
+        <!-- Featured Tags -->
+<style>
+    #featured-tag .post-tag-item {
+        font-size: 12px;
+        line-height: 30px;
+        display: inline-block;
+        height: 30px;
+        margin: 5px 0px;
+        padding: 0 7px;
+        color: #333;
+        border-radius: 15px;
+        background: #f6f6f6;
+    }
+
+    #featured-tag .post-tag-item:hover {
+        color: #337ab7;
+    }
+</style>
+<div id="featured-tag">
+    
+    <a class="post-tag-item" href="/tags/#C语言" title="C语言"
+        rel="1">#C语言 (1) </a>
+    
+    <a class="post-tag-item" href="/tags/#MIT 课程" title="MIT 课程"
+        rel="1">#MIT 课程 (1) </a>
+    
+    <a class="post-tag-item" href="/tags/#Mac" title="Mac"
+        rel="1">#Mac (1) </a>
+    
 </div>
     </div>
-    <aside class="float-left gkt-sidebar hidden-xs hidden-sm">
-        <div style="clear: both"></div>
-        <div class="gkt-sidebar-wrapper">
-            <section class="bg-white box-shadow"><style>
+    <!-- 评论 -->
+    
+    <div class="col-xs-12">
+        
+    </div>
+    
+</div>
+<aside class="float-left gkt-sidebar hidden-xs hidden-sm">
+    <div style="clear: both"></div>
+    <div class="gkt-sidebar-wrapper">
+        <section class="box-shadow"><style>
     .gkt-summary {
         border: 1px solid #DDDDDD;
         border-radius: 3px;
@@ -242,40 +418,100 @@
     </div>
     
 </div></section>
-            <section class="gkt-sidebar-content bg-white box-shadow"><!-- Featured Tags -->
-<style>
-    #featured-tag .post-tag-item {
-        font-size: 12px;
-        line-height: 30px;
-        display: inline-block;
-        height: 30px;
-        margin: 5px 0px;
-        padding: 0 7px;
-        color: #333;
-        border-radius: 15px;
-        background: #f6f6f6;
+        
+        
+        <section class="gkt-sidebar-content box-shadow">
+            <strong>Mac</strong>
+            <ul>
+                
+                <li>
+                    <a href="/post/Download-Homebrew.html"
+                        class="gkt-sidebar-active">Download Homebrew</a>
+                    
+                    <!-- Table of Contents -->
+<div id="sidebar-toc">
+  <!-- TOC  -->
+  
+  
+</div>
+
+<script>
+  (function () {
+    var h2 = document.querySelectorAll('article h2');
+    var h3 = document.querySelectorAll('article h3');
+    var linkList = document.querySelectorAll('#sidebar-toc a');
+
+    function findLinkElement(name) {
+      for (var i = 0; i < linkList.length; i++) {
+        var items = linkList[i].href.split('#');
+        if (items && items[items.length - 1] === encodeURIComponent(name)) {
+          return i;
+        }
+      }
+      return -1;
     }
 
-    #featured-tag .post-tag-item:hover {
-        color: #337ab7;
+    function activeLink(titleList) {
+      var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      for (var i = titleList.length - 1; i >= 0; i--) {
+        if (scrollTop - titleList[i].offsetTop > 0) {
+          var index = findLinkElement(titleList[i].id);
+          index != -1 && linkList[index].classList.add('gkt-sidebar-active');
+          break;
+        }
+      }
     }
-</style>
-<div id="featured-tag">
-    
-    <a class="post-tag-item" href="/tags/#C语言" title="C语言"
-        rel="1">#C语言 (1) </a>
-    
-    <a class="post-tag-item" href="/tags/#MIT 课程" title="MIT 课程"
-        rel="1">#MIT 课程 (1) </a>
-    
-    <a class="post-tag-item" href="/tags/#tset" title="tset"
-        rel="1">#tset (1) </a>
-    
-</div></section>
-            
-            
-        </div>
-    </aside>
+
+    window.addEventListener("scroll", function (e) {
+      [].slice.call(linkList).forEach(function (link) {
+        link.classList.remove('gkt-sidebar-active');
+      })
+      activeLink(h2);
+    })
+  })();
+</script>
+                    
+                </li>
+                
+            </ul>
+        </section>
+        
+        
+        <section class="gkt-sidebar-content box-shadow">
+            <strong>最近的文章</strong>
+            <ul>
+                
+                <li>
+                    <a href="/post/Download-Homebrew.html">Download Homebrew</a>
+                </li>
+                
+                <li>
+                    <a href="/post/about.html">about</a>
+                </li>
+                
+                <li>
+                    <a href="/post/Lecture1.html">Lecture 1</a>
+                </li>
+                
+            </ul>
+        </section>
+        
+    </div>
+</aside>
+
+<script>
+    (function () {
+        function resizeUArrow() {
+            var s = getDom('.u-arrow-wrapper').style
+            var pc = getDom('.post-container')
+            s.left = getPosition(pc).x + 'px';
+            s.width = pc.clientWidth + 'px';
+        }
+        resizeUArrow()
+        window.addEventListener('resize', resizeUArrow);
+    })();
+</script>
+
     
 
 <script>

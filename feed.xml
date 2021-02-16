@@ -15,27 +15,31 @@
     <atom:link href="https://emilypeng2017.github.io/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description>艾美尼自我学习的地方。</description>
-    <pubDate>Mon, 15 Feb 2021 14:26:23 GMT</pubDate>
+    <pubDate>Tue, 16 Feb 2021 08:15:27 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>test</title>
-      <link>https://emilypeng2017.github.io/post/test.html</link>
-      <guid>https://emilypeng2017.github.io/post/test.html</guid>
-      <pubDate>Mon, 15 Feb 2021 14:25:37 GMT</pubDate>
+      <title>Download Homebrew</title>
+      <link>https://emilypeng2017.github.io/post/Download-Homebrew.html</link>
+      <guid>https://emilypeng2017.github.io/post/Download-Homebrew.html</guid>
+      <pubDate>Tue, 16 Feb 2021 07:49:37 GMT</pubDate>
       
-      <description>test</description>
-      
-      
-      
-      
-      <category domain="https://emilypeng2017.github.io/categories/test/">test</category>
-      
-      
-      <category domain="https://emilypeng2017.github.io/tags/tset/">tset</category>
+        
+        
+      <description>&lt;p&gt;The problem I met:&lt;/p&gt;
+&lt;p&gt;I would like to install gdb. While there was no brew on my computer. I tried to download it using the official </description>
+        
       
       
-      <comments>https://emilypeng2017.github.io/post/test.html#disqus_thread</comments>
+      
+      
+      <category domain="https://emilypeng2017.github.io/categories/Mac/">Mac</category>
+      
+      
+      <category domain="https://emilypeng2017.github.io/tags/Mac/">Mac</category>
+      
+      
+      <comments>https://emilypeng2017.github.io/post/Download-Homebrew.html#disqus_thread</comments>
       
     </item>
     
