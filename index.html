@@ -211,7 +211,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-10-09 14:00:45 / Modified: 16:16:17" itemprop="dateCreated datePublished" datetime="2022-10-09T14:00:45+08:00">2022-10-09</time>
+      <time title="Created: 2022-10-09 14:00:45 / Modified: 16:52:20" itemprop="dateCreated datePublished" datetime="2022-10-09T14:00:45+08:00">2022-10-09</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -233,9 +233,36 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>Once setting up the hexo environment, it’s time to create your new pages! Shall we just use mkdir cmd to create subfolders under source folder? The answer is no. Please realize this is HEXO! We could use “hexo cmd” directly!</p>
-<p><code>hexo new filename</code><br>the file would be generated in hexo&#x2F;source&#x2F;_posts folder</p>
-<p><code>hexo </code></p>
+          <p>Once setting up the hexo environment, it’s time to create your new pages! Shall we just use mkdir cmd to create subfolders under source folder? The answer is NO. Please realize this is HEXO! We could use “hexo cmd” directly!</p>
+<ol>
+<li>create new file</li>
+</ol>
+<ul>
+<li>cmd<br><code>hexo new &lt;title&gt;</code></li>
+</ul>
+<p>the file would be generated under <strong>hexo&#x2F;source&#x2F;_posts</strong> folder</p>
+<ul>
+<li>settings<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: How to use hexo to create page, tag and category</span><br><span class="line">date: 2022-10-09 14:00:45</span><br><span class="line">tags: hexo, tools</span><br><span class="line">categories: Tools</span><br><span class="line">comments: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="2">
+<li>create new tag</li>
+</ol>
+<ul>
+<li>cmd</li>
+</ul>
+<p><code>hexo new page tags</code></p>
+<ul>
+<li>settings<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 2022-10-09 14:07:24</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="3">
+<li>create new category</li>
+</ol>
+<ul>
+<li>cmd<br><code>hexo new page categories</code></li>
+<li>settings</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">date: 2022-10-09 14:07:46</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p><a target="_blank" rel="noopener" href="https://hexo.io/">for more information, please go to hexo website</a></p>
 
       
     </div>
