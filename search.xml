@@ -60,19 +60,12 @@
 ]]></content>
   </entry>
   <entry>
-    <title>test  //文章标题</title>
-    <url>///%E6%96%87%E7%AB%A0%E6%98%BE%E7%A4%BA%E8%BF%9E%E6%8E%A5</url>
-    <content><![CDATA[<p>&#x2F;&#x2F;首页文章展示缩略图</p>
-<hr />
+    <title>test</title>
+    <url>/2022/10/14/test/</url>
+    <content><![CDATA[<hr />
 Copyright &copy 2022 by Emily Peng
 
 <p>All rights reserved.</p>
 ]]></content>
-      <categories>
-        <category>//文章分类目录</category>
-      </categories>
-      <tags>
-        <tag>//文章标签，可多个，用，隔开</tag>
-      </tags>
   </entry>
 </search>
