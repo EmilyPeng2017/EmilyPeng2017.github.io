@@ -4,13 +4,25 @@
   
     
     <entry>
-      <title>test</title>
-      <link href="/2022/10/14/test/"/>
-      <url>/2022/10/14/test/</url>
+      <title>VIM - common used cmd!</title>
+      <link href="/2022/10/14/VIM-common-used-cmd/"/>
+      <url>/2022/10/14/VIM-common-used-cmd/</url>
       
-        <content type="html"><![CDATA[<p>&#x2F;&#x2F;首页文章展示缩略图</p><hr /><p style="text-align: center"><font face='comic'> Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved</font></p>]]></content>
+        <content type="html"><![CDATA[<img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Vimlogo.svg" alt="" style="width:50%" />  <h2 id="case-1-to-delete-and-add-same-content-in-multi-lines"><a href="#case-1-to-delete-and-add-same-content-in-multi-lines" class="headerlink" title="case 1 - to delete and add same content in multi lines"></a>case 1 - to delete and add same content in multi lines</h2><p>before change</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">item1</span><br><span class="line">item2</span><br><span class="line">item3</span><br><span class="line">item4</span><br></pre></td></tr></table></figure><h3 id="add"><a href="#add" class="headerlink" title="add"></a>add</h3><ol><li>move the cursor at the first line first character</li><li>ctrl + v and enter visual block mode</li><li>use motion key or run “3gg” to select all </li><li>input I (upper case) to enter Edit mode</li><li>input the content you want to insert</li><li>ESC and wait for a moment</li></ol><p>after change</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">my_item1</span><br><span class="line">my_item2</span><br><span class="line">my_item3</span><br><span class="line">my_item4</span><br></pre></td></tr></table></figure><h3 id="delete"><a href="#delete" class="headerlink" title="delete"></a>delete</h3><ol><li>move the cursor at the first line first character</li><li>ctrl + v and enter visual block mode</li><li>use motion key or run “3j3l” to select what you want to delete </li><li>enter “d” to delete</li></ol><hr /><p style="text-align: center"><font face='comic'> Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved</font></p>]]></content>
       
       
+      <categories>
+          
+          <category> Tools </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Vim </tag>
+            
+        </tags>
       
     </entry>
     
