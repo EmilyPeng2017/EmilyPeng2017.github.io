@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>test</title>
+      <link href="/2022/10/14/test/"/>
+      <url>/2022/10/14/test/</url>
+      
+        <content type="html"><![CDATA[<p>&#x2F;&#x2F;首页文章展示缩略图</p><hr />Copyright &copy 2022 by Emily Peng<p>All rights reserved.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> test </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> test </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>1-what is real-time system?</title>
       <link href="/2022/10/10/1-what-is-real-time-system/"/>
       <url>/2022/10/10/1-what-is-real-time-system/</url>
