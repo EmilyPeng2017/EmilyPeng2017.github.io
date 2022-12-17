@@ -20,18 +20,19 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"emilypeng2017.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.13.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="These days, humidifier in the study is working day and night since I wanna reduce formaldehyde content(that’s another story). Around one week later, ghosting appeared on my display screen and fina">
+    <meta name="description" content="Raspberry Pi stopped working? It&#39;s only IP address changed ~">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Cannot connect Raspberry Pi after a period of time?">
 <meta property="og:url" content="https://emilypeng2017.github.io/2022/12/17/Cannot-connect-RespberryPi-after-a-period-of-time/index.html">
 <meta property="og:site_name" content="Out of Shell">
-<meta property="og:description" content="These days, humidifier in the study is working day and night since I wanna reduce formaldehyde content(that’s another story). Around one week later, ghosting appeared on my display screen and fina">
+<meta property="og:description" content="Raspberry Pi stopped working? It&#39;s only IP address changed ~">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://www.softzone.es/app/uploads-softzone.es/2020/08/Apps-para-Raspberry-Pi.jpg">
 <meta property="article:published_time" content="2022-12-17T06:03:10.000Z">
-<meta property="article:modified_time" content="2022-12-17T10:41:42.828Z">
+<meta property="article:modified_time" content="2022-12-17T12:20:04.574Z">
 <meta property="article:author" content="Emily Peng">
-<meta property="article:tag" content="tools, Raspberry Pi">
+<meta property="article:tag" content="tools">
+<meta property="article:tag" content="Raspberry Pi">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://www.softzone.es/app/uploads-softzone.es/2020/08/Apps-para-Raspberry-Pi.jpg">
 
@@ -233,7 +234,7 @@
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
       <meta itemprop="name" content="Cannot connect Raspberry Pi after a period of time? | Out of Shell">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="Raspberry Pi stopped working? It's only IP address changed ~">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -249,7 +250,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2022-12-17 14:03:10 / Modified: 18:41:42" itemprop="dateCreated datePublished" datetime="2022-12-17T14:03:10+08:00">2022-12-17</time>
+      <time title="Created: 2022-12-17 14:03:10 / Modified: 20:20:04" itemprop="dateCreated datePublished" datetime="2022-12-17T14:03:10+08:00">2022-12-17</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -275,7 +276,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">Symbols count in article: </span>
-      <span>515</span>
+      <span>767</span>
     </span>
     <span class="post-meta-item" title="Reading time">
       <span class="post-meta-item-icon">
@@ -286,6 +287,7 @@
     </span>
 </div>
 
+            <div class="post-description">Raspberry Pi stopped working? It's only IP address changed ~</div>
         </div>
       </header>
 
@@ -293,9 +295,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <img src="https://www.softzone.es/app/uploads-softzone.es/2020/08/Apps-para-Raspberry-Pi.jpg" alt="" style="width:100%" />  
+        <img src="https://www.softzone.es/app/uploads-softzone.es/2020/08/Apps-para-Raspberry-Pi.jpg" alt="" style="width:50%" />  
 
-<p>These days, humidifier in the study is working day and night since I wanna reduce formaldehyde content(that’s another story). Around one week later, ghosting appeared on my display screen and finally the root cause turned out to be the humidifier’s water vapor. Moving the monitor to the balcony and under the sunshine, then it works well again. What drives crazy is that my Raspberry Pi refused to work almost at the same time! I used to connect my Raspberry Pi via SSH while this time it showed “connection refused”.</p>
+<p>These days, humidifier in the study is working day and night since I wanna reduce formaldehyde content(that’s another story). Around one week later, ghosting appeared on my display screen and finally the root cause turned out to be the humidifier’s water vapor. Moving the monitor to the balcony and under the sunshine, then it works well again.</p>
+<p>What drives me crazy is that my Raspberry Pi refused to work almost at the same time! I used to connect my Raspberry Pi via SSH while this time it showed “connection refused”. I was afraid that it was due to the vapor as well and disappointed when it still had no response after one day’s in the sun.</p>
+<p>This Saturday, getting time to dig further, I connected the mouse, keyboard and monitor to my lovely Pi, and it’s working! How come I could not SSH to it? It’s the IP address changing!</p>
 <hr />
 <p style="text-align: center">
 <font face='comic'> 
@@ -311,7 +315,8 @@ Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> 
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/tools-Raspberry-Pi/" rel="tag"># tools, Raspberry Pi</a>
+              <a href="/tags/tools/" rel="tag"># tools</a>
+              <a href="/tags/Raspberry-Pi/" rel="tag"># Raspberry Pi</a>
           </div>
 
         

@@ -8,7 +8,7 @@
       <link href="/2022/12/17/Cannot-connect-RespberryPi-after-a-period-of-time/"/>
       <url>/2022/12/17/Cannot-connect-RespberryPi-after-a-period-of-time/</url>
       
-        <content type="html"><![CDATA[<img src="https://www.softzone.es/app/uploads-softzone.es/2020/08/Apps-para-Raspberry-Pi.jpg" alt="" style="width:100%" />  <p>These days, humidifier in the study is working day and night since I wanna reduce formaldehyde content(that’s another story). Around one week later, ghosting appeared on my display screen and finally the root cause turned out to be the humidifier’s water vapor. Moving the monitor to the balcony and under the sunshine, then it works well again. What drives crazy is that my Raspberry Pi refused to work almost at the same time! I used to connect my Raspberry Pi via SSH while this time it showed “connection refused”.</p><hr /><p style="text-align: center"><font face='comic'> Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved</font></p>]]></content>
+        <content type="html"><![CDATA[<img src="https://www.softzone.es/app/uploads-softzone.es/2020/08/Apps-para-Raspberry-Pi.jpg" alt="" style="width:50%" />  <p>These days, humidifier in the study is working day and night since I wanna reduce formaldehyde content(that’s another story). Around one week later, ghosting appeared on my display screen and finally the root cause turned out to be the humidifier’s water vapor. Moving the monitor to the balcony and under the sunshine, then it works well again.</p><p>What drives me crazy is that my Raspberry Pi refused to work almost at the same time! I used to connect my Raspberry Pi via SSH while this time it showed “connection refused”. I was afraid that it was due to the vapor as well and disappointed when it still had no response after one day’s in the sun.</p><p>This Saturday, getting time to dig further, I connected the mouse, keyboard and monitor to my lovely Pi, and it’s working! How come I could not SSH to it? It’s the IP address changing!</p><hr /><p style="text-align: center"><font face='comic'> Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved</font></p>]]></content>
       
       
       <categories>
@@ -20,7 +20,9 @@
       
         <tags>
             
-            <tag> tools, Raspberry Pi </tag>
+            <tag> tools </tag>
+            
+            <tag> Raspberry Pi </tag>
             
         </tags>
       
