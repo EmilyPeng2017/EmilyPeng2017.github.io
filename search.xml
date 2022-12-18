@@ -140,26 +140,48 @@ Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> 
   </entry>
   <entry>
     <title>To generate random numbers in C</title>
-    <url>/2022/12/18/To-generate-random-number-in-C/</url>
-    <content><![CDATA[<img src="https://" alt="" style="width:100%" />  
-
-<p>For randomly gerenating number, we could use &lt;stdlib.h&gt; header file in order to leverage the rand function. Each time rand() is called, it would generate a totally random number. However, it would generate the same value if the environment&#x2F;program kept unchanging. Thus here we introduce another function srand() which is used to create a seed value. The input parameter could set as time since time changes and makes sure the seed various.</p>
+    <url>/2022/10/18/To-generate-random-numbers-in-C/</url>
+    <content><![CDATA[<p>For randomly gerenating number, we could use &lt;stdlib.h&gt; header file in order to leverage the rand function. Each time rand() is called, it would generate a totally random number. However, it would generate the same value if the environment&#x2F;program kept unchanging. Thus here we introduce another function srand() which is used to create a seed value. The input parameter could set as time since time changes and makes sure the seed various.</p>
 <p>To generate floating number, we could type cast value to (float)rand();</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;stdlib.h&gt;</span><br><span class="line">#include &lt;time.h&gt;</span><br><span class="line"></span><br><span class="line">#define MAX_CYCLE (50)</span><br><span class="line">#define MAX_NUM (20)</span><br><span class="line">#define MIN_NUM (10)</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int rand_num, count = 0;</span><br><span class="line"></span><br><span class="line">    for (count = 0; count &lt; MAX_CYCLE; count++)</span><br><span class="line">    &#123;</span><br><span class="line">       if (0 == count%5)</span><br><span class="line">       &#123;</span><br><span class="line">            srand(time(0));     // The seed value is kept on changing</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">     printf(&quot;The randomly generated number is between (%d, %d)&quot;, MIN_NUM, MAX_NUM);</span><br><span class="line"></span><br><span class="line">     rand_num = rand()%(MAX_NUM - MIN_NUM) + MIN_NUM;</span><br><span class="line"></span><br><span class="line">     printf(&quot;%d\n&quot;, rand_num);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;time.h&gt;
 
+#define MAX_CYCLE (50)
+#define MAX_NUM (20)
+#define MIN_NUM (10)
 
-<hr />
-<p style="text-align: center">
-<font face='comic'> 
-Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved
-</font>
-</p>
+int main()
+&#123;
+    int rand_num, count = 0;
+    for (count = 0; count &lt; MAX_CYCLE; count++)
+    &#123;
+       if (0 == count%5)
+       &#123;
+            srand(time(0));     // The seed value is kept on changing
+       &#125;
+
+     printf(&quot;The randomly generated number is between (%d, %d)&quot;, MIN_NUM, MAX_NUM);
+     rand_num = rand()%(MAX_NUM - MIN_NUM) + MIN_NUM;
+     printf(&quot;%d\n&quot;, rand_num);
+    &#125;
+
+    return 0;
+&#125;
+
+&lt;hr /&gt;
+&lt;p style=&quot;text-align: center&quot;&gt;
+&lt;font face=&#39;comic&#39;&gt; 
+Copyright &amp;copy; 2022-&lt;script&gt;document.write(new Date().getFullYear())&lt;/script&gt; Emily Peng All Rights Reserved
+&lt;/font&gt;
+&lt;/p&gt;
+</code></pre>
 ]]></content>
       <categories>
         <category>C language</category>
       </categories>
       <tags>
-        <tag>C language</tag>
+        <tag>C langauge</tag>
       </tags>
   </entry>
 </search>
