@@ -117,10 +117,8 @@ Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> 
   </entry>
   <entry>
     <title>Stringize(#) and token pasting (##) operator in C language</title>
-    <url>/2022/09/18/Stringize-and-token-pasting-operator-in-C-language/</url>
-    <content><![CDATA[<img src="https://" alt="" style="width:100%" />  
-
-<h2 id="Stringizing-operator"><a href="#Stringizing-operator" class="headerlink" title="Stringizing operator"></a>Stringizing operator</h2><p>convert a token to string</p>
+    <url>/2022/10/17/Stringize-and-token-pasting-operator-in-C-language/</url>
+    <content><![CDATA[<h2 id="Stringizing-operator"><a href="#Stringizing-operator" class="headerlink" title="Stringizing operator"></a>Stringizing operator</h2><p>convert a token to string</p>
 <h2 id="Token-passing-operator"><a href="#Token-passing-operator" class="headerlink" title="Token passing operator"></a>Token passing operator</h2><p>Token pasting operator (##) combines or concatenates tokens together.</p>
 <p>example:</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;stdio.h&gt; </span><br><span class="line"></span><br><span class="line">#define PRINT(msg) #msg     // this is used to stringize</span><br><span class="line">#define CONCAT(a, b) a##b   // this is used to concatenate tokens</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    printf(PRINT(This is a test for stringizing!) &quot;\n&quot;);</span><br><span class="line">    printf(&quot;CONCAT(20, 22) = %d\n&quot;, CONCAT(20, 22));</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
