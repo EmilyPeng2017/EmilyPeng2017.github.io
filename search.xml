@@ -122,16 +122,10 @@ Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> 
 
 <h2 id="Stringizing-operator"><a href="#Stringizing-operator" class="headerlink" title="Stringizing operator"></a>Stringizing operator</h2><p>convert a token to string</p>
 <h2 id="Token-passing-operator"><a href="#Token-passing-operator" class="headerlink" title="Token passing operator"></a>Token passing operator</h2><p>Token pasting operator (##) combines or concatenates tokens together.</p>
-<p>example:<br>‘’’<br>#include &lt;stdio.h&gt; </p>
-<p>#define PRINT(msg) #msg     &#x2F;&#x2F; this is used to stringize<br>#define CONCAT(a, b) a##b   &#x2F;&#x2F; this is used to concatenate tokens</p>
-<p>int main()<br>{</p>
-<pre><code>printf(PRINT(This is a test for stringizing!) &quot;\n&quot;);
-printf(&quot;CONCAT(20, 22) = %d\n&quot;, CONCAT(20, 22));
+<p>example:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;stdio.h&gt; </span><br><span class="line"></span><br><span class="line">#define PRINT(msg) #msg     // this is used to stringize</span><br><span class="line">#define CONCAT(a, b) a##b   // this is used to concatenate tokens</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    printf(PRINT(This is a test for stringizing!) &quot;\n&quot;);</span><br><span class="line">    printf(&quot;CONCAT(20, 22) = %d\n&quot;, CONCAT(20, 22));</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-return 0;
-</code></pre>
-<p>}<br>‘’’</p>
-<p>Reference:<br>    [1] <a href="https://learn.microsoft.com/en-us/cpp/preprocessor/stringizing-operator-hash?view=msvc-170">https://learn.microsoft.com/en-us/cpp/preprocessor/stringizing-operator-hash?view=msvc-170</a><br>    [2] <a href="https://codeforwin.org/2018/11/stringize-token-pasting-operator-in-c-language.html">https://codeforwin.org/2018/11/stringize-token-pasting-operator-in-c-language.html</a></p>
+<p>###Reference:<br>    [1] <a href="https://learn.microsoft.com/en-us/cpp/preprocessor/stringizing-operator-hash?view=msvc-170">https://learn.microsoft.com/en-us/cpp/preprocessor/stringizing-operator-hash?view=msvc-170</a><br>    [2] <a href="https://codeforwin.org/2018/11/stringize-token-pasting-operator-in-c-language.html">https://codeforwin.org/2018/11/stringize-token-pasting-operator-in-c-language.html</a></p>
 <hr />
 <p style="text-align: center">
 <font face='comic'> 
