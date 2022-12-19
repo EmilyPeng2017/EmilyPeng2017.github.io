@@ -20,25 +20,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"emilypeng2017.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.13.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="人间有味是清欢">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Out of Shell">
-<meta property="og:url" content="https://emilypeng2017.github.io/index.html">
+    <meta name="description" content="Requirement Print the output of uname -a in the first line of the syslog file.  Each syslog statement should have [COURSE:X][ASSIGNMENT:Y] where X corresponds to Course Number i.e. 1 in this case and">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RTES -2 - Assignment 1">
+<meta property="og:url" content="https://emilypeng2017.github.io/2022/12/19/RTES-Assignment-1/index.html">
 <meta property="og:site_name" content="Out of Shell">
-<meta property="og:description" content="人间有味是清欢">
+<meta property="og:description" content="Requirement Print the output of uname -a in the first line of the syslog file.  Each syslog statement should have [COURSE:X][ASSIGNMENT:Y] where X corresponds to Course Number i.e. 1 in this case and">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-12-19T12:49:39.000Z">
+<meta property="article:modified_time" content="2022-12-19T12:53:46.652Z">
 <meta property="article:author" content="Emily Peng">
+<meta property="article:tag" content="RTES">
+<meta property="article:tag" content="Assignment">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://emilypeng2017.github.io/">
+<link rel="canonical" href="https://emilypeng2017.github.io/2022/12/19/RTES-Assignment-1/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"en","comments":"","permalink":"","path":"index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"https://emilypeng2017.github.io/2022/12/19/RTES-Assignment-1/","path":"2022/12/19/RTES-Assignment-1/","title":"RTES -2 - Assignment 1"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Out of Shell</title>
+<title>RTES -2 - Assignment 1 | Out of Shell</title>
   
 
 
@@ -69,7 +73,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">Out of Shell</h1>
+      <p class="site-title">Out of Shell</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">在壳外</p>
@@ -129,7 +133,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           Table of Contents
@@ -142,6 +146,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Requirement"><span class="nav-number">1.</span> <span class="nav-text">Requirement</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Solution"><span class="nav-number">2.</span> <span class="nav-text">Solution</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-how-to-log-uname-a-info-into-syslog"><span class="nav-number">2.1.</span> <span class="nav-text">1. how to log uname -a info into syslog?</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#a-use-system-function"><span class="nav-number">2.1.1.</span> <span class="nav-text">a. use system function</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#b-print-uname-struct-elements-this-makes-things-a-little-bit-complicated"><span class="nav-number">2.1.2.</span> <span class="nav-text">b. print uname struct elements (this makes things a little bit complicated)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-how-to-use-syslog"><span class="nav-number">2.2.</span> <span class="nav-text">2. how to use syslog</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-the-whole-code"><span class="nav-number">2.3.</span> <span class="nav-text">3. the whole code</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -203,16 +208,17 @@
 </noscript>
 
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
     <link itemprop="mainEntityOfPage" href="https://emilypeng2017.github.io/2022/12/19/RTES-Assignment-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -226,13 +232,13 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Out of Shell">
+      <meta itemprop="name" content="RTES -2 - Assignment 1 | Out of Shell">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/12/19/RTES-Assignment-1/" class="post-title-link" itemprop="url">RTES -2 - Assignment 1</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          RTES -2 - Assignment 1
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -256,6 +262,13 @@
     </span>
 
   
+    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
     <span class="post-meta-break"></span>
     <span class="post-meta-item" title="Symbols count in article">
       <span class="post-meta-item-icon">
@@ -280,7 +293,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h1><ol>
+        <h1 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h1><ol>
 <li>Print the output of <strong>uname -a</strong> in the first line of the syslog file. </li>
 <li>Each syslog statement should have [COURSE:X][ASSIGNMENT:Y] where X corresponds to Course Number i.e. 1 in this case and Y corresponds to Assignment No.</li>
 </ol>
@@ -317,7 +330,6 @@ Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> 
 </font>
 </p>
 
-      
     </div>
 
     
@@ -325,636 +337,22 @@ Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> 
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
+          <div class="post-tags">
+              <a href="/tags/RTES/" rel="tag"># RTES</a>
+              <a href="/tags/Assignment/" rel="tag"># Assignment</a>
+          </div>
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://emilypeng2017.github.io/2022/12/17/Cannot-connect-RespberryPi-after-a-period-of-time/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/emily.jpg">
-      <meta itemprop="name" content="Emily Peng">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Out of Shell">
-      <meta itemprop="description" content="人间有味是清欢">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Out of Shell">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/12/17/Cannot-connect-RespberryPi-after-a-period-of-time/" class="post-title-link" itemprop="url">Cannot connect Raspberry Pi after a period of time?</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-      
-
-      <time title="Created: 2022-12-17 14:03:10 / Modified: 22:51:39" itemprop="dateCreated datePublished" datetime="2022-12-17T14:03:10+08:00">2022-12-17</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Raspberry-Pi/" itemprop="url" rel="index"><span itemprop="name">Raspberry Pi</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="Symbols count in article">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">Symbols count in article: </span>
-      <span>1.1k</span>
-    </span>
-    <span class="post-meta-item" title="Reading time">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">Reading time &asymp;</span>
-      <span>1 mins.</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Raspberry Pi stopped working? It's only IP address changed ~</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/12/17/Cannot-connect-RespberryPi-after-a-period-of-time/">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://emilypeng2017.github.io/2022/11/12/Stringize-and-token-pasting-operator-in-C-language/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/emily.jpg">
-      <meta itemprop="name" content="Emily Peng">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Out of Shell">
-      <meta itemprop="description" content="人间有味是清欢">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Out of Shell">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/11/12/Stringize-and-token-pasting-operator-in-C-language/" class="post-title-link" itemprop="url">Stringize(#) and token pasting (##) operator in C language</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-11-12 20:08:27" itemprop="dateCreated datePublished" datetime="2022-11-12T20:08:27+08:00">2022-11-12</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-12-18 20:48:11" itemprop="dateModified" datetime="2022-12-18T20:48:11+08:00">2022-12-18</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/C-language/" itemprop="url" rel="index"><span itemprop="name">C language</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="Symbols count in article">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">Symbols count in article: </span>
-      <span>680</span>
-    </span>
-    <span class="post-meta-item" title="Reading time">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">Reading time &asymp;</span>
-      <span>1 mins.</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>A basic understanding of (#) in C language</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/11/12/Stringize-and-token-pasting-operator-in-C-language/">
-                Read more &raquo;
-              </a>
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/12/17/Cannot-connect-RespberryPi-after-a-period-of-time/" rel="prev" title="Cannot connect Raspberry Pi after a period of time?">
+                  <i class="fa fa-chevron-left"></i> Cannot connect Raspberry Pi after a period of time?
+                </a>
             </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://emilypeng2017.github.io/2022/10/18/To-generate-random-numbers-in-C/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/emily.jpg">
-      <meta itemprop="name" content="Emily Peng">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Out of Shell">
-      <meta itemprop="description" content="人间有味是清欢">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Out of Shell">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/10/18/To-generate-random-numbers-in-C/" class="post-title-link" itemprop="url">To generate random numbers in C</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-10-18 21:14:58" itemprop="dateCreated datePublished" datetime="2022-10-18T21:14:58+08:00">2022-10-18</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-12-18 21:21:42" itemprop="dateModified" datetime="2022-12-18T21:21:42+08:00">2022-12-18</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/C-language/" itemprop="url" rel="index"><span itemprop="name">C language</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="Symbols count in article">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">Symbols count in article: </span>
-      <span>1k</span>
-    </span>
-    <span class="post-meta-item" title="Reading time">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">Reading time &asymp;</span>
-      <span>1 mins.</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>How to generate a random nuber in C?</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/10/18/To-generate-random-numbers-in-C/">
-                Read more &raquo;
-              </a>
+            <div class="post-nav-item">
             </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://emilypeng2017.github.io/2022/10/14/VIM-common-used-cmd/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/emily.jpg">
-      <meta itemprop="name" content="Emily Peng">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Out of Shell">
-      <meta itemprop="description" content="人间有味是清欢">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Out of Shell">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/10/14/VIM-common-used-cmd/" class="post-title-link" itemprop="url">VIM - common used cmd!</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-10-14 23:39:33" itemprop="dateCreated datePublished" datetime="2022-10-14T23:39:33+08:00">2022-10-14</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-12-17 18:44:13" itemprop="dateModified" datetime="2022-12-17T18:44:13+08:00">2022-12-17</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Tools/" itemprop="url" rel="index"><span itemprop="name">Tools</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="Symbols count in article">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">Symbols count in article: </span>
-      <span>630</span>
-    </span>
-    <span class="post-meta-item" title="Reading time">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">Reading time &asymp;</span>
-      <span>1 mins.</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>This is used to track the common used vim cmd in my daily work!</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/10/14/VIM-common-used-cmd/">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://emilypeng2017.github.io/2022/10/10/RTES-1-what-is-real-time-system/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/emily.jpg">
-      <meta itemprop="name" content="Emily Peng">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Out of Shell">
-      <meta itemprop="description" content="人间有味是清欢">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Out of Shell">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/10/10/RTES-1-what-is-real-time-system/" class="post-title-link" itemprop="url">RTES - 1 - what is real-time system?</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-10-10 23:41:05" itemprop="dateCreated datePublished" datetime="2022-10-10T23:41:05+08:00">2022-10-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-12-19 20:51:38" itemprop="dateModified" datetime="2022-12-19T20:51:38+08:00">2022-12-19</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Real-Time-Embedded-Systems-Concepts-and-Practices/" itemprop="url" rel="index"><span itemprop="name">Real-Time Embedded Systems Concepts and Practices</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="Symbols count in article">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">Symbols count in article: </span>
-      <span>0</span>
-    </span>
-    <span class="post-meta-item" title="Reading time">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">Reading time &asymp;</span>
-      <span>1 mins.</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://emilypeng2017.github.io/2022/10/09/1-how-to-use-hexo-to-create-file-tag-and-category/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/emily.jpg">
-      <meta itemprop="name" content="Emily Peng">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Out of Shell">
-      <meta itemprop="description" content="人间有味是清欢">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | Out of Shell">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/10/09/1-how-to-use-hexo-to-create-file-tag-and-category/" class="post-title-link" itemprop="url">How to use hexo to create page, tag and category</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">Posted on</span>
-
-      <time title="Created: 2022-10-09 14:00:45" itemprop="dateCreated datePublished" datetime="2022-10-09T14:00:45+08:00">2022-10-09</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-10-14 23:32:39" itemprop="dateModified" datetime="2022-10-14T23:32:39+08:00">2022-10-14</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">In</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Tools/" itemprop="url" rel="index"><span itemprop="name">Tools</span></a>
-        </span>
-    </span>
-
-  
-    <span class="post-meta-break"></span>
-    <span class="post-meta-item" title="Symbols count in article">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">Symbols count in article: </span>
-      <span>776</span>
-    </span>
-    <span class="post-meta-item" title="Reading time">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">Reading time &asymp;</span>
-      <span>1 mins.</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>this shows how to create a new file using hexo</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/10/09/1-how-to-use-hexo-to-create-file-tag-and-category/">
-                Read more &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+          </div>
     </footer>
   </article>
 </div>
@@ -963,6 +361,8 @@ Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> 
 
 
 
+
+    <div class="comments gitalk-container"></div>
 </div>
   </main>
 
@@ -1038,7 +438,7 @@ Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"EmilyPeng2017","repo":"EmilyPeng2017.github.io","client_id":"31256fbc9a629386fd88","client_secret":"d85c3a8990a04d615335ddb96f441204863849e0","admin_user":"EmilyPeng2017","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"en","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"d1546d731a9f30cc80127d57142a482b"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"EmilyPeng2017","repo":"EmilyPeng2017.github.io","client_id":"31256fbc9a629386fd88","client_secret":"d85c3a8990a04d615335ddb96f441204863849e0","admin_user":"EmilyPeng2017","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":"en","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"d1d2e41b66417de9e2c547de29d9fdb7"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>
