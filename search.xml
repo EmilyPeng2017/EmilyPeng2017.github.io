@@ -1,210 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>How to use hexo to create page, tag and category</title>
-    <url>/2022/10/09/1-how-to-use-hexo-to-create-file-tag-and-category/</url>
-    <content><![CDATA[<p>Once setting up the hexo environment, it’s time to create your new pages! Shall we just use mkdir cmd to create subfolders under source folder? The answer is NO. Please realize this is HEXO! We could use “hexo cmd” directly!</p>
-<h2 id="1-create-new-file"><a href="#1-create-new-file" class="headerlink" title="1. create new file"></a>1. create new file</h2><ul>
-<li>cmd<br><code>hexo new &lt;title&gt;</code></li>
-</ul>
-<p>the file would be generated under <strong>hexo&#x2F;source&#x2F;_posts</strong> folder</p>
-<ul>
-<li>settings<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: How to use hexo to create page, tag and category</span><br><span class="line">date: 2022-10-09 14:00:45</span><br><span class="line">tags: hexo, tools</span><br><span class="line">categories: Tools</span><br><span class="line">comments: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="2-create-new-tag"><a href="#2-create-new-tag" class="headerlink" title="2. create new tag"></a>2. create new tag</h2><ul>
-<li><p>cmd<br><code>hexo new page tags</code></p>
-</li>
-<li><p>settings</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 2022-10-09 14:07:24</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h2 id="3-create-new-category"><a href="#3-create-new-category" class="headerlink" title="3. create new category"></a>3. create new category</h2><ul>
-<li><p>cmd<br><code>hexo new page categories</code></p>
-</li>
-<li><p>settings</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">date: 2022-10-09 14:07:46</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="for-more-information-please-go-to-hexo-website"><a href="#for-more-information-please-go-to-hexo-website" class="headerlink" title="for more information, please go to hexo website"></a><a href="https://hexo.io/">for more information, please go to hexo website</a></h3><hr />
-<p style="text-align: center">
-<font face='comic'> 
-Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved
-</font>
-</p>
-
-
-
-]]></content>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Cannot connect Raspberry Pi after a period of time?</title>
+      <link href="/2022/12/17/Cannot-connect-RespberryPi-after-a-period-of-time/"/>
+      <url>/2022/12/17/Cannot-connect-RespberryPi-after-a-period-of-time/</url>
+      
+        <content type="html"><![CDATA[<img src="https://www.softzone.es/app/uploads-softzone.es/2020/08/Apps-para-Raspberry-Pi.jpg" alt="" style="width:50%" />  <p>These days, humidifier in the study is working day and night since I wanna reduce formaldehyde content(that’s another story). Around one week later, ghosting appeared on my display screen and finally the root cause turned out to be the humidifier’s water vapor. Moving the monitor to the balcony and under the sunshine, then it works well again.</p><p>What drives me crazy is that my Raspberry Pi refused to work almost at the same time! I used to connect my Raspberry Pi via SSH while this time it showed “connection refused”. I was afraid that it was due to the vapor as well and disappointed when it still had no response after one day’s in the sun.</p><p>This Saturday, getting time to dig further, I connected the mouse, keyboard and monitor to my lovely Pi, and it’s working! How came I could not SSH to it? It’s the IP address changing!</p><p>By default, the Raspberry Pi will get a dynamically allocated IP address, meaning it changes as you restart it or potentially when new devices are added to the network. We could set a static IP address to solve this issue.</p><p>[reference] <a href="https://www.ionos.com/digitalguide/server/configuration/provide-raspberry-pi-with-a-static-ip-address/">https://www.ionos.com/digitalguide/server/configuration/provide-raspberry-pi-with-a-static-ip-address/</a></p><hr /><p style="text-align: center"><font face='comic'> Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved</font></p>]]></content>
+      
+      
       <categories>
-        <category>Tools</category>
+          
+          <category> Raspberry Pi </category>
+          
       </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>tools</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>VIM - common used cmd!</title>
-    <url>/2022/10/14/VIM-common-used-cmd/</url>
-    <content><![CDATA[<img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Vimlogo.svg" alt="" style="width:50%" />  
-
-<h2 id="case-1-to-delete-and-add-same-content-in-multi-lines"><a href="#case-1-to-delete-and-add-same-content-in-multi-lines" class="headerlink" title="case 1 - to delete and add same content in multi lines"></a>case 1 - to delete and add same content in multi lines</h2><p>before change</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">item1</span><br><span class="line">item2</span><br><span class="line">item3</span><br><span class="line">item4</span><br></pre></td></tr></table></figure>
-<h3 id="add"><a href="#add" class="headerlink" title="add"></a>add</h3><ol>
-<li>move the cursor at the first line first character</li>
-<li>ctrl + v and enter visual block mode</li>
-<li>use motion key or run “3gg” to select all </li>
-<li>input I (upper case) to enter Edit mode</li>
-<li>input the content you want to insert</li>
-<li>ESC and wait for a moment</li>
-</ol>
-<p>after change</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">my_item1</span><br><span class="line">my_item2</span><br><span class="line">my_item3</span><br><span class="line">my_item4</span><br></pre></td></tr></table></figure>
-
-<h3 id="delete"><a href="#delete" class="headerlink" title="delete"></a>delete</h3><ol>
-<li>move the cursor at the first line first character</li>
-<li>ctrl + v and enter visual block mode</li>
-<li>use motion key or run “3j3l” to select what you want to delete </li>
-<li>enter “d” to delete<br>tip: after delete, we could still use ‘p’ to paste the deleted sentence which means ‘delete’ is like ‘cut’.</li>
-</ol>
-<hr />
-<p style="text-align: center">
-<font face='comic'> 
-Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved
-</font>
-</p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> tools </tag>
+            
+            <tag> Raspberry Pi </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Stringize(#) and token pasting (##) operator in C language</title>
+      <link href="/2022/11/12/Stringize-and-token-pasting-operator-in-C-language/"/>
+      <url>/2022/11/12/Stringize-and-token-pasting-operator-in-C-language/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Stringizing-operator"><a href="#Stringizing-operator" class="headerlink" title="Stringizing operator"></a>Stringizing operator</h2><p>convert a token to string</p><h2 id="Token-passing-operator"><a href="#Token-passing-operator" class="headerlink" title="Token passing operator"></a>Token passing operator</h2><p>Token pasting operator (##) combines or concatenates tokens together.</p><p>example:</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt; </span><br><span class="line"></span><br><span class="line">#define PRINT(msg) #msg     // this is used to stringize</span><br><span class="line">#define CONCAT(a, b) a##b   // this is used to concatenate tokens</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    printf(PRINT(This is a test for stringizing!) &quot;\n&quot;);</span><br><span class="line">    printf(&quot;CONCAT(20, 22) = %d\n&quot;, CONCAT(20, 22));</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>###Reference:<br>    [1] <a href="https://learn.microsoft.com/en-us/cpp/preprocessor/stringizing-operator-hash?view=msvc-170">https://learn.microsoft.com/en-us/cpp/preprocessor/stringizing-operator-hash?view=msvc-170</a><br>    [2] <a href="https://codeforwin.org/2018/11/stringize-token-pasting-operator-in-c-language.html">https://codeforwin.org/2018/11/stringize-token-pasting-operator-in-c-language.html</a></p><hr /><p style="text-align: center"><font face='comic'> Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved</font></p>]]></content>
+      
+      
       <categories>
-        <category>Tools</category>
+          
+          <category> C language </category>
+          
       </categories>
-      <tags>
-        <tag>Vim</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Cannot connect Raspberry Pi after a period of time?</title>
-    <url>/2022/12/17/Cannot-connect-RespberryPi-after-a-period-of-time/</url>
-    <content><![CDATA[<img src="https://www.softzone.es/app/uploads-softzone.es/2020/08/Apps-para-Raspberry-Pi.jpg" alt="" style="width:50%" />  
-
-<p>These days, humidifier in the study is working day and night since I wanna reduce formaldehyde content(that’s another story). Around one week later, ghosting appeared on my display screen and finally the root cause turned out to be the humidifier’s water vapor. Moving the monitor to the balcony and under the sunshine, then it works well again.</p>
-<p>What drives me crazy is that my Raspberry Pi refused to work almost at the same time! I used to connect my Raspberry Pi via SSH while this time it showed “connection refused”. I was afraid that it was due to the vapor as well and disappointed when it still had no response after one day’s in the sun.</p>
-<p>This Saturday, getting time to dig further, I connected the mouse, keyboard and monitor to my lovely Pi, and it’s working! How came I could not SSH to it? It’s the IP address changing!</p>
-<p>By default, the Raspberry Pi will get a dynamically allocated IP address, meaning it changes as you restart it or potentially when new devices are added to the network. We could set a static IP address to solve this issue.</p>
-<p>[reference] <a href="https://www.ionos.com/digitalguide/server/configuration/provide-raspberry-pi-with-a-static-ip-address/">https://www.ionos.com/digitalguide/server/configuration/provide-raspberry-pi-with-a-static-ip-address/</a></p>
-<hr />
-<p style="text-align: center">
-<font face='comic'> 
-Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved
-</font>
-</p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> C language </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>To generate random numbers in C</title>
+      <link href="/2022/10/18/To-generate-random-numbers-in-C/"/>
+      <url>/2022/10/18/To-generate-random-numbers-in-C/</url>
+      
+        <content type="html"><![CDATA[<p>For randomly gerenating number, we could use &lt;stdlib.h&gt; header file in order to leverage the rand function. Each time rand() is called, it would generate a totally random number. However, it would generate the same value if the environment&#x2F;program kept unchanging. Thus here we introduce another function srand() which is used to create a seed value. The input parameter could set as time since time changes and makes sure the seed various.</p><p>To generate floating number, we could type cast value to (float)rand();</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;stdlib.h&gt;</span><br><span class="line">#include &lt;time.h&gt;</span><br><span class="line"></span><br><span class="line">#define MAX_CYCLE (50)</span><br><span class="line">#define MAX_NUM (20)</span><br><span class="line">#define MIN_NUM (10)</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int rand_num, count = 0;</span><br><span class="line">    for (count = 0; count &lt; MAX_CYCLE; count++)</span><br><span class="line">    &#123;</span><br><span class="line">       if (0 == count%5)</span><br><span class="line">       &#123;</span><br><span class="line">            srand(time(0));     // The seed value is kept on changing</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">     printf(&quot;The randomly generated number is between (%d, %d)&quot;, MIN_NUM, MAX_NUM);</span><br><span class="line">     rand_num = rand()%(MAX_NUM - MIN_NUM) + MIN_NUM;</span><br><span class="line">     printf(&quot;%d\n&quot;, rand_num);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><hr /><p style="text-align: center"><font face='comic'> Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved</font></p>]]></content>
+      
+      
       <categories>
-        <category>Raspberry Pi</category>
+          
+          <category> C language </category>
+          
       </categories>
-      <tags>
-        <tag>tools</tag>
-        <tag>Raspberry Pi</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Stringize(#) and token pasting (##) operator in C language</title>
-    <url>/2022/11/12/Stringize-and-token-pasting-operator-in-C-language/</url>
-    <content><![CDATA[<h2 id="Stringizing-operator"><a href="#Stringizing-operator" class="headerlink" title="Stringizing operator"></a>Stringizing operator</h2><p>convert a token to string</p>
-<h2 id="Token-passing-operator"><a href="#Token-passing-operator" class="headerlink" title="Token passing operator"></a>Token passing operator</h2><p>Token pasting operator (##) combines or concatenates tokens together.</p>
-<p>example:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;stdio.h&gt; </span><br><span class="line"></span><br><span class="line">#define PRINT(msg) #msg     // this is used to stringize</span><br><span class="line">#define CONCAT(a, b) a##b   // this is used to concatenate tokens</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    printf(PRINT(This is a test for stringizing!) &quot;\n&quot;);</span><br><span class="line">    printf(&quot;CONCAT(20, 22) = %d\n&quot;, CONCAT(20, 22));</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>###Reference:<br>    [1] <a href="https://learn.microsoft.com/en-us/cpp/preprocessor/stringizing-operator-hash?view=msvc-170">https://learn.microsoft.com/en-us/cpp/preprocessor/stringizing-operator-hash?view=msvc-170</a><br>    [2] <a href="https://codeforwin.org/2018/11/stringize-token-pasting-operator-in-c-language.html">https://codeforwin.org/2018/11/stringize-token-pasting-operator-in-c-language.html</a></p>
-<hr />
-<p style="text-align: center">
-<font face='comic'> 
-Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved
-</font>
-</p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> C langauge </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>VIM - common used cmd!</title>
+      <link href="/2022/10/14/VIM-common-used-cmd/"/>
+      <url>/2022/10/14/VIM-common-used-cmd/</url>
+      
+        <content type="html"><![CDATA[<img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Vimlogo.svg" alt="" style="width:50%" />  <h2 id="case-1-to-delete-and-add-same-content-in-multi-lines"><a href="#case-1-to-delete-and-add-same-content-in-multi-lines" class="headerlink" title="case 1 - to delete and add same content in multi lines"></a>case 1 - to delete and add same content in multi lines</h2><p>before change</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">item1</span><br><span class="line">item2</span><br><span class="line">item3</span><br><span class="line">item4</span><br></pre></td></tr></table></figure><h3 id="add"><a href="#add" class="headerlink" title="add"></a>add</h3><ol><li>move the cursor at the first line first character</li><li>ctrl + v and enter visual block mode</li><li>use motion key or run “3gg” to select all </li><li>input I (upper case) to enter Edit mode</li><li>input the content you want to insert</li><li>ESC and wait for a moment</li></ol><p>after change</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">my_item1</span><br><span class="line">my_item2</span><br><span class="line">my_item3</span><br><span class="line">my_item4</span><br></pre></td></tr></table></figure><h3 id="delete"><a href="#delete" class="headerlink" title="delete"></a>delete</h3><ol><li>move the cursor at the first line first character</li><li>ctrl + v and enter visual block mode</li><li>use motion key or run “3j3l” to select what you want to delete </li><li>enter “d” to delete<br>tip: after delete, we could still use ‘p’ to paste the deleted sentence which means ‘delete’ is like ‘cut’.</li></ol><hr /><p style="text-align: center"><font face='comic'> Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved</font></p>]]></content>
+      
+      
       <categories>
-        <category>C language</category>
+          
+          <category> Tools </category>
+          
       </categories>
-      <tags>
-        <tag>C language</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>To generate random numbers in C</title>
-    <url>/2022/10/18/To-generate-random-numbers-in-C/</url>
-    <content><![CDATA[<p>For randomly gerenating number, we could use &lt;stdlib.h&gt; header file in order to leverage the rand function. Each time rand() is called, it would generate a totally random number. However, it would generate the same value if the environment&#x2F;program kept unchanging. Thus here we introduce another function srand() which is used to create a seed value. The input parameter could set as time since time changes and makes sure the seed various.</p>
-<p>To generate floating number, we could type cast value to (float)rand();</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;stdlib.h&gt;</span><br><span class="line">#include &lt;time.h&gt;</span><br><span class="line"></span><br><span class="line">#define MAX_CYCLE (50)</span><br><span class="line">#define MAX_NUM (20)</span><br><span class="line">#define MIN_NUM (10)</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int rand_num, count = 0;</span><br><span class="line">    for (count = 0; count &lt; MAX_CYCLE; count++)</span><br><span class="line">    &#123;</span><br><span class="line">       if (0 == count%5)</span><br><span class="line">       &#123;</span><br><span class="line">            srand(time(0));     // The seed value is kept on changing</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">     printf(&quot;The randomly generated number is between (%d, %d)&quot;, MIN_NUM, MAX_NUM);</span><br><span class="line">     rand_num = rand()%(MAX_NUM - MIN_NUM) + MIN_NUM;</span><br><span class="line">     printf(&quot;%d\n&quot;, rand_num);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<hr />
-<p style="text-align: center">
-<font face='comic'> 
-Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved
-</font>
-</p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> Vim </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>RTES - 1 - what is real-time system?</title>
+      <link href="/2022/10/10/RTES-1-what-is-real-time-system/"/>
+      <url>/2022/10/10/RTES-1-what-is-real-time-system/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
       <categories>
-        <category>C language</category>
+          
+          <category> Real-Time Embedded Systems Concepts and Practices </category>
+          
       </categories>
-      <tags>
-        <tag>C langauge</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>RTES - 1 - what is real-time system?</title>
-    <url>/2022/10/10/RTES-1-what-is-real-time-system/</url>
-    <content><![CDATA[]]></content>
+      
+      
+        <tags>
+            
+            <tag> RTES </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>How to use hexo to create page, tag and category</title>
+      <link href="/2022/10/09/1-how-to-use-hexo-to-create-file-tag-and-category/"/>
+      <url>/2022/10/09/1-how-to-use-hexo-to-create-file-tag-and-category/</url>
+      
+        <content type="html"><![CDATA[<p>Once setting up the hexo environment, it’s time to create your new pages! Shall we just use mkdir cmd to create subfolders under source folder? The answer is NO. Please realize this is HEXO! We could use “hexo cmd” directly!</p><h2 id="1-create-new-file"><a href="#1-create-new-file" class="headerlink" title="1. create new file"></a>1. create new file</h2><ul><li>cmd<br><code>hexo new &lt;title&gt;</code></li></ul><p>the file would be generated under <strong>hexo&#x2F;source&#x2F;_posts</strong> folder</p><ul><li>settings<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: How to use hexo to create page, tag and category</span><br><span class="line">date: 2022-10-09 14:00:45</span><br><span class="line">tags: hexo, tools</span><br><span class="line">categories: Tools</span><br><span class="line">comments: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure></li></ul><h2 id="2-create-new-tag"><a href="#2-create-new-tag" class="headerlink" title="2. create new tag"></a>2. create new tag</h2><ul><li><p>cmd<br><code>hexo new page tags</code></p></li><li><p>settings</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: tags</span><br><span class="line">date: 2022-10-09 14:07:24</span><br><span class="line">type: &quot;tags&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure></li></ul><h2 id="3-create-new-category"><a href="#3-create-new-category" class="headerlink" title="3. create new category"></a>3. create new category</h2><ul><li><p>cmd<br><code>hexo new page categories</code></p></li><li><p>settings</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: categories</span><br><span class="line">date: 2022-10-09 14:07:46</span><br><span class="line">type: &quot;categories&quot;</span><br><span class="line">---</span><br></pre></td></tr></table></figure></li></ul><h3 id="for-more-information-please-go-to-hexo-website"><a href="#for-more-information-please-go-to-hexo-website" class="headerlink" title="for more information, please go to hexo website"></a><a href="https://hexo.io/">for more information, please go to hexo website</a></h3><hr /><p style="text-align: center"><font face='comic'> Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved</font></p>]]></content>
+      
+      
       <categories>
-        <category>Real-Time Embedded Systems Concepts and Practices</category>
+          
+          <category> Tools </category>
+          
       </categories>
-      <tags>
-        <tag>RTES</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>RTES -2 - Assignment 1</title>
-    <url>/2022/12/19/RTES-Assignment-1/</url>
-    <content><![CDATA[<h1 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h1><ol>
-<li>Print the output of <strong>uname -a</strong> in the first line of the syslog file. </li>
-<li>Each syslog statement should have [COURSE:X][ASSIGNMENT:Y] where X corresponds to Course Number i.e. 1 in this case and Y corresponds to Assignment No.</li>
-</ol>
-<blockquote>
-<p>Example - Aug 30 22:10:54 raspberrypi pthread:<br>[COURSE:1][ASSIGNMENT:1] YOUR DATA HERE</p>
-</blockquote>
-<p>This is what your output should look like. Also, please note that the uname output is generated from the program and not copied from the terminal and pasted into the program as a string.<br>All syslog prints in this assignment and upcoming assignments shall follow this format. (The time, name of the machine, and the program name are generated by syslog, you do not need to add them in manually).<br>3. This assignment expects two log statements as below from the main and the thread in execution</p>
-<blockquote>
-<p>Hello World from Main!<br>Hello World from Thread!</p>
-</blockquote>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><h2 id="1-how-to-log-uname-a-info-into-syslog"><a href="#1-how-to-log-uname-a-info-into-syslog" class="headerlink" title="1. how to log uname -a info into syslog?"></a>1. how to log <strong>uname -a</strong> info into syslog?</h2><h3 id="a-use-system-function"><a href="#a-use-system-function" class="headerlink" title="a. use system function"></a>a. use system function</h3><ul>
-<li>using <strong>man system</strong> to get how to use this interface. please note that we need to <strong>#include &lt;stdlib.h&gt;</strong></li>
-<li><code>system(&quot;logger [COURSE:1][ASSIGNMENT:1]: </code>`uname -a`“);&#96;</li>
-</ul>
-<h3 id="b-print-uname-struct-elements-this-makes-things-a-little-bit-complicated"><a href="#b-print-uname-struct-elements-this-makes-things-a-little-bit-complicated" class="headerlink" title="b. print uname struct elements (this makes things a little bit complicated)"></a>b. print uname struct elements (this makes things a little bit complicated)</h3><ul>
-<li>uname struct</li>
-</ul>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">utsname</span> &#123;</span></span><br><span class="line">    <span class="type">char</span> sysname[];    <span class="comment">/* Operating system name (e.g., &quot;Linux&quot;) */</span></span><br><span class="line">    <span class="type">char</span> nodename[];   <span class="comment">/* Name within &quot;some implementation-defined</span></span><br><span class="line"><span class="comment">                          network&quot; */</span></span><br><span class="line">    <span class="type">char</span> release[];    <span class="comment">/* Operating system release</span></span><br><span class="line"><span class="comment">                          (e.g., &quot;2.6.28&quot;) */</span></span><br><span class="line">    <span class="type">char</span> version[];    <span class="comment">/* Operating system version */</span></span><br><span class="line">    <span class="type">char</span> machine[];    <span class="comment">/* Hardware identifier */</span></span><br><span class="line"><span class="meta">#<span class="keyword">ifdef</span> _GNU_SOURCE</span></span><br><span class="line">    <span class="type">char</span> domainname[]; <span class="comment">/* NIS or YP domain name */</span></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">     &#125;;</span><br></pre></td></tr></table></figure>
-<p>reference: <a href="https://www.man7.org/linux/man-pages/man2/uname.2.html">https://www.man7.org/linux/man-pages/man2/uname.2.html</a></p>
-<ul>
-<li>corresponding code</li>
-</ul>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">utsname</span> *<span class="title">buf</span> =</span> <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> utsname));</span><br><span class="line">    uname(buf);</span><br><span class="line">    syslog(LOG_INFO, <span class="string">&quot;%s %s %s %s %s GNU/Linux\n&quot;</span>, buf-&gt;sysname, buf-&gt;nodename, buf-&gt;release, buf-&gt;version, buf-&gt;machine);</span><br></pre></td></tr></table></figure>
-<p>it has disadvantages since there is no operation system info in the struct.</p>
-<h2 id="2-how-to-use-syslog"><a href="#2-how-to-use-syslog" class="headerlink" title="2. how to use syslog"></a>2. how to use syslog</h2><ul>
-<li>openlog() and closelog()</li>
-</ul>
-<h2 id="3-the-whole-code"><a href="#3-the-whole-code" class="headerlink" title="3. the whole code"></a>3. the whole code</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/utsname.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sched.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;syslog.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> NUM_THREADS 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> COURSE_INFO <span class="string">&quot;[COURSE:1][ASSIGNMENT:1]&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> threadIdx;</span><br><span class="line">&#125; threadParams_t;</span><br><span class="line"></span><br><span class="line"><span class="comment">// POSIX thread declarations and scheduling attributes</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="type">pthread_t</span> threads[NUM_THREADS];</span><br><span class="line">threadParams_t threadParams[NUM_THREADS];</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> *<span class="title function_">counterThread</span><span class="params">(<span class="type">void</span> *threadp)</span></span><br><span class="line">&#123;</span><br><span class="line">    openlog(COURSE_INFO, LOG_CONS, LOG_USER);</span><br><span class="line">	syslog(LOG_INFO, <span class="string">&quot;Hello World from Thread!&quot;</span>);</span><br><span class="line">	closelog();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span> <span class="params">(<span class="type">int</span> argc, <span class="type">char</span> *argv[])</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">utsname</span> *<span class="title">buf</span> =</span> <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> utsname));</span><br><span class="line">    uname(buf);</span><br><span class="line">  </span><br><span class="line">    openlog(COURSE_INFO, LOG_CONS, LOG_USER);</span><br><span class="line">    syslog(LOG_INFO, <span class="string">&quot;%s %s %s %s %s GNU/Linux\n&quot;</span>, buf-&gt;sysname, buf-&gt;nodename, buf-&gt;release, buf-&gt;version, buf-&gt;machine);</span><br><span class="line"><span class="comment">// I know we could use system call cmd to print uname, but here I keep my original code which print the uname struct elements one by one  </span></span><br><span class="line"><span class="meta">#<span class="keyword">if</span> (0)</span></span><br><span class="line">	system(<span class="string">&quot;logger [COURSE:1][ASSIGNMENT:1]: `uname -a`&quot;</span>);</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">    </span><br><span class="line">	syslog(LOG_INFO, <span class="string">&quot;Hello World from Main!&quot;</span>);</span><br><span class="line">   </span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>; i &lt; NUM_THREADS; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        threadParams[i].threadIdx=i;</span><br><span class="line"></span><br><span class="line">        pthread_create(&amp;threads[i],   <span class="comment">// pointer to thread descriptor</span></span><br><span class="line">                       (<span class="type">void</span> *)<span class="number">0</span>,     <span class="comment">// use default attributes</span></span><br><span class="line">                       counterThread, <span class="comment">// thread function entry point</span></span><br><span class="line">                       (<span class="type">void</span> *)&amp;(threadParams[i]) <span class="comment">// parameters to pass in</span></span><br><span class="line">                      );</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;NUM_THREADS;i++)</span><br><span class="line">        pthread_join(threads[i], <span class="literal">NULL</span>);</span><br><span class="line"></span><br><span class="line">    closelog();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<hr />
-<p style="text-align: center">
-<font face='comic'> 
-Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved
-</font>
-</p>
-]]></content>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> tools </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>RTES -2 - Assignment 1</title>
+      <link href="/2022/05/19/RTES-Assignment-1/"/>
+      <url>/2022/05/19/RTES-Assignment-1/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Requirement"><a href="#Requirement" class="headerlink" title="Requirement"></a>Requirement</h1><ol><li>Print the output of <strong>uname -a</strong> in the first line of the syslog file. </li><li>Each syslog statement should have [COURSE:X][ASSIGNMENT:Y] where X corresponds to Course Number i.e. 1 in this case and Y corresponds to Assignment No.</li></ol><blockquote><p>Example - Aug 30 22:10:54 raspberrypi pthread:<br>[COURSE:1][ASSIGNMENT:1] YOUR DATA HERE</p></blockquote><p>This is what your output should look like. Also, please note that the uname output is generated from the program and not copied from the terminal and pasted into the program as a string.<br>All syslog prints in this assignment and upcoming assignments shall follow this format. (The time, name of the machine, and the program name are generated by syslog, you do not need to add them in manually).<br>3. This assignment expects two log statements as below from the main and the thread in execution</p><blockquote><p>Hello World from Main!<br>Hello World from Thread!</p></blockquote><h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><h2 id="1-how-to-log-uname-a-info-into-syslog"><a href="#1-how-to-log-uname-a-info-into-syslog" class="headerlink" title="1. how to log uname -a info into syslog?"></a>1. how to log <strong>uname -a</strong> info into syslog?</h2><h3 id="a-use-system-function"><a href="#a-use-system-function" class="headerlink" title="a. use system function"></a>a. use system function</h3><ul><li>using <strong>man system</strong> to get how to use this interface. please note that we need to <strong>#include &lt;stdlib.h&gt;</strong></li><li><code>system(&quot;logger [COURSE:1][ASSIGNMENT:1]: </code>`uname -a`“);&#96;</li></ul><h3 id="b-print-uname-struct-elements-this-makes-things-a-little-bit-complicated"><a href="#b-print-uname-struct-elements-this-makes-things-a-little-bit-complicated" class="headerlink" title="b. print uname struct elements (this makes things a little bit complicated)"></a>b. print uname struct elements (this makes things a little bit complicated)</h3><ul><li>uname struct</li></ul><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">utsname</span> &#123;</span></span><br><span class="line">    <span class="type">char</span> sysname[];    <span class="comment">/* Operating system name (e.g., &quot;Linux&quot;) */</span></span><br><span class="line">    <span class="type">char</span> nodename[];   <span class="comment">/* Name within &quot;some implementation-defined</span></span><br><span class="line"><span class="comment">                          network&quot; */</span></span><br><span class="line">    <span class="type">char</span> release[];    <span class="comment">/* Operating system release</span></span><br><span class="line"><span class="comment">                          (e.g., &quot;2.6.28&quot;) */</span></span><br><span class="line">    <span class="type">char</span> version[];    <span class="comment">/* Operating system version */</span></span><br><span class="line">    <span class="type">char</span> machine[];    <span class="comment">/* Hardware identifier */</span></span><br><span class="line"><span class="meta">#<span class="keyword">ifdef</span> _GNU_SOURCE</span></span><br><span class="line">    <span class="type">char</span> domainname[]; <span class="comment">/* NIS or YP domain name */</span></span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">     &#125;;</span><br></pre></td></tr></table></figure><p>reference: <a href="https://www.man7.org/linux/man-pages/man2/uname.2.html">https://www.man7.org/linux/man-pages/man2/uname.2.html</a></p><ul><li>corresponding code</li></ul><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">utsname</span> *<span class="title">buf</span> =</span> <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> utsname));</span><br><span class="line">    uname(buf);</span><br><span class="line">    syslog(LOG_INFO, <span class="string">&quot;%s %s %s %s %s GNU/Linux\n&quot;</span>, buf-&gt;sysname, buf-&gt;nodename, buf-&gt;release, buf-&gt;version, buf-&gt;machine);</span><br></pre></td></tr></table></figure><p>it has disadvantages since there is no operation system info in the struct.</p><h2 id="2-how-to-use-syslog"><a href="#2-how-to-use-syslog" class="headerlink" title="2. how to use syslog"></a>2. how to use syslog</h2><ul><li>openlog() and closelog()</li></ul><h2 id="3-the-whole-code"><a href="#3-the-whole-code" class="headerlink" title="3. the whole code"></a>3. the whole code</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;pthread.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sys/utsname.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;sched.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;syslog.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> NUM_THREADS 1</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> COURSE_INFO <span class="string">&quot;[COURSE:1][ASSIGNMENT:1]&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="type">int</span> threadIdx;</span><br><span class="line">&#125; threadParams_t;</span><br><span class="line"></span><br><span class="line"><span class="comment">// POSIX thread declarations and scheduling attributes</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="type">pthread_t</span> threads[NUM_THREADS];</span><br><span class="line">threadParams_t threadParams[NUM_THREADS];</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> *<span class="title function_">counterThread</span><span class="params">(<span class="type">void</span> *threadp)</span></span><br><span class="line">&#123;</span><br><span class="line">    openlog(COURSE_INFO, LOG_CONS, LOG_USER);</span><br><span class="line">syslog(LOG_INFO, <span class="string">&quot;Hello World from Thread!&quot;</span>);</span><br><span class="line">closelog();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span> <span class="params">(<span class="type">int</span> argc, <span class="type">char</span> *argv[])</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> i;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">utsname</span> *<span class="title">buf</span> =</span> <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">struct</span> utsname));</span><br><span class="line">    uname(buf);</span><br><span class="line">  </span><br><span class="line">    openlog(COURSE_INFO, LOG_CONS, LOG_USER);</span><br><span class="line">    syslog(LOG_INFO, <span class="string">&quot;%s %s %s %s %s GNU/Linux\n&quot;</span>, buf-&gt;sysname, buf-&gt;nodename, buf-&gt;release, buf-&gt;version, buf-&gt;machine);</span><br><span class="line"><span class="comment">// I know we could use system call cmd to print uname, but here I keep my original code which print the uname struct elements one by one  </span></span><br><span class="line"><span class="meta">#<span class="keyword">if</span> (0)</span></span><br><span class="line">system(<span class="string">&quot;logger [COURSE:1][ASSIGNMENT:1]: `uname -a`&quot;</span>);</span><br><span class="line"><span class="meta">#<span class="keyword">endif</span></span></span><br><span class="line">    </span><br><span class="line">syslog(LOG_INFO, <span class="string">&quot;Hello World from Main!&quot;</span>);</span><br><span class="line">   </span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>; i &lt; NUM_THREADS; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        threadParams[i].threadIdx=i;</span><br><span class="line"></span><br><span class="line">        pthread_create(&amp;threads[i],   <span class="comment">// pointer to thread descriptor</span></span><br><span class="line">                       (<span class="type">void</span> *)<span class="number">0</span>,     <span class="comment">// use default attributes</span></span><br><span class="line">                       counterThread, <span class="comment">// thread function entry point</span></span><br><span class="line">                       (<span class="type">void</span> *)&amp;(threadParams[i]) <span class="comment">// parameters to pass in</span></span><br><span class="line">                      );</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;NUM_THREADS;i++)</span><br><span class="line">        pthread_join(threads[i], <span class="literal">NULL</span>);</span><br><span class="line"></span><br><span class="line">    closelog();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><hr /><p style="text-align: center"><font face='comic'> Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved</font></p>]]></content>
+      
+      
       <categories>
-        <category>Real-Time Embedded Systems Concepts and Practices</category>
+          
+          <category> Real-Time Embedded Systems Concepts and Practices </category>
+          
       </categories>
-      <tags>
-        <tag>RTES</tag>
-        <tag>Assignment</tag>
-      </tags>
-  </entry>
+      
+      
+        <tags>
+            
+            <tag> RTES </tag>
+            
+            <tag> Assignment </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
 </search>
