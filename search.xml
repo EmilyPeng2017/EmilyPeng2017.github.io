@@ -207,4 +207,35 @@ Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> 
         <tag>Assignment</tag>
       </tags>
   </entry>
+  <entry>
+    <title>how to open a file automatically after &#39;hexo new&#39;?</title>
+    <url>/2022/12/22/how-to-open-a-file-automatically-after-hexo-new/</url>
+    <content><![CDATA[<p>By default, when we use <code>hexo new</code> to create files, the files will be located in <code>_posts</code> folder.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dudu@dudus-MacBook-Air ~/D/B/h/scripts&gt; hexo new &quot;how to open a file automatically after &#x27;hexo new&#x27;?&quot;</span><br><span class="line">INFO  Validating config</span><br><span class="line">INFO  ==================================</span><br><span class="line">  ███╗   ██╗███████╗██╗  ██╗████████╗</span><br><span class="line">  ████╗  ██║██╔════╝╚██╗██╔╝╚══██╔══╝</span><br><span class="line">  ██╔██╗ ██║█████╗   ╚███╔╝    ██║</span><br><span class="line">  ██║╚██╗██║██╔══╝   ██╔██╗    ██║</span><br><span class="line">  ██║ ╚████║███████╗██╔╝ ██╗   ██║</span><br><span class="line">  ╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝   ╚═╝</span><br><span class="line">========================================</span><br><span class="line">NexT version 8.13.1</span><br><span class="line">Documentation: https://theme-next.js.org</span><br><span class="line">========================================</span><br><span class="line">INFO  Created: ~/Documents/Blog/hexo/source/_posts/2022-12-22-how-to-open-a-file-automatically-after-hexo-new.md</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>Each time after creating, we need to copy the path above to open the file using vim or any other application you like. Below is the procedure to open the file automatically using JavaScript. It’s convenient and simple, please try it~</p>
+<h2 id="Steps"><a href="#Steps" class="headerlink" title="Steps:"></a>Steps:</h2><h3 id="step-1"><a href="#step-1" class="headerlink" title="step 1:"></a>step 1:</h3><p>Create a folder named <code>scripts</code> under <code>hexo</code> using <code>**mkdir scripts**</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dudu@dudus-MacBook-Air ~/D/B/hexo&gt; ll -t</span><br><span class="line">total 632</span><br><span class="line">drwxr-xr-x    3 dudu  staff    96B Dec 22 20:38 scripts/</span><br><span class="line">-rw-r--r--    1 dudu  staff   166K Dec 22 19:27 db.json</span><br><span class="line">drwxr-xr-x   14 dudu  staff   448B Dec 22 19:27 public/</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="step-2"><a href="#step-2" class="headerlink" title="step 2:"></a>step 2:</h3><p>Change the _config.yml to avoid rendering files under scripts.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">skip_render:</span><br><span class="line">   - &quot;scripts/**&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="step-3"><a href="#step-3" class="headerlink" title="step 3:"></a>step 3:</h3><p>Create a .js file under scripts folder.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">dudu@dudus-MacBook-Air ~/D/B/h/scripts&gt; cat autoOpen.js </span><br><span class="line">var exec = require(&#x27;child_process&#x27;).exec;</span><br><span class="line"></span><br><span class="line"> // Hexo 3</span><br><span class="line">hexo.on(&#x27;new&#x27;, function(data)&#123;</span><br><span class="line">	exec(&#x27;open -a &quot;/Applications/Markdown Editor.app&quot; &#x27; + data.path);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>Please note if you are using Windows, the command <code>open -a</code> shall be changed to <code>start</code>, you could directly run the cmd in your cmd prompt to make sure it works.</p>
+<p>!!! <strong>Please note there is a space right after <code>.app&quot;</code>.</strong></p>
+<hr />
+<p style="text-align: center">
+<font face='comic'> 
+Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved
+</font>
+</p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>tools</tag>
+      </tags>
+  </entry>
 </search>
