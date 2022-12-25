@@ -263,4 +263,132 @@ Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> 
         <tag>Application</tag>
       </tags>
   </entry>
+  <entry>
+    <title>6.087-1-Introduction. Writing, compiling, and debugging C programs. Hello world.</title>
+    <url>/2022/12/25/6-087-1-Introduction-Writing-compiling-and-debugging-C-programs-Hello-world/</url>
+    <content><![CDATA[<h1 id="What-is-C"><a href="#What-is-C" class="headerlink" title="What is C?"></a>What is C?</h1><h2 id="widely-used-today"><a href="#widely-used-today" class="headerlink" title="widely used today"></a>widely used today</h2><pre><code>a. extends to newer system architectures
+b. efficiency/performance
+c. low-level access --&gt; often means faster
+</code></pre>
+<h2 id="what-is-C-used-for"><a href="#what-is-C-used-for" class="headerlink" title="what is C used for?"></a>what is C used for?</h2><pre><code>a. OSes, like Linux
+b. microcontrollers: automobiles and airplanes
+c. embedded processors: phones, portable electronics, etc
+d. DSP processors: digital audio and TV systems
+</code></pre>
+<h2 id="C-lacks"><a href="#C-lacks" class="headerlink" title="C lacks:"></a>C lacks:</h2><pre><code>a. exceptions
+b. range-checking
+c. garbage collection
+d. object-oriented programming
+e. polymorphism
+</code></pre>
+<h1 id="Writing-C-Programs"><a href="#Writing-C-Programs" class="headerlink" title="Writing C Programs"></a>Writing C Programs</h1><h2 id="steps"><a href="#steps" class="headerlink" title="steps"></a>steps</h2><ol>
+<li>edit .c file directly</li>
+<li>gcc compiler to get .o file<br><code>gcc -Wall infilename.c -o outfilename.o</code><br>&#x2F;&#x2F; embed debugging info and disable optimization<br><code>gcc -g -o0 -Wall infilename.c -o outfilename.o</code></li>
+</ol>
+<h1 id="Our-First-C-Program"><a href="#Our-First-C-Program" class="headerlink" title="Our First C Program"></a>Our First C Program</h1><h2 id="structure-of-a-c-file"><a href="#structure-of-a-c-file" class="headerlink" title="structure of a .c file"></a>structure of a .c file</h2><ol>
+<li>begin with comments about file contents</li>
+<li>insert #include statements and preprocessor definitions</li>
+<li>function prototypes and variable declarations</li>
+<li>main() function</li>
+<li>define other functions</li>
+</ol>
+<h2 id="confitional-preprocessor-macros"><a href="#confitional-preprocessor-macros" class="headerlink" title="confitional preprocessor macros"></a>confitional preprocessor macros</h2><p><code>#if, #ifdef, #ifndef, #else, #elif, #endif</code></p>
+<hr />
+<p style="text-align: center">
+<font face='comic'> 
+Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved
+</font>
+</p>
+]]></content>
+      <categories>
+        <category>C language</category>
+      </categories>
+      <tags>
+        <tag>C language</tag>
+        <tag>MIT Course</tag>
+        <tag>6.087</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>6.087-1-assignment</title>
+    <url>/2022/02/25/6-087-1-assignment/</url>
+    <content><![CDATA[<h1 id="Problem-Set-1"><a href="#Problem-Set-1" class="headerlink" title="Problem Set 1"></a>Problem Set 1</h1><h2 id="Problem-1-1"><a href="#Problem-1-1" class="headerlink" title="Problem 1.1"></a>Problem 1.1</h2><p>(a) what do curly braces denote in C? Why does it make sense to use curly braces to surround the body of a function?</p>
+<p>anw：</p>
+<ul>
+<li>Curly braces mean a block of code with the aim to complete one function</li>
+<li>a function is a set of code to achieve one goal, curly brace makes it a whole block</li>
+</ul>
+<p>(b) Describe the difference between the literal values 7, “7”, and ‘7’<br>anw：</p>
+<ul>
+<li>7 is a number, it could be int. “7” is a string, ‘7’ is a char.</li>
+</ul>
+<p>(c) Consider the statement</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">double</span> ans = <span class="number">10.0</span> + <span class="number">2.0</span>/<span class="number">3.0</span> - <span class="number">2.0</span>*<span class="number">2.0</span>;</span><br></pre></td></tr></table></figure>
+
+<p>Rewrite this statement, inserting parentheses to ensure that ans &#x3D; 11.0 upon evaluation of this statement.</p>
+<p>ans：</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">double</span> ans = <span class="number">10.0</span> + <span class="number">2.0</span>/（（<span class="number">3.0</span> - <span class="number">2.0</span>）*<span class="number">2.0</span>）;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Problem-1-2"><a href="#Problem-1-2" class="headerlink" title="Problem 1.2"></a>Problem 1.2</h2><p>Consider the statement</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">double</span> ans = <span class="number">18.0</span>/squared(<span class="number">2</span>+<span class="number">1</span>);</span><br></pre></td></tr></table></figure>
+
+<p>For each of the four versions of the function macro squared() below, write the corresponding value of ans.</p>
+<ol>
+<li>#define squared(x) x*x</li>
+</ol>
+<p>ans: ans &#x3D; 18.0&#x2F;2+1*2+1 &#x3D; 9.0+3 &#x3D; 12.0</p>
+<ol start="2">
+<li>#define squared(x) (x*x)</li>
+</ol>
+<p>ans: ans &#x3D; 18.0&#x2F;(2+1*2+1) &#x3D; 18.0&#x2F;5 &#x3D; 3.6</p>
+<ol start="3">
+<li>#define squared(x) (x)*(x)</li>
+</ol>
+<p>ans: ans &#x3D; 18.0&#x2F;(2+1)<em>(2+1) &#x3D; 6.0</em>3 &#x3D; 18.0</p>
+<ol start="4">
+<li>#define squared(x) ((x)*(x))</li>
+</ol>
+<p>ans: ans &#x3D; 18.0&#x2F;((2+1)*(2+1)) &#x3D; 18.0&#x2F;9 &#x3D; 2.0</p>
+<h2 id="Problem-1-3"><a href="#Problem-1-3" class="headerlink" title="Problem 1.3"></a>Problem 1.3</h2><p>Write the “Hello, 6.087 students” program described in lecture in your favorite text editor and compile and execute it. Turn in a printout or screen shot showing</p>
+<ul>
+<li>the command used to compile your program</li>
+<li>the command used to execute your program (using gdb)</li>
+<li>the output of your program</li>
+</ul>
+<p>ans:</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">gcc <span class="number">1</span>_3.c -o <span class="number">1</span>_3.o</span><br><span class="line">gdb <span class="number">1</span>_3.o</span><br></pre></td></tr></table></figure>
+
+<h2 id="Problem-1-4"><a href="#Problem-1-4" class="headerlink" title="Problem 1.4"></a>Problem 1.4</h2><p>see 1_4.c</p>
+<h2 id="Problem-1-5"><a href="#Problem-1-5" class="headerlink" title="Problem 1.5"></a>Problem 1.5</h2><p>For each of the following statements, explain why it is not correct, and fix it.</p>
+<p>(a) #include &lt;stdio.h&gt;;</p>
+<p>ans: no need semicolon</p>
+<h1 id="include-lt-stdio-h-gt"><a href="#include-lt-stdio-h-gt" class="headerlink" title="include &lt;stdio.h&gt;"></a>include &lt;stdio.h&gt;</h1><p>(b)</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">function</span><span class="params">(<span class="type">void</span> arg1)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> arg1<span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>ans: the return type should be the same as input type</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">function</span><span class="params">(<span class="type">int</span> arg1)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">return</span> arg1<span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>(c)</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> MESSAGE = <span class="string">&quot;Happy new year!&quot;</span> </span></span><br><span class="line"><span class="built_in">puts</span>(MESSAGE);</span><br></pre></td></tr></table></figure>
+
+<p>ans:</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> MESSAGE <span class="string">&quot;Happy new year!&quot;</span> </span></span><br><span class="line"><span class="built_in">puts</span>(MESSAGE);</span><br></pre></td></tr></table></figure>
+
+
+<hr />
+<p style="text-align: center">
+<font face='comic'> 
+Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved
+</font>
+</p>
+]]></content>
+      <categories>
+        <category>C language</category>
+      </categories>
+      <tags>
+        <tag>C language</tag>
+        <tag>MIT 6.087</tag>
+        <tag>assignment</tag>
+      </tags>
+  </entry>
 </search>
