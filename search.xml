@@ -306,7 +306,7 @@ Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> 
       <tags>
         <tag>C language</tag>
         <tag>MIT Course</tag>
-        <tag>6.087</tag>
+        <tag>MIT 6.087</tag>
       </tags>
   </entry>
   <entry>
@@ -389,6 +389,31 @@ Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> 
         <tag>C language</tag>
         <tag>MIT 6.087</tag>
         <tag>assignment</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>6.087-2-Variables and datatypes, operators。</title>
+    <url>/2022/03/02/6-087-2-Variables-and-datatypes-operators/</url>
+    <content><![CDATA[<h1 id="1-Variables-and-data-types"><a href="#1-Variables-and-data-types" class="headerlink" title="1. Variables and data types"></a>1. Variables and data types</h1><h2 id="1-1-Definition"><a href="#1-1-Definition" class="headerlink" title="1.1 Definition"></a>1.1 Definition</h2><p>Datatype: The datatype of an object in memory determines the set of values it can have and what operations that can be performed on it. C is a weakly typed language. It allows implicit conversions as well as forced casting.</p>
+<p>Variable: A variable is as named link&#x2F;reference to a value stored in the system’s memory or an expression that can be evaluated.</p>
+<h2 id="1-2-Big-endian-vs-little-endian"><a href="#1-2-Big-endian-vs-little-endian" class="headerlink" title="1.2 Big endian vs. little endian"></a>1.2 Big endian vs. little endian</h2><ul>
+<li>why we have these two formats?<br>For numeric data types that span multiple bytes, the order of arrangement of the individual bytes is important.</li>
+<li>definition<br>Big endian: the most significant bits (MSBs) occupy the lower address.<br>Little endian: the least significant bits (LSBs) occupy the lower address. (using this to remember, LLL)</li>
+</ul>
+<h2 id="1-3-Relational-operators"><a href="#1-3-Relational-operators" class="headerlink" title="1.3 Relational operators"></a>1.3 Relational operators</h2><p>Relational operators compare two operands to produce a ‘boolean’ result. In C, any non-zero value is considered to be ‘true’ and 0 is considered to be false.</p>
+<hr />
+<p style="text-align: center">
+<font face='comic'> 
+Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved
+</font>
+</p>
+]]></content>
+      <categories>
+        <category>C language</category>
+      </categories>
+      <tags>
+        <tag>C language</tag>
+        <tag>MIT 6.087</tag>
       </tags>
   </entry>
 </search>
