@@ -20,16 +20,19 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"emilypeng2017.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.13.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Problem 2.1Determine the size,minimum and maximum value following data types. Please specify if yourmachine is 32 bit or 64 bits in the answer.• char• unsigned char• short• int• unsigned int• unsigned">
+    <meta name="description" content="This is the solution for assignment 2.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="6.087-2-assignment">
 <meta property="og:url" content="https://emilypeng2017.github.io/2022/03/05/6-087-2-assignment/index.html">
 <meta property="og:site_name" content="Out of Shell">
-<meta property="og:description" content="Problem 2.1Determine the size,minimum and maximum value following data types. Please specify if yourmachine is 32 bit or 64 bits in the answer.• char• unsigned char• short• int• unsigned int• unsigned">
+<meta property="og:description" content="This is the solution for assignment 2.">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-03-05T12:12:00.000Z">
-<meta property="article:modified_time" content="2022-12-31T13:33:45.797Z">
+<meta property="article:modified_time" content="2022-12-31T13:38:29.589Z">
 <meta property="article:author" content="Emily Peng">
+<meta property="article:tag" content="C language">
+<meta property="article:tag" content="assignment">
+<meta property="article:tag" content="MIT-6.087">
 <meta name="twitter:card" content="summary">
 
 
@@ -144,7 +147,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Problem-2-1"><span class="nav-number">1.</span> <span class="nav-text">Problem 2.1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Problem-2-2"><span class="nav-number">2.</span> <span class="nav-text">Problem 2.2</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Problem-2-1"><span class="nav-number">1.</span> <span class="nav-text">Problem 2.1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Problem-2-2"><span class="nav-number">2.</span> <span class="nav-text">Problem 2.2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Problem-2-3"><span class="nav-number">3.</span> <span class="nav-text">Problem 2.3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Problem-2-4"><span class="nav-number">4.</span> <span class="nav-text">Problem 2.4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Problem-2-5"><span class="nav-number">5.</span> <span class="nav-text">Problem 2.5</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -170,7 +173,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -231,7 +234,7 @@
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
       <meta itemprop="name" content="6.087-2-assignment | Out of Shell">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="This is the solution for assignment 2.">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -253,7 +256,16 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-12-31 21:33:45" itemprop="dateModified" datetime="2022-12-31T21:33:45+08:00">2022-12-31</time>
+      <time title="Modified: 2022-12-31 21:38:29" itemprop="dateModified" datetime="2022-12-31T21:38:29+08:00">2022-12-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/C-language/" itemprop="url" rel="index"><span itemprop="name">C language</span></a>
+        </span>
     </span>
 
   
@@ -281,6 +293,7 @@
     </span>
 </div>
 
+            <div class="post-description">This is the solution for assignment 2.</div>
         </div>
       </header>
 
@@ -327,13 +340,13 @@ return 0;
 </code></pre>
 <p>}</p>
 <p>‘’’</p>
-<p>##Problem 2.3<br>Consider int val&#x3D;0xCAFE; Write expressions using bitwise operators that do the following:<br>• test if atleast three of last four bits (LSB) are on<br>• reverse the byte order (i.e., produce val&#x3D;0xFECA)<br>• rotate fourbits (i.e., produce val&#x3D;0xECAF)<br>ans:</p>
+<h2 id="Problem-2-3"><a href="#Problem-2-3" class="headerlink" title="Problem 2.3"></a>Problem 2.3</h2><p>Consider int val&#x3D;0xCAFE; Write expressions using bitwise operators that do the following:<br>• test if atleast three of last four bits (LSB) are on<br>• reverse the byte order (i.e., produce val&#x3D;0xFECA)<br>• rotate fourbits (i.e., produce val&#x3D;0xECAF)<br>ans:</p>
 <ol>
 <li>(val&amp;0XF)|(val&amp;0X7)|(val&amp;0XB)|(val&amp;0XD)|(val&amp;0XE)</li>
 <li>(val&amp;0XFF&lt;&lt;8)|(val&amp;0XFF00&gt;&gt;8)</li>
 <li>(val&amp;0XF&lt;&lt;12)|(val&gt;&gt;4)</li>
 </ol>
-<p>##Problem 2.4<br>Using precedence rules, evaluate the following expressions and determine the value of the variables(without running the code). Also rewrite them using parenthesis to make the order explicit.<br>• Assume (x&#x3D;0xFF33,MASK&#x3D;0xFF00).Expression: c&#x3D;x &amp; MASK &#x3D;&#x3D;0;<br>• Assume (x&#x3D;10,y&#x3D;2,z&#x3D;2;).Expression: z&#x3D;y&#x3D;x++ + ++y∗2;<br>• Assume (x&#x3D;10,y&#x3D;4,z&#x3D;1;).Expression: y&gt;&gt;&#x3D; x&amp;0x2 &amp;&amp; z</p>
+<h2 id="Problem-2-4"><a href="#Problem-2-4" class="headerlink" title="Problem 2.4"></a>Problem 2.4</h2><p>Using precedence rules, evaluate the following expressions and determine the value of the variables(without running the code). Also rewrite them using parenthesis to make the order explicit.<br>• Assume (x&#x3D;0xFF33,MASK&#x3D;0xFF00).Expression: c&#x3D;x &amp; MASK &#x3D;&#x3D;0;<br>• Assume (x&#x3D;10,y&#x3D;2,z&#x3D;2;).Expression: z&#x3D;y&#x3D;x++ + ++y∗2;<br>• Assume (x&#x3D;10,y&#x3D;4,z&#x3D;1;).Expression: y&gt;&gt;&#x3D; x&amp;0x2 &amp;&amp; z</p>
 <p>ans:</p>
 <ol>
 <li>c &#x3D; 0, c &#x3D; x &amp; (MASK&#x3D;&#x3D;0);</li>
@@ -341,7 +354,7 @@ return 0;
 <li>y &gt;&gt;&#x3D; (x&amp;0x2) &amp;&amp; z; y &#x3D; y&gt;&gt;1; x&#x3D;10, y&#x3D;2, z&#x3D;1</li>
 </ol>
 <p>comment:<br>the answer to the second one should be z&#x3D;y&#x3D;(x++)+ ((++y)*2), therefore x&#x3D;11, y&#x3D;3, z&#x3D;10+6&#x3D;16</p>
-<p>##Problem 2.5<br>Determine if the following statements have any errors. If so, highlight them and explain why.<br>• int 2nd_value&#x3D;10;<br>• Assume (x&#x3D;0,y&#x3D;0,alliszero&#x3D;1). alliszero &#x3D;(x&#x3D;1) &amp;&amp; (y&#x3D;0);<br>• Assume (x&#x3D;10,y&#x3D;3,z&#x3D;0;). y&#x3D;++x+y;z&#x3D;z−−&gt;x;<br>• Assume that we want to test if last four bits of x are on. (int MASK&#x3D;0xF;ison&#x3D;x&amp;MASK&#x3D;&#x3D;MASK)</p>
+<h2 id="Problem-2-5"><a href="#Problem-2-5" class="headerlink" title="Problem 2.5"></a>Problem 2.5</h2><p>Determine if the following statements have any errors. If so, highlight them and explain why.<br>• int 2nd_value&#x3D;10;<br>• Assume (x&#x3D;0,y&#x3D;0,alliszero&#x3D;1). alliszero &#x3D;(x&#x3D;1) &amp;&amp; (y&#x3D;0);<br>• Assume (x&#x3D;10,y&#x3D;3,z&#x3D;0;). y&#x3D;++x+y;z&#x3D;z−−&gt;x;<br>• Assume that we want to test if last four bits of x are on. (int MASK&#x3D;0xF;ison&#x3D;x&amp;MASK&#x3D;&#x3D;MASK)</p>
 <ol>
 <li>number can not be the first character.</li>
 <li>alliszero &#x3D; (x&#x3D;&#x3D;1) &amp;&amp; (y&#x3D;&#x3D;0)</li>
@@ -362,6 +375,11 @@ Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> 
     
 
     <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/C-language/" rel="tag"># C language</a>
+              <a href="/tags/assignment/" rel="tag"># assignment</a>
+              <a href="/tags/MIT-6-087/" rel="tag"># MIT-6.087</a>
+          </div>
 
         
 

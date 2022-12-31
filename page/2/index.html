@@ -167,7 +167,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -669,7 +669,16 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2022-12-31 21:33:45" itemprop="dateModified" datetime="2022-12-31T21:33:45+08:00">2022-12-31</time>
+      <time title="Modified: 2022-12-31 21:38:29" itemprop="dateModified" datetime="2022-12-31T21:38:29+08:00">2022-12-31</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/C-language/" itemprop="url" rel="index"><span itemprop="name">C language</span></a>
+        </span>
     </span>
 
   
@@ -697,73 +706,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h2 id="Problem-2-1"><a href="#Problem-2-1" class="headerlink" title="Problem 2.1"></a>Problem 2.1</h2><p>Determine the size,minimum and maximum value following data types. Please specify if your<br>machine is 32 bit or 64 bits in the answer.<br>• char<br>• unsigned char<br>• short<br>• int<br>• unsigned int<br>• unsigned long<br>• float<br>Hint: Use sizeof() operator,limits.h and float.h header files</p>
-<p>ans:<br>‘’’<br>#include &lt;limits.h&gt;<br>#include &lt;math.h&gt;<br>#include &lt;stdio.h&gt;<br>#include &lt;float.h&gt;</p>
-<p>int main(){</p>
-<pre><code>printf(&quot;The size of char is %d, minimum is %d, maximum is %d\n&quot;, sizeof(char), CHAR_MIN, CHAR_MAX);
-printf(&quot;The size of unsigned char is %d, minimum is %d, maximum is %u\n&quot;, sizeof(unsigned char), 0, UCHAR_MAX);
-printf(&quot;The size of short is %d, minimum is %d, maximum is %d\n&quot;, sizeof(short), SHRT_MIN, SHRT_MAX);
-printf(&quot;The size of int is %d, minimum is %d, maximum is %d\n&quot;, sizeof(int), INT_MIN, INT_MAX);
-printf(&quot;The size of unsigned int is %d, minimum is %d, maximum is %u\n&quot;, sizeof(unsigned int), 0, UINT_MAX);
-printf(&quot;The size of unsigned long is %d, minimum is %d, maximum is %u\n&quot;, sizeof(unsigned long), 0, ULONG_MAX);
-printf(&quot;The size of float is %d, minimum is %f, maximum is %f\n&quot;, sizeof(float), FLT_MIN, FLT_MAX);
-</code></pre>
-<p>‘’’</p>
-<h2 id="Problem-2-2"><a href="#Problem-2-2" class="headerlink" title="Problem 2.2"></a>Problem 2.2</h2><p>Write logical expressions that tests whether a given character variable c is<br>• lower case letter<br>• upper case letter<br>• digit<br>• white space (includes space,tab,new line)</p>
-<p>ans:<br>‘’’<br>#include &lt;stdio.h&gt;</p>
-<p>int main(){</p>
-<pre><code>char c;
-printf(&quot;Please input a character:\n&quot;);
-scanf(&quot;%c&quot;, &amp;c);
-if (c&gt;=&#39;a&#39;&amp;&amp;c&lt;=&#39;z&#39;)
-&#123;
-    printf(&quot;lower case letter!\n&quot;);
-&#125;
-else if (c&gt;=&#39;A&#39;&amp;&amp;c&lt;=&#39;Z&#39;)
-&#123;
-    printf(&quot;upper case letter!\n&quot;);
-&#125;
-else if (c&gt;=&#39;0&#39;&amp;&amp;c&lt;=&#39;9&#39;)
-&#123;
-    printf(&quot;digit!\n&quot;);
-&#125;
-else
-&#123;
-    printf(&quot;white space!\n&quot;);
-&#125;
-
-return 0;
-</code></pre>
-<p>}</p>
-<p>‘’’</p>
-<p>##Problem 2.3<br>Consider int val&#x3D;0xCAFE; Write expressions using bitwise operators that do the following:<br>• test if atleast three of last four bits (LSB) are on<br>• reverse the byte order (i.e., produce val&#x3D;0xFECA)<br>• rotate fourbits (i.e., produce val&#x3D;0xECAF)<br>ans:</p>
-<ol>
-<li>(val&amp;0XF)|(val&amp;0X7)|(val&amp;0XB)|(val&amp;0XD)|(val&amp;0XE)</li>
-<li>(val&amp;0XFF&lt;&lt;8)|(val&amp;0XFF00&gt;&gt;8)</li>
-<li>(val&amp;0XF&lt;&lt;12)|(val&gt;&gt;4)</li>
-</ol>
-<p>##Problem 2.4<br>Using precedence rules, evaluate the following expressions and determine the value of the variables(without running the code). Also rewrite them using parenthesis to make the order explicit.<br>• Assume (x&#x3D;0xFF33,MASK&#x3D;0xFF00).Expression: c&#x3D;x &amp; MASK &#x3D;&#x3D;0;<br>• Assume (x&#x3D;10,y&#x3D;2,z&#x3D;2;).Expression: z&#x3D;y&#x3D;x++ + ++y∗2;<br>• Assume (x&#x3D;10,y&#x3D;4,z&#x3D;1;).Expression: y&gt;&gt;&#x3D; x&amp;0x2 &amp;&amp; z</p>
-<p>ans:</p>
-<ol>
-<li>c &#x3D; 0, c &#x3D; x &amp; (MASK&#x3D;&#x3D;0);</li>
-<li>x&#x3D;11, z&#x3D;16, y&#x3D;16, z &#x3D; y &#x3D; (x++) + ++(y*2)</li>
-<li>y &gt;&gt;&#x3D; (x&amp;0x2) &amp;&amp; z; y &#x3D; y&gt;&gt;1; x&#x3D;10, y&#x3D;2, z&#x3D;1</li>
-</ol>
-<p>comment:<br>the answer to the second one should be z&#x3D;y&#x3D;(x++)+ ((++y)*2), therefore x&#x3D;11, y&#x3D;3, z&#x3D;10+6&#x3D;16</p>
-<p>##Problem 2.5<br>Determine if the following statements have any errors. If so, highlight them and explain why.<br>• int 2nd_value&#x3D;10;<br>• Assume (x&#x3D;0,y&#x3D;0,alliszero&#x3D;1). alliszero &#x3D;(x&#x3D;1) &amp;&amp; (y&#x3D;0);<br>• Assume (x&#x3D;10,y&#x3D;3,z&#x3D;0;). y&#x3D;++x+y;z&#x3D;z−−&gt;x;<br>• Assume that we want to test if last four bits of x are on. (int MASK&#x3D;0xF;ison&#x3D;x&amp;MASK&#x3D;&#x3D;MASK)</p>
-<ol>
-<li>number can not be the first character.</li>
-<li>alliszero &#x3D; (x&#x3D;&#x3D;1) &amp;&amp; (y&#x3D;&#x3D;0)</li>
-<li>correct</li>
-<li>ison &#x3D; (x&amp;MASK)&#x3D;&#x3D;MASK</li>
-</ol>
-<hr />
-<p style="text-align: center">
-<font face='comic'> 
-Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved
-</font>
-</p>
-
+          <p>This is the solution for assignment 2.</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2022/03/05/6-087-2-assignment/">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
