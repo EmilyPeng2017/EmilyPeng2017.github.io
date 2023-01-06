@@ -459,8 +459,9 @@ Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> 
       </categories>
       <tags>
         <tag>C language</tag>
+        <tag>MIT Course</tag>
+        <tag>MIT 6.087</tag>
         <tag>assignment</tag>
-        <tag>MIT-6.087</tag>
       </tags>
   </entry>
   <entry>
@@ -522,7 +523,8 @@ Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> 
       </categories>
       <tags>
         <tag>C language</tag>
-        <tag>MIT-6.087</tag>
+        <tag>MIT Course</tag>
+        <tag>MIT 6.087</tag>
       </tags>
   </entry>
   <entry>
