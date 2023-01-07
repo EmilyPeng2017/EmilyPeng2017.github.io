@@ -582,4 +582,88 @@ Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> 
         <tag>MIT-6.087</tag>
       </tags>
   </entry>
+  <entry>
+    <title>6.087-4-More control flow. Input and output.</title>
+    <url>/2022/03/20/6-087-4-More-control-flow-Input-and-output/</url>
+    <content><![CDATA[<h1 id="1-Control-Flow"><a href="#1-Control-Flow" class="headerlink" title="1. Control Flow"></a>1. Control Flow</h1><h2 id="1-1-goto"><a href="#1-1-goto" class="headerlink" title="1.1 goto"></a>1.1 goto</h2><ul>
+<li><code>goto</code> allows you to jump unconditionally to arbitrary part of your code (within the same function)</li>
+<li>the location is identified using a label</li>
+<li>a label is a named location in the code. It has the same form as a variable followed by a ‘:’.</li>
+</ul>
+<p><strong>Any code that uses <code>goto</code> can be written without using one.</strong></p>
+<h3 id="1-1-1-error-handling"><a href="#1-1-1-error-handling" class="headerlink" title="1.1.1 error handling"></a>1.1.1 error handling</h3><p>Language like C++ and Java provide exception mechanism to recover from errors. In C, <code>goto</code> provides a convenient way to exit from nested blocks.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">for (..)</span><br><span class="line">&#123;</span><br><span class="line">	for (..)</span><br><span class="line">	&#123;</span><br><span class="line">		if (error_cond)</span><br><span class="line">		goto error;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">error:</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<h1 id="2-I-x2F-O"><a href="#2-I-x2F-O" class="headerlink" title="2. I&#x2F;O"></a>2. I&#x2F;O</h1><h2 id="2-1-Standard-input-and-output"><a href="#2-1-Standard-input-and-output" class="headerlink" title="2.1 Standard input and output"></a>2.1 Standard input and output</h2><p><code>int putchar(int)</code></p>
+<ul>
+<li>putchar(c) puts the character c on the standard output</li>
+<li>it returns the character printed or EOF on error</li>
+</ul>
+<p><code>int getchar()</code></p>
+<ul>
+<li>returns the next character from standard input</li>
+<li>it returns EOF on error</li>
+</ul>
+<h2 id="2-2-Standard-output-formatted"><a href="#2-2-Standard-output-formatted" class="headerlink" title="2.2 Standard output: formatted"></a>2.2 Standard output: formatted</h2><h3 id="2-2-1-prinft-format-specification"><a href="#2-2-1-prinft-format-specification" class="headerlink" title="2.2.1 prinft format specification"></a>2.2.1 prinft format specification</h3><p>The format specification has the following components:<br><code>%[flags][width][.precision][length]&lt;type&gt;</code></p>
+<h3 id="2-2-2-character-arrays"><a href="#2-2-2-character-arrays" class="headerlink" title="2.2.2 character arrays"></a>2.2.2 character arrays</h3><ul>
+<li>strings are represented as an array of characters</li>
+<li>C does not restrict the length of the string. The end of the string is specified using 0.</li>
+</ul>
+<h3 id="2-2-3-formatted-input"><a href="#2-2-3-formatted-input" class="headerlink" title="2.2.3 formatted input"></a>2.2.3 formatted input</h3><ul>
+<li>scanf ignores white spaces</li>
+<li>arguments have to be address of variables (pointers)</li>
+</ul>
+<h3 id="2-2-4-String-input-x2F-output"><a href="#2-2-4-String-input-x2F-output" class="headerlink" title="2.2.4 String input&#x2F;output"></a>2.2.4 String input&#x2F;output</h3><p>Instead of writing to the standard output, the formatted data can be written to or read from character arrays.<br><code>int sprintf(char string [], char format [], arg1, arg2)</code><br><code>int sscanf(char string [], char format [], arg1, arg2)</code></p>
+<h2 id="2-3-File-I-x2F-O"><a href="#2-3-File-I-x2F-O" class="headerlink" title="2.3 File I&#x2F;O"></a>2.3 File I&#x2F;O</h2><p>So far, we have read from the standard input and written to the standard output. C allows us to read data from text&#x2F;binary files using <code>fopen()</code></p>
+<p><code>FILE* fopen(char name[], char mode[])</code></p>
+<ul>
+<li>mode can be “r” (read only), “w” (write only), “a” (append) among other options. “b” can be appended for binary files.</li>
+<li>the standard input and output are also FILE* datatypes (stdin, stdout).</li>
+<li>stderr corresponds to standard error output (different from stdout).</li>
+</ul>
+<p><code>int fclose(FILE* fp)</code></p>
+<ul>
+<li>closes the stream (release OS resources)</li>
+<li>fclose() is automatically called on all open files when program terminates</li>
+</ul>
+<h3 id="2-3-1-File-input"><a href="#2-3-1-File-input" class="headerlink" title="2.3.1 File input"></a>2.3.1 File input</h3><p>a) <code>int getc(FILE* fp)</code></p>
+<ul>
+<li>reads a single character from the stream</li>
+<li>returns the character read or EOF on error&#x2F;end of file<br><strong>getcahr simply uses the standard input to read a character. We can implement it as follows:</strong><br><code>#define getchar() getc(stdin)</code></li>
+</ul>
+<p>b) <code>char[] fgets(char line[], int maxlen, FILE* fp)</code></p>
+<ul>
+<li>reads a single line (up to maxlen characters) from the input stream (including line break)</li>
+<li>returns a pointer to the character array that stores the line (read-only)</li>
+<li>return NULL if end of stream</li>
+</ul>
+<h3 id="2-3-2-File-output"><a href="#2-3-2-File-output" class="headerlink" title="2.3.2 File output"></a>2.3.2 File output</h3><p>a) <code>int putc(int c, FILE* fp)</code><br><code>#define putchar(c) putc(c, stdout)</code></p>
+<p>b) <code>int fputs(char line[], FILE* fp)</code></p>
+<h3 id="2-3-3-Command-line-input"><a href="#2-3-3-Command-line-input" class="headerlink" title="2.3.3 Command line input"></a>2.3.3 Command line input</h3><p><code>int main(int argc, char* argv[])</code></p>
+<ul>
+<li>argc: count of arguments</li>
+<li>argv[]: an array of pointers to each of the arguments</li>
+<li>note: the arguments include the name of the program as well</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li><code>./cat a.txt b.txt</code><br>  argc &#x3D; 3, argv[0]&#x3D;”cat”, argv[1]&#x3D;”a.txt”, argv[2]&#x3D;”b.txt”</li>
+<li><code>./cat</code><br>  argc &#x3D; 1, argv[0]&#x3D;”cat”</li>
+</ul>
+<hr />
+<p style="text-align: center">
+<font face='comic'> 
+Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved
+</font>
+</p>
+]]></content>
+      <categories>
+        <category>C language</category>
+      </categories>
+      <tags>
+        <tag>C language</tag>
+        <tag>MIT Course</tag>
+        <tag>MIT 6.087</tag>
+      </tags>
+  </entry>
 </search>
