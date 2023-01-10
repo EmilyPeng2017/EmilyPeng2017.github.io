@@ -695,4 +695,58 @@ Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> 
         <tag>Application</tag>
       </tags>
   </entry>
+  <entry>
+    <title>6.087-5-Pointers and memory addressing. Arrays and pointer arithmetic. Strings. Searching and sorting algorithms.</title>
+    <url>/2022/04/01/6-087-5-Pointers-and-memory-addressing-Arrays-and-pointer-arithmetic-Strings-Searching-and-sorting-algorithms/</url>
+    <content><![CDATA[<h1 id="1-Pointers-and-Memory-Address"><a href="#1-Pointers-and-Memory-Address" class="headerlink" title="1. Pointers and Memory Address"></a>1. Pointers and Memory Address</h1><ul>
+<li>pointer: memory address of a variable</li>
+<li>address can be used to access&#x2F;modify a variable from anywhere</li>
+<li>extremely useful, especially for data structure</li>
+<li>well known for obfuscating code</li>
+</ul>
+<h2 id="1-1-Physical-and-Virtual-Memory"><a href="#1-1-Physical-and-Virtual-Memory" class="headerlink" title="1.1 Physical and Virtual Memory"></a>1.1 Physical and Virtual Memory</h2><ul>
+<li><p>physical memory: physical resources where data can be stored and accessed by your computer<br>  a) cache<br>  b) RAM<br>  c) hard disk<br>  d) removable storage<br>Considerations:<br>  a) different sizes and access speeds<br>  b) memory management - major function of OS<br>  c) optimization - to ensure your code makes the best use of physical memory available<br>  d) OS moves around data in physical memory during execution<br>  e) embedded processors - may be very limited</p>
+</li>
+<li><p>virtual memory: abstraction by OS, addressable space accessible by your code<br>  a) virtual memory maps to different parts of physical memory<br>  b) usable parts of virtual memory: <em>stack</em> and <em>heap</em><br>  i. stack: where declared variables go<br>  ii. heap: where dynamic memory goes</p>
+</li>
+</ul>
+<h2 id="1-2-Addressing-and-Indirection"><a href="#1-2-Addressing-and-Indirection" class="headerlink" title="1.2 Addressing and Indirection"></a>1.2 Addressing and Indirection</h2><ul>
+<li>every variable residing in memory has an address</li>
+<li>what doesn’t have an address?<br>  a) register variable<br>  b) constants&#x2F;literals&#x2F;preprocessor defines<br>  c) expressions (unless result is a variable)</li>
+<li>how to find an address of a variable? The <em>&amp;</em> operator</li>
+<li>address of a variable of type <em>t</em> has type <em>t</em>*</li>
+</ul>
+<h2 id="1-3-Functions-with-Multiple-Outputs"><a href="#1-3-Functions-with-Multiple-Outputs" class="headerlink" title="1.3 Functions with Multiple Outputs"></a>1.3 Functions with Multiple Outputs</h2><ul>
+<li>can use pointers to pass back multiple outputs<br>example. Accessing caller’s variables<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">void swap(int *x, int *y)</span><br><span class="line">&#123;</span><br><span class="line">	int temp = *x;</span><br><span class="line">	*x = *y;</span><br><span class="line">	*y = temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>attention: variables passing out of scope<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">char * get_message()&#123;</span><br><span class="line">	char msg[] = &quot;Aren&#x27;t pointers fun?&quot;;</span><br><span class="line">	return msg;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main(void)</span><br><span class="line">&#123;</span><br><span class="line">	char *string = get_message();</span><br><span class="line">	puts(string);</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<strong>pointer invalid after variable passes out of scope</strong></li>
+</ul>
+<h1 id="2-Arrays-and-Pointer-Arithmetic"><a href="#2-Arrays-and-Pointer-Arithmetic" class="headerlink" title="2. Arrays and Pointer Arithmetic"></a>2. Arrays and Pointer Arithmetic</h1><h2 id="2-1-definition"><a href="#2-1-definition" class="headerlink" title="2.1 definition"></a>2.1 definition</h2><ul>
+<li>primitive arrays implemented in C using pointer to block of contiguous memory</li>
+<li>array is not modifiable&#x2F;reassignable like a pointer</li>
+</ul>
+<h2 id="2-2-the-sizeof-operator"><a href="#2-2-the-sizeof-operator" class="headerlink" title="2.2 the sizeof() operator"></a>2.2 the sizeof() operator</h2><ul>
+<li>array length<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#define array_length(arr) (sizeof(arr)==0?0:sizeof(arr)/sizeof((arr)[0]))</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="2-3-pointer-arithmetic"><a href="#2-3-pointer-arithmetic" class="headerlink" title="2.3 pointer arithmetic"></a>2.3 pointer arithmetic</h2><ul>
+<li>suppose <code>int *pa = arr</code></li>
+<li>pointer not an <code>int</code>, but can add or subtract an <code>int</code> from a pointer<br>  <code>pa + i</code> points to <code>arr [i]</code></li>
+<li>address value increments by <code>i</code> times size of data type<br>  suppose <code>arr[0]</code> has address <code>100</code>, then <code>arr[3]</code> has address <code>112</code></li>
+</ul>
+<h1 id="3-Strings"><a href="#3-Strings" class="headerlink" title="3. Strings"></a>3. Strings</h1><h2 id="3-1-String-Utility-Functions"><a href="#3-1-String-Utility-Functions" class="headerlink" title="3.1 String Utility Functions"></a>3.1 String Utility Functions</h2><h1 id="4-Searching-and-Sorting-Algorithms"><a href="#4-Searching-and-Sorting-Algorithms" class="headerlink" title="4. Searching and Sorting Algorithms"></a>4. Searching and Sorting Algorithms</h1><h2 id="4-1-Linear-Search"><a href="#4-1-Linear-Search" class="headerlink" title="4.1 Linear Search"></a>4.1 Linear Search</h2><h2 id="4-2-A-Simple-Sort"><a href="#4-2-A-Simple-Sort" class="headerlink" title="4.2 A Simple Sort"></a>4.2 A Simple Sort</h2><h2 id="4-3-Faster-Sorting"><a href="#4-3-Faster-Sorting" class="headerlink" title="4.3 Faster Sorting"></a>4.3 Faster Sorting</h2><h2 id="4-4-Binary-Search"><a href="#4-4-Binary-Search" class="headerlink" title="4.4 Binary Search"></a>4.4 Binary Search</h2><hr />
+<p style="text-align: center">
+<font face='comic'> 
+Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved
+</font>
+</p>
+]]></content>
+      <categories>
+        <category>C language</category>
+      </categories>
+      <tags>
+        <tag>C language</tag>
+        <tag>MIT Course</tag>
+        <tag>MIT 6.087</tag>
+      </tags>
+  </entry>
 </search>
