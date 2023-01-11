@@ -28,7 +28,7 @@
 <meta property="og:description" content="Lecture presentation on pointers and memory addresses, physical and virtual memory, addressing and indirection, functions with multiple outputs, arrays and pointer arithmetic, strings, string utility">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-04-01T15:07:34.000Z">
-<meta property="article:modified_time" content="2023-01-10T04:21:05.320Z">
+<meta property="article:modified_time" content="2023-01-11T03:28:30.351Z">
 <meta property="article:author" content="Emily Peng">
 <meta property="article:tag" content="C language">
 <meta property="article:tag" content="MIT Course">
@@ -256,7 +256,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">Edited on</span>
-      <time title="Modified: 2023-01-10 12:21:05" itemprop="dateModified" datetime="2023-01-10T12:21:05+08:00">2023-01-10</time>
+      <time title="Modified: 2023-01-11 11:28:30" itemprop="dateModified" datetime="2023-01-11T11:28:30+08:00">2023-01-11</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -282,14 +282,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">Symbols count in article: </span>
-      <span>2.2k</span>
+      <span>3k</span>
     </span>
     <span class="post-meta-item" title="Reading time">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">Reading time &asymp;</span>
-      <span>2 mins.</span>
+      <span>3 mins.</span>
     </span>
 </div>
 
@@ -336,7 +336,20 @@
 <li>pointer not an <code>int</code>, but can add or subtract an <code>int</code> from a pointer<br>  <code>pa + i</code> points to <code>arr [i]</code></li>
 <li>address value increments by <code>i</code> times size of data type<br>  suppose <code>arr[0]</code> has address <code>100</code>, then <code>arr[3]</code> has address <code>112</code></li>
 </ul>
-<h1 id="3-Strings"><a href="#3-Strings" class="headerlink" title="3. Strings"></a>3. Strings</h1><h2 id="3-1-String-Utility-Functions"><a href="#3-1-String-Utility-Functions" class="headerlink" title="3.1 String Utility Functions"></a>3.1 String Utility Functions</h2><h1 id="4-Searching-and-Sorting-Algorithms"><a href="#4-Searching-and-Sorting-Algorithms" class="headerlink" title="4. Searching and Sorting Algorithms"></a>4. Searching and Sorting Algorithms</h1><h2 id="4-1-Linear-Search"><a href="#4-1-Linear-Search" class="headerlink" title="4.1 Linear Search"></a>4.1 Linear Search</h2><h2 id="4-2-A-Simple-Sort"><a href="#4-2-A-Simple-Sort" class="headerlink" title="4.2 A Simple Sort"></a>4.2 A Simple Sort</h2><h2 id="4-3-Faster-Sorting"><a href="#4-3-Faster-Sorting" class="headerlink" title="4.3 Faster Sorting"></a>4.3 Faster Sorting</h2><h2 id="4-4-Binary-Search"><a href="#4-4-Binary-Search" class="headerlink" title="4.4 Binary Search"></a>4.4 Binary Search</h2><hr />
+<h1 id="3-Strings"><a href="#3-Strings" class="headerlink" title="3. Strings"></a>3. Strings</h1><p>String stored as null-terminated character arrays (last character &#x3D;&#x3D; ‘\0’)</p>
+<h2 id="3-1-String-Utility-Functions"><a href="#3-1-String-Utility-Functions" class="headerlink" title="3.1 String Utility Functions"></a>3.1 String Utility Functions</h2><ul>
+<li>String functions in standard header <code>string.h</code></li>
+<li>Copy functions: <code>strcpy()</code>, <code>strncpy()</code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">char * strncpy(strto, strfrom, n);</span><br><span class="line">// copy n chars from strfrom to strto</span><br></pre></td></tr></table></figure></li>
+<li>Comparison functions: <code>strcmp()</code>, <code>strncmp()</code></li>
+<li>String length: <code>strlen()</code></li>
+<li>Concatenation functions: <code>strcat()</code>, <code>strncat</code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">char * strcat(strto, strfrom);</span><br><span class="line">// add strfrom to end of strto</span><br></pre></td></tr></table></figure></li>
+<li>Search functions: <code>strchr()</code>, <code>strrchr()</code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">char * strchar(str, c);</span><br><span class="line">// find char c in str, return pointer to first occurrence, or NULL if not found</span><br><span class="line">// strrchr() return pointer to last occurrence, or NULL if not found</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h1 id="4-Searching-and-Sorting-Algorithms"><a href="#4-Searching-and-Sorting-Algorithms" class="headerlink" title="4. Searching and Sorting Algorithms"></a>4. Searching and Sorting Algorithms</h1><h2 id="4-1-Linear-Search"><a href="#4-1-Linear-Search" class="headerlink" title="4.1 Linear Search"></a>4.1 Linear Search</h2><ul>
+<li>suppose we have an array of <code>int</code>‘s<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int arr[100];</span><br></pre></td></tr></table></figure></li>
+<li>let’s write a simple search function:<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">int * linear_search(int val)</span><br><span class="line">&#123;</span><br><span class="line">	int *parr, *parrend = arr + array_length(arr);</span><br><span class="line"></span><br><span class="line">	for (parr = arr; parr &lt; parrend; parr++)</span><br><span class="line">	&#123;</span><br><span class="line">		if (*parr == val)</span><br><span class="line">		&#123;</span><br><span class="line">			return parr;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	return NULL;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="4-2-A-Simple-Sort"><a href="#4-2-A-Simple-Sort" class="headerlink" title="4.2 A Simple Sort"></a>4.2 A Simple Sort</h2><h2 id="4-3-Faster-Sorting"><a href="#4-3-Faster-Sorting" class="headerlink" title="4.3 Faster Sorting"></a>4.3 Faster Sorting</h2><h2 id="4-4-Binary-Search"><a href="#4-4-Binary-Search" class="headerlink" title="4.4 Binary Search"></a>4.4 Binary Search</h2><hr />
 <p style="text-align: center">
 <font face='comic'> 
 Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved
@@ -401,14 +414,14 @@ Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> 
       <i class="fa fa-chart-line"></i>
     </span>
       <span>Symbols count total: </span>
-    <span title="Symbols count total">33k</span>
+    <span title="Symbols count total">34k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>Reading time total &asymp;</span>
-    <span title="Reading time total">30 mins.</span>
+    <span title="Reading time total">31 mins.</span>
   </span>
 </div>
 <div class="busuanzi-count">
