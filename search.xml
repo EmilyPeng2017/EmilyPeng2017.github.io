@@ -249,7 +249,18 @@ Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> 
 <li><p>Usually one page is enough. Professors or committee normally have no time to scan a long letter. Make sure your first paragraph is impressive.</p>
 </li>
 </ol>
-<hr />
+<h2 id="Make-it-personal-not-general"><a href="#Make-it-personal-not-general" class="headerlink" title="Make it personal not general"></a>Make it personal not general</h2><p>Find something motivate you very specific</p>
+<h2 id="Body-3-paragraphs"><a href="#Body-3-paragraphs" class="headerlink" title="Body 3 paragraphs"></a>Body 3 paragraphs</h2><ol>
+<li><pre><code>What skills you have (they asked and cover that)
+</code></pre>
+<ol start="2">
+<li><pre><code>Situation -&gt; task -&gt; action -&gt; result (good for your interview as well)
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><hr />
 <p style="text-align: center">
 <font face='comic'> 
 Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved
@@ -770,6 +781,26 @@ Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> 
         <tag>C language</tag>
         <tag>MIT Course</tag>
         <tag>MIT 6.087</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>6.087-5-Sorting algorithms.</title>
+    <url>/2022/04/10/6-087-5-Sorting-algorithms/</url>
+    <content><![CDATA[<img src="https://" alt="" style="width:100%" />  
+
+<h1 id="1-Bubble-Sort"><a href="#1-Bubble-Sort" class="headerlink" title="1. Bubble Sort"></a>1. Bubble Sort</h1><hr />
+<p style="text-align: center">
+<font face='comic'> 
+Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved
+</font>
+</p>
+]]></content>
+      <categories>
+        <category>C language</category>
+        <category>Algorithm</category>
+      </categories>
+      <tags>
+        <tag>C language</tag>
       </tags>
   </entry>
 </search>
