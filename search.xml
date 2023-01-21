@@ -1,6 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>VIM - common used cmd!</title>
+    <url>/2022/10/14/VIM-common-used-cmd/</url>
+    <content><![CDATA[<img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Vimlogo.svg" alt="" style="width:50%" />  
+
+<h2 id="case-1-to-delete-and-add-same-content-in-multi-lines"><a href="#case-1-to-delete-and-add-same-content-in-multi-lines" class="headerlink" title="case 1 - to delete and add same content in multi lines"></a>case 1 - to delete and add same content in multi lines</h2><p>before change</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">item1</span><br><span class="line">item2</span><br><span class="line">item3</span><br><span class="line">item4</span><br></pre></td></tr></table></figure>
+<h3 id="add"><a href="#add" class="headerlink" title="add"></a>add</h3><ol>
+<li>move the cursor at the first line first character</li>
+<li>ctrl + v and enter visual block mode</li>
+<li>use motion key or run “3gg” to select all </li>
+<li>input I (upper case) to enter Edit mode</li>
+<li>input the content you want to insert</li>
+<li>ESC and wait for a moment</li>
+</ol>
+<p>after change</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">my_item1</span><br><span class="line">my_item2</span><br><span class="line">my_item3</span><br><span class="line">my_item4</span><br></pre></td></tr></table></figure>
+
+<h3 id="delete"><a href="#delete" class="headerlink" title="delete"></a>delete</h3><ol>
+<li>move the cursor at the first line first character</li>
+<li>ctrl + v and enter visual block mode</li>
+<li>use motion key or run “3j3l” to select what you want to delete </li>
+<li>enter “d” to delete<br>tip: after delete, we could still use ‘p’ to paste the deleted sentence which means ‘delete’ is like ‘cut’.</li>
+</ol>
+<hr />
+<p style="text-align: center">
+<font face='comic'> 
+Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved
+</font>
+</p>
+]]></content>
+      <categories>
+        <category>Tools</category>
+      </categories>
+      <tags>
+        <tag>Vim</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RTES - 1 - what is real-time system?</title>
+    <url>/2022/10/10/RTES-1-what-is-real-time-system/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Real-Time Embedded Systems Concepts and Practices</category>
+      </categories>
+      <tags>
+        <tag>RTES</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Stringize(#) and token pasting (##) operator in C language</title>
+    <url>/2022/11/12/Stringize-and-token-pasting-operator-in-C-language/</url>
+    <content><![CDATA[<h2 id="Stringizing-operator"><a href="#Stringizing-operator" class="headerlink" title="Stringizing operator"></a>Stringizing operator</h2><p>convert a token to string</p>
+<h2 id="Token-passing-operator"><a href="#Token-passing-operator" class="headerlink" title="Token passing operator"></a>Token passing operator</h2><p>Token pasting operator (##) combines or concatenates tokens together.</p>
+<p>example:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;stdio.h&gt; </span><br><span class="line"></span><br><span class="line">#define PRINT(msg) #msg     // this is used to stringize</span><br><span class="line">#define CONCAT(a, b) a##b   // this is used to concatenate tokens</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    printf(PRINT(This is a test for stringizing!) &quot;\n&quot;);</span><br><span class="line">    printf(&quot;CONCAT(20, 22) = %d\n&quot;, CONCAT(20, 22));</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>###Reference:<br>    [1] <a href="https://learn.microsoft.com/en-us/cpp/preprocessor/stringizing-operator-hash?view=msvc-170">https://learn.microsoft.com/en-us/cpp/preprocessor/stringizing-operator-hash?view=msvc-170</a><br>    [2] <a href="https://codeforwin.org/2018/11/stringize-token-pasting-operator-in-c-language.html">https://codeforwin.org/2018/11/stringize-token-pasting-operator-in-c-language.html</a></p>
+<hr />
+<p style="text-align: center">
+<font face='comic'> 
+Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved
+</font>
+</p>
+]]></content>
+      <categories>
+        <category>C language</category>
+      </categories>
+      <tags>
+        <tag>C language</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>How to use hexo to create page, tag and category</title>
     <url>/2022/10/09/1-how-to-use-hexo-to-create-file-tag-and-category/</url>
     <content><![CDATA[<p>Once setting up the hexo environment, it’s time to create your new pages! Shall we just use mkdir cmd to create subfolders under source folder? The answer is NO. Please realize this is HEXO! We could use “hexo cmd” directly!</p>
@@ -42,44 +114,6 @@ Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> 
       </tags>
   </entry>
   <entry>
-    <title>VIM - common used cmd!</title>
-    <url>/2022/10/14/VIM-common-used-cmd/</url>
-    <content><![CDATA[<img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Vimlogo.svg" alt="" style="width:50%" />  
-
-<h2 id="case-1-to-delete-and-add-same-content-in-multi-lines"><a href="#case-1-to-delete-and-add-same-content-in-multi-lines" class="headerlink" title="case 1 - to delete and add same content in multi lines"></a>case 1 - to delete and add same content in multi lines</h2><p>before change</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">item1</span><br><span class="line">item2</span><br><span class="line">item3</span><br><span class="line">item4</span><br></pre></td></tr></table></figure>
-<h3 id="add"><a href="#add" class="headerlink" title="add"></a>add</h3><ol>
-<li>move the cursor at the first line first character</li>
-<li>ctrl + v and enter visual block mode</li>
-<li>use motion key or run “3gg” to select all </li>
-<li>input I (upper case) to enter Edit mode</li>
-<li>input the content you want to insert</li>
-<li>ESC and wait for a moment</li>
-</ol>
-<p>after change</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">my_item1</span><br><span class="line">my_item2</span><br><span class="line">my_item3</span><br><span class="line">my_item4</span><br></pre></td></tr></table></figure>
-
-<h3 id="delete"><a href="#delete" class="headerlink" title="delete"></a>delete</h3><ol>
-<li>move the cursor at the first line first character</li>
-<li>ctrl + v and enter visual block mode</li>
-<li>use motion key or run “3j3l” to select what you want to delete </li>
-<li>enter “d” to delete<br>tip: after delete, we could still use ‘p’ to paste the deleted sentence which means ‘delete’ is like ‘cut’.</li>
-</ol>
-<hr />
-<p style="text-align: center">
-<font face='comic'> 
-Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved
-</font>
-</p>
-]]></content>
-      <categories>
-        <category>Tools</category>
-      </categories>
-      <tags>
-        <tag>Vim</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Cannot connect Raspberry Pi after a period of time?</title>
     <url>/2022/12/17/Cannot-connect-RespberryPi-after-a-period-of-time/</url>
     <content><![CDATA[<img src="https://www.softzone.es/app/uploads-softzone.es/2020/08/Apps-para-Raspberry-Pi.jpg" alt="" style="width:50%" />  
@@ -102,61 +136,6 @@ Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> 
       <tags>
         <tag>tools</tag>
         <tag>Raspberry Pi</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Stringize(#) and token pasting (##) operator in C language</title>
-    <url>/2022/11/12/Stringize-and-token-pasting-operator-in-C-language/</url>
-    <content><![CDATA[<h2 id="Stringizing-operator"><a href="#Stringizing-operator" class="headerlink" title="Stringizing operator"></a>Stringizing operator</h2><p>convert a token to string</p>
-<h2 id="Token-passing-operator"><a href="#Token-passing-operator" class="headerlink" title="Token passing operator"></a>Token passing operator</h2><p>Token pasting operator (##) combines or concatenates tokens together.</p>
-<p>example:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;stdio.h&gt; </span><br><span class="line"></span><br><span class="line">#define PRINT(msg) #msg     // this is used to stringize</span><br><span class="line">#define CONCAT(a, b) a##b   // this is used to concatenate tokens</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    printf(PRINT(This is a test for stringizing!) &quot;\n&quot;);</span><br><span class="line">    printf(&quot;CONCAT(20, 22) = %d\n&quot;, CONCAT(20, 22));</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>###Reference:<br>    [1] <a href="https://learn.microsoft.com/en-us/cpp/preprocessor/stringizing-operator-hash?view=msvc-170">https://learn.microsoft.com/en-us/cpp/preprocessor/stringizing-operator-hash?view=msvc-170</a><br>    [2] <a href="https://codeforwin.org/2018/11/stringize-token-pasting-operator-in-c-language.html">https://codeforwin.org/2018/11/stringize-token-pasting-operator-in-c-language.html</a></p>
-<hr />
-<p style="text-align: center">
-<font face='comic'> 
-Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved
-</font>
-</p>
-]]></content>
-      <categories>
-        <category>C language</category>
-      </categories>
-      <tags>
-        <tag>C language</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>To generate random numbers in C</title>
-    <url>/2022/10/18/To-generate-random-numbers-in-C/</url>
-    <content><![CDATA[<p>For randomly gerenating number, we could use &lt;stdlib.h&gt; header file in order to leverage the rand function. Each time rand() is called, it would generate a totally random number. However, it would generate the same value if the environment&#x2F;program kept unchanging. Thus here we introduce another function srand() which is used to create a seed value. The input parameter could set as time since time changes and makes sure the seed various.</p>
-<p>To generate floating number, we could type cast value to (float)rand();</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;stdlib.h&gt;</span><br><span class="line">#include &lt;time.h&gt;</span><br><span class="line"></span><br><span class="line">#define MAX_CYCLE (50)</span><br><span class="line">#define MAX_NUM (20)</span><br><span class="line">#define MIN_NUM (10)</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int rand_num, count = 0;</span><br><span class="line">    for (count = 0; count &lt; MAX_CYCLE; count++)</span><br><span class="line">    &#123;</span><br><span class="line">       if (0 == count%5)</span><br><span class="line">       &#123;</span><br><span class="line">            srand(time(0));     // The seed value is kept on changing</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">     printf(&quot;The randomly generated number is between (%d, %d)&quot;, MIN_NUM, MAX_NUM);</span><br><span class="line">     rand_num = rand()%(MAX_NUM - MIN_NUM) + MIN_NUM;</span><br><span class="line">     printf(&quot;%d\n&quot;, rand_num);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<hr />
-<p style="text-align: center">
-<font face='comic'> 
-Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved
-</font>
-</p>
-]]></content>
-      <categories>
-        <category>C language</category>
-      </categories>
-      <tags>
-        <tag>C language</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>RTES - 1 - what is real-time system?</title>
-    <url>/2022/10/10/RTES-1-what-is-real-time-system/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>Real-Time Embedded Systems Concepts and Practices</category>
-      </categories>
-      <tags>
-        <tag>RTES</tag>
       </tags>
   </entry>
   <entry>
@@ -239,42 +218,6 @@ Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> 
       </tags>
   </entry>
   <entry>
-    <title>how to write your motivation letter?</title>
-    <url>/2022/12/22/how-to-write-your-motivation-letter/</url>
-    <content><![CDATA[<ol>
-<li><p>For different job, do enough research and write different motivation letter. Some people like to write only one general letter and use it for all applications which is awful.</p>
-</li>
-<li><p>Be sincere, write down your own story. Do not be boastful or unrealistic. Do not care much about using complicated sentences. </p>
-</li>
-<li><p>Usually one page is enough. Professors or committee normally have no time to scan a long letter. Make sure your first paragraph is impressive.</p>
-</li>
-</ol>
-<h2 id="Make-it-personal-not-general"><a href="#Make-it-personal-not-general" class="headerlink" title="Make it personal not general"></a>Make it personal not general</h2><p>Find something motivate you very specific</p>
-<h2 id="Body-3-paragraphs"><a href="#Body-3-paragraphs" class="headerlink" title="Body 3 paragraphs"></a>Body 3 paragraphs</h2><ol>
-<li><pre><code>What skills you have (they asked and cover that)
-</code></pre>
-<ol start="2">
-<li><pre><code>Situation -&gt; task -&gt; action -&gt; result (good for your interview as well)
-</code></pre>
-</li>
-</ol>
-</li>
-</ol>
-<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><hr />
-<p style="text-align: center">
-<font face='comic'> 
-Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved
-</font>
-</p>
-]]></content>
-      <categories>
-        <category>Application</category>
-      </categories>
-      <tags>
-        <tag>Application</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>6.087-1-Introduction. Writing, compiling, and debugging C programs. Hello world.</title>
     <url>/2022/02/21/6-087-1-Introduction-Writing-compiling-and-debugging-C-programs-Hello-world/</url>
     <content><![CDATA[<h1 id="1-What-is-C"><a href="#1-What-is-C" class="headerlink" title="1. What is C?"></a>1. What is C?</h1><h2 id="1-1-widely-used-today"><a href="#1-1-widely-used-today" class="headerlink" title="1.1 widely used today"></a>1.1 widely used today</h2><pre><code>a. extends to newer system architectures
@@ -318,6 +261,27 @@ Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> 
         <tag>C language</tag>
         <tag>MIT Course</tag>
         <tag>MIT 6.087</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>To generate random numbers in C</title>
+    <url>/2022/10/18/To-generate-random-numbers-in-C/</url>
+    <content><![CDATA[<p>For randomly gerenating number, we could use &lt;stdlib.h&gt; header file in order to leverage the rand function. Each time rand() is called, it would generate a totally random number. However, it would generate the same value if the environment&#x2F;program kept unchanging. Thus here we introduce another function srand() which is used to create a seed value. The input parameter could set as time since time changes and makes sure the seed various.</p>
+<p>To generate floating number, we could type cast value to (float)rand();</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;stdlib.h&gt;</span><br><span class="line">#include &lt;time.h&gt;</span><br><span class="line"></span><br><span class="line">#define MAX_CYCLE (50)</span><br><span class="line">#define MAX_NUM (20)</span><br><span class="line">#define MIN_NUM (10)</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    int rand_num, count = 0;</span><br><span class="line">    for (count = 0; count &lt; MAX_CYCLE; count++)</span><br><span class="line">    &#123;</span><br><span class="line">       if (0 == count%5)</span><br><span class="line">       &#123;</span><br><span class="line">            srand(time(0));     // The seed value is kept on changing</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">     printf(&quot;The randomly generated number is between (%d, %d)&quot;, MIN_NUM, MAX_NUM);</span><br><span class="line">     rand_num = rand()%(MAX_NUM - MIN_NUM) + MIN_NUM;</span><br><span class="line">     printf(&quot;%d\n&quot;, rand_num);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr />
+<p style="text-align: center">
+<font face='comic'> 
+Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved
+</font>
+</p>
+]]></content>
+      <categories>
+        <category>C language</category>
+      </categories>
+      <tags>
+        <tag>C language</tag>
       </tags>
   </entry>
   <entry>
@@ -428,54 +392,6 @@ Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> 
       </tags>
   </entry>
   <entry>
-    <title>6.087-2-assignment</title>
-    <url>/2022/03/05/6-087-2-assignment/</url>
-    <content><![CDATA[<h2 id="Problem-2-1"><a href="#Problem-2-1" class="headerlink" title="Problem 2.1"></a>Problem 2.1</h2><p>Determine the size,minimum and maximum value following data types. Please specify if your<br>machine is 32 bit or 64 bits in the answer.<br>• char<br>• unsigned char<br>• short<br>• int<br>• unsigned int<br>• unsigned long<br>• float<br>Hint: Use sizeof() operator,limits.h and float.h header files</p>
-<p>ans:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;limits.h&gt;</span><br><span class="line">#include &lt;math.h&gt;</span><br><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;float.h&gt;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line"></span><br><span class="line">	printf(&quot;The size of char is %d, minimum is %d, maximum is %d\n&quot;, sizeof(char), CHAR_MIN, CHAR_MAX);</span><br><span class="line">	printf(&quot;The size of unsigned char is %d, minimum is %d, maximum is %u\n&quot;, sizeof(unsigned char), 0, UCHAR_MAX);</span><br><span class="line">	printf(&quot;The size of short is %d, minimum is %d, maximum is %d\n&quot;, sizeof(short), SHRT_MIN, SHRT_MAX);</span><br><span class="line">	printf(&quot;The size of int is %d, minimum is %d, maximum is %d\n&quot;, sizeof(int), INT_MIN, INT_MAX);</span><br><span class="line">	printf(&quot;The size of unsigned int is %d, minimum is %d, maximum is %u\n&quot;, sizeof(unsigned int), 0, UINT_MAX);</span><br><span class="line">	printf(&quot;The size of unsigned long is %d, minimum is %d, maximum is %u\n&quot;, sizeof(unsigned long), 0, ULONG_MAX);</span><br><span class="line">	printf(&quot;The size of float is %d, minimum is %f, maximum is %f\n&quot;, sizeof(float), FLT_MIN, FLT_MAX);</span><br></pre></td></tr></table></figure>
-
-<h2 id="Problem-2-2"><a href="#Problem-2-2" class="headerlink" title="Problem 2.2"></a>Problem 2.2</h2><p>Write logical expressions that tests whether a given character variable c is<br>• lower case letter<br>• upper case letter<br>• digit<br>• white space (includes space,tab,new line)</p>
-<p>ans:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line"></span><br><span class="line">	char c;</span><br><span class="line">	printf(&quot;Please input a character:\n&quot;);</span><br><span class="line">	scanf(&quot;%c&quot;, &amp;c);</span><br><span class="line">	if (c&gt;=&#x27;a&#x27;&amp;&amp;c&lt;=&#x27;z&#x27;)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;lower case letter!\n&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	else if (c&gt;=&#x27;A&#x27;&amp;&amp;c&lt;=&#x27;Z&#x27;)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;upper case letter!\n&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	else if (c&gt;=&#x27;0&#x27;&amp;&amp;c&lt;=&#x27;9&#x27;)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;digit!\n&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;white space!\n&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h2 id="Problem-2-3"><a href="#Problem-2-3" class="headerlink" title="Problem 2.3"></a>Problem 2.3</h2><p>Consider int val&#x3D;0xCAFE; Write expressions using bitwise operators that do the following:<br>• test if atleast three of last four bits (LSB) are on<br>• reverse the byte order (i.e., produce val&#x3D;0xFECA)<br>• rotate fourbits (i.e., produce val&#x3D;0xECAF)<br>ans:</p>
-<ol>
-<li>(val&amp;0XF)|(val&amp;0X7)|(val&amp;0XB)|(val&amp;0XD)|(val&amp;0XE)</li>
-<li>(val&amp;0XFF&lt;&lt;8)|(val&amp;0XFF00&gt;&gt;8)</li>
-<li>(val&amp;0XF&lt;&lt;12)|(val&gt;&gt;4)</li>
-</ol>
-<h2 id="Problem-2-4"><a href="#Problem-2-4" class="headerlink" title="Problem 2.4"></a>Problem 2.4</h2><p>Using precedence rules, evaluate the following expressions and determine the value of the variables(without running the code). Also rewrite them using parenthesis to make the order explicit.<br>• Assume (x&#x3D;0xFF33,MASK&#x3D;0xFF00).Expression: c&#x3D;x &amp; MASK &#x3D;&#x3D;0;<br>• Assume (x&#x3D;10,y&#x3D;2,z&#x3D;2;).Expression: z&#x3D;y&#x3D;x++ + ++y∗2;<br>• Assume (x&#x3D;10,y&#x3D;4,z&#x3D;1;).Expression: y&gt;&gt;&#x3D; x&amp;0x2 &amp;&amp; z</p>
-<p>ans:</p>
-<ol>
-<li>c &#x3D; 0, c &#x3D; x &amp; (MASK&#x3D;&#x3D;0);</li>
-<li>x&#x3D;11, z&#x3D;16, y&#x3D;16, z &#x3D; y &#x3D; (x++) + ++(y*2)</li>
-<li>y &gt;&gt;&#x3D; (x&amp;0x2) &amp;&amp; z; y &#x3D; y&gt;&gt;1; x&#x3D;10, y&#x3D;2, z&#x3D;1</li>
-</ol>
-<p>comment:<br>the answer to the second one should be z&#x3D;y&#x3D;(x++)+ ((++y)*2), therefore x&#x3D;11, y&#x3D;3, z&#x3D;10+6&#x3D;16</p>
-<h2 id="Problem-2-5"><a href="#Problem-2-5" class="headerlink" title="Problem 2.5"></a>Problem 2.5</h2><p>Determine if the following statements have any errors. If so, highlight them and explain why.<br>• int 2nd_value&#x3D;10;<br>• Assume (x&#x3D;0,y&#x3D;0,alliszero&#x3D;1). alliszero &#x3D;(x&#x3D;1) &amp;&amp; (y&#x3D;0);<br>• Assume (x&#x3D;10,y&#x3D;3,z&#x3D;0;). y&#x3D;++x+y;z&#x3D;z−−&gt;x;<br>• Assume that we want to test if last four bits of x are on. (int MASK&#x3D;0xF;ison&#x3D;x&amp;MASK&#x3D;&#x3D;MASK)</p>
-<ol>
-<li>number can not be the first character.</li>
-<li>alliszero &#x3D; (x&#x3D;&#x3D;1) &amp;&amp; (y&#x3D;&#x3D;0)</li>
-<li>correct</li>
-<li>ison &#x3D; (x&amp;MASK)&#x3D;&#x3D;MASK</li>
-</ol>
-<hr />
-<p style="text-align: center">
-<font face='comic'> 
-Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved
-</font>
-</p>
-]]></content>
-      <categories>
-        <category>C language</category>
-      </categories>
-      <tags>
-        <tag>C language</tag>
-        <tag>MIT Course</tag>
-        <tag>MIT 6.087</tag>
-        <tag>assignment</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>6.087-3-Control flow. Functions and modular programming. Variable scope. Static and global variables.</title>
     <url>/2022/03/07/6-087-3-Control-flow-Functions-and-modular-programming-Variable-scope-Static-and-global-variables/</url>
     <content><![CDATA[<h1 id="1-Blocks-and-Compound-Statements"><a href="#1-Blocks-and-Compound-Statements" class="headerlink" title="1. Blocks and Compound Statements"></a>1. Blocks and Compound Statements</h1><ul>
@@ -539,6 +455,43 @@ Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> 
       </tags>
   </entry>
   <entry>
+    <title>how to write your motivation letter?</title>
+    <url>/2022/12/22/how-to-write-your-motivation-letter/</url>
+    <content><![CDATA[<p>Motivation letter (or letter of motivation) is similar as Statement of Purpose (SOP).</p>
+<ol>
+<li><p>For different job, do enough research and write different motivation letter. Some people like to write only one general letter and use it for all applications which is awful.</p>
+</li>
+<li><p>Be sincere, write down your own story. Do not be boastful or unrealistic. Do not care much about using complicated sentences. </p>
+</li>
+<li><p>Usually one page is enough. Professors or committee normally have no time to scan a long letter. Make sure your first paragraph is impressive.</p>
+</li>
+</ol>
+<h2 id="Make-it-personal-not-general"><a href="#Make-it-personal-not-general" class="headerlink" title="Make it personal not general"></a>Make it personal not general</h2><p>Find something motivate you very specific</p>
+<h2 id="Body-3-paragraphs"><a href="#Body-3-paragraphs" class="headerlink" title="Body 3 paragraphs"></a>Body 3 paragraphs</h2><ol>
+<li><pre><code>What skills you have (they asked and cover that)
+</code></pre>
+<ol start="2">
+<li><pre><code>Situation -&gt; task -&gt; action -&gt; result (good for your interview as well)
+</code></pre>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><hr />
+<p style="text-align: center">
+<font face='comic'> 
+Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved
+</font>
+</p>
+]]></content>
+      <categories>
+        <category>Application</category>
+      </categories>
+      <tags>
+        <tag>Application</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>6.087-3-assignment</title>
     <url>/2022/03/11/6-087-3-assignment/</url>
     <content><![CDATA[<h1 id="Problem-3-1"><a href="#Problem-3-1" class="headerlink" title="Problem 3.1"></a>Problem 3.1</h1><p>Code profiling and registers. In this problem, we will use some basic code profiling to examine the effects of explicitly declaring variables as registers. Consider the fibonacci sequence generating function fibonacci in prob1.c, which is reproduced at the end of this problem set (and can be downloaded from Stellar). The main() function handles the code profiling, calling fibonacci() many times and measuring the average processor time. </p>
@@ -594,90 +547,6 @@ Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> 
       </tags>
   </entry>
   <entry>
-    <title>6.087-4-More control flow. Input and output.</title>
-    <url>/2022/03/20/6-087-4-More-control-flow-Input-and-output/</url>
-    <content><![CDATA[<h1 id="1-Control-Flow"><a href="#1-Control-Flow" class="headerlink" title="1. Control Flow"></a>1. Control Flow</h1><h2 id="1-1-goto"><a href="#1-1-goto" class="headerlink" title="1.1 goto"></a>1.1 goto</h2><ul>
-<li><code>goto</code> allows you to jump unconditionally to arbitrary part of your code (within the same function)</li>
-<li>the location is identified using a label</li>
-<li>a label is a named location in the code. It has the same form as a variable followed by a ‘:’.</li>
-</ul>
-<p><strong>Any code that uses <code>goto</code> can be written without using one.</strong></p>
-<h3 id="1-1-1-error-handling"><a href="#1-1-1-error-handling" class="headerlink" title="1.1.1 error handling"></a>1.1.1 error handling</h3><p>Language like C++ and Java provide exception mechanism to recover from errors. In C, <code>goto</code> provides a convenient way to exit from nested blocks.</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">for (..)</span><br><span class="line">&#123;</span><br><span class="line">	for (..)</span><br><span class="line">	&#123;</span><br><span class="line">		if (error_cond)</span><br><span class="line">		goto error;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">error:</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
-
-<h1 id="2-I-x2F-O"><a href="#2-I-x2F-O" class="headerlink" title="2. I&#x2F;O"></a>2. I&#x2F;O</h1><h2 id="2-1-Standard-input-and-output"><a href="#2-1-Standard-input-and-output" class="headerlink" title="2.1 Standard input and output"></a>2.1 Standard input and output</h2><p><code>int putchar(int)</code></p>
-<ul>
-<li>putchar(c) puts the character c on the standard output</li>
-<li>it returns the character printed or EOF on error</li>
-</ul>
-<p><code>int getchar()</code></p>
-<ul>
-<li>returns the next character from standard input</li>
-<li>it returns EOF on error</li>
-</ul>
-<h2 id="2-2-Standard-output-formatted"><a href="#2-2-Standard-output-formatted" class="headerlink" title="2.2 Standard output: formatted"></a>2.2 Standard output: formatted</h2><h3 id="2-2-1-prinft-format-specification"><a href="#2-2-1-prinft-format-specification" class="headerlink" title="2.2.1 prinft format specification"></a>2.2.1 prinft format specification</h3><p>The format specification has the following components:<br><code>%[flags][width][.precision][length]&lt;type&gt;</code></p>
-<h3 id="2-2-2-character-arrays"><a href="#2-2-2-character-arrays" class="headerlink" title="2.2.2 character arrays"></a>2.2.2 character arrays</h3><ul>
-<li>strings are represented as an array of characters</li>
-<li>C does not restrict the length of the string. The end of the string is specified using 0.</li>
-</ul>
-<h3 id="2-2-3-formatted-input"><a href="#2-2-3-formatted-input" class="headerlink" title="2.2.3 formatted input"></a>2.2.3 formatted input</h3><ul>
-<li>scanf ignores white spaces</li>
-<li>arguments have to be address of variables (pointers)</li>
-</ul>
-<h3 id="2-2-4-String-input-x2F-output"><a href="#2-2-4-String-input-x2F-output" class="headerlink" title="2.2.4 String input&#x2F;output"></a>2.2.4 String input&#x2F;output</h3><p>Instead of writing to the standard output, the formatted data can be written to or read from character arrays.<br><code>int sprintf(char string [], char format [], arg1, arg2)</code><br><code>int sscanf(char string [], char format [], arg1, arg2)</code></p>
-<h2 id="2-3-File-I-x2F-O"><a href="#2-3-File-I-x2F-O" class="headerlink" title="2.3 File I&#x2F;O"></a>2.3 File I&#x2F;O</h2><p>So far, we have read from the standard input and written to the standard output. C allows us to read data from text&#x2F;binary files using <code>fopen()</code></p>
-<p><code>FILE* fopen(char name[], char mode[])</code></p>
-<ul>
-<li>mode can be “r” (read only), “w” (write only), “a” (append) among other options. “b” can be appended for binary files.</li>
-<li>the standard input and output are also FILE* datatypes (stdin, stdout).</li>
-<li>stderr corresponds to standard error output (different from stdout).</li>
-</ul>
-<p><code>int fclose(FILE* fp)</code></p>
-<ul>
-<li>closes the stream (release OS resources)</li>
-<li>fclose() is automatically called on all open files when program terminates</li>
-</ul>
-<h3 id="2-3-1-File-input"><a href="#2-3-1-File-input" class="headerlink" title="2.3.1 File input"></a>2.3.1 File input</h3><p>a) <code>int getc(FILE* fp)</code></p>
-<ul>
-<li>reads a single character from the stream</li>
-<li>returns the character read or EOF on error&#x2F;end of file<br><strong>getcahr simply uses the standard input to read a character. We can implement it as follows:</strong><br><code>#define getchar() getc(stdin)</code></li>
-</ul>
-<p>b) <code>char[] fgets(char line[], int maxlen, FILE* fp)</code></p>
-<ul>
-<li>reads a single line (up to maxlen characters) from the input stream (including line break)</li>
-<li>returns a pointer to the character array that stores the line (read-only)</li>
-<li>return NULL if end of stream</li>
-</ul>
-<h3 id="2-3-2-File-output"><a href="#2-3-2-File-output" class="headerlink" title="2.3.2 File output"></a>2.3.2 File output</h3><p>a) <code>int putc(int c, FILE* fp)</code><br><code>#define putchar(c) putc(c, stdout)</code></p>
-<p>b) <code>int fputs(char line[], FILE* fp)</code></p>
-<h3 id="2-3-3-Command-line-input"><a href="#2-3-3-Command-line-input" class="headerlink" title="2.3.3 Command line input"></a>2.3.3 Command line input</h3><p><code>int main(int argc, char* argv[])</code></p>
-<ul>
-<li>argc: count of arguments</li>
-<li>argv[]: an array of pointers to each of the arguments</li>
-<li>note: the arguments include the name of the program as well</li>
-</ul>
-<p>Examples:</p>
-<ul>
-<li><code>./cat a.txt b.txt</code><br>  argc &#x3D; 3, argv[0]&#x3D;”cat”, argv[1]&#x3D;”a.txt”, argv[2]&#x3D;”b.txt”</li>
-<li><code>./cat</code><br>  argc &#x3D; 1, argv[0]&#x3D;”cat”</li>
-</ul>
-<hr />
-<p style="text-align: center">
-<font face='comic'> 
-Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved
-</font>
-</p>
-]]></content>
-      <categories>
-        <category>C language</category>
-      </categories>
-      <tags>
-        <tag>C language</tag>
-        <tag>MIT Course</tag>
-        <tag>MIT 6.087</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>how to write a recommendation letter?</title>
     <url>/2023/01/08/how-to-write-a-recommendation-letter/</url>
     <content><![CDATA[<p>A letter of recommendation is a letter written on behalf of an applicant by someone who can vouch for that person’s educational or professional performance. This letter is typically sent to an admissions officer or hiring manager considering a candidate for admission, employment, or a scholarship.</p>
@@ -704,6 +573,54 @@ Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> 
       </categories>
       <tags>
         <tag>Application</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>6.087-2-assignment</title>
+    <url>/2022/03/05/6-087-2-assignment/</url>
+    <content><![CDATA[<h2 id="Problem-2-1"><a href="#Problem-2-1" class="headerlink" title="Problem 2.1"></a>Problem 2.1</h2><p>Determine the size,minimum and maximum value following data types. Please specify if your<br>machine is 32 bit or 64 bits in the answer.<br>• char<br>• unsigned char<br>• short<br>• int<br>• unsigned int<br>• unsigned long<br>• float<br>Hint: Use sizeof() operator,limits.h and float.h header files</p>
+<p>ans:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;limits.h&gt;</span><br><span class="line">#include &lt;math.h&gt;</span><br><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;float.h&gt;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line"></span><br><span class="line">	printf(&quot;The size of char is %d, minimum is %d, maximum is %d\n&quot;, sizeof(char), CHAR_MIN, CHAR_MAX);</span><br><span class="line">	printf(&quot;The size of unsigned char is %d, minimum is %d, maximum is %u\n&quot;, sizeof(unsigned char), 0, UCHAR_MAX);</span><br><span class="line">	printf(&quot;The size of short is %d, minimum is %d, maximum is %d\n&quot;, sizeof(short), SHRT_MIN, SHRT_MAX);</span><br><span class="line">	printf(&quot;The size of int is %d, minimum is %d, maximum is %d\n&quot;, sizeof(int), INT_MIN, INT_MAX);</span><br><span class="line">	printf(&quot;The size of unsigned int is %d, minimum is %d, maximum is %u\n&quot;, sizeof(unsigned int), 0, UINT_MAX);</span><br><span class="line">	printf(&quot;The size of unsigned long is %d, minimum is %d, maximum is %u\n&quot;, sizeof(unsigned long), 0, ULONG_MAX);</span><br><span class="line">	printf(&quot;The size of float is %d, minimum is %f, maximum is %f\n&quot;, sizeof(float), FLT_MIN, FLT_MAX);</span><br></pre></td></tr></table></figure>
+
+<h2 id="Problem-2-2"><a href="#Problem-2-2" class="headerlink" title="Problem 2.2"></a>Problem 2.2</h2><p>Write logical expressions that tests whether a given character variable c is<br>• lower case letter<br>• upper case letter<br>• digit<br>• white space (includes space,tab,new line)</p>
+<p>ans:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main()&#123;</span><br><span class="line"></span><br><span class="line">	char c;</span><br><span class="line">	printf(&quot;Please input a character:\n&quot;);</span><br><span class="line">	scanf(&quot;%c&quot;, &amp;c);</span><br><span class="line">	if (c&gt;=&#x27;a&#x27;&amp;&amp;c&lt;=&#x27;z&#x27;)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;lower case letter!\n&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	else if (c&gt;=&#x27;A&#x27;&amp;&amp;c&lt;=&#x27;Z&#x27;)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;upper case letter!\n&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	else if (c&gt;=&#x27;0&#x27;&amp;&amp;c&lt;=&#x27;9&#x27;)</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;digit!\n&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	else</span><br><span class="line">	&#123;</span><br><span class="line">		printf(&quot;white space!\n&quot;);</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="Problem-2-3"><a href="#Problem-2-3" class="headerlink" title="Problem 2.3"></a>Problem 2.3</h2><p>Consider int val&#x3D;0xCAFE; Write expressions using bitwise operators that do the following:<br>• test if atleast three of last four bits (LSB) are on<br>• reverse the byte order (i.e., produce val&#x3D;0xFECA)<br>• rotate fourbits (i.e., produce val&#x3D;0xECAF)<br>ans:</p>
+<ol>
+<li>(val&amp;0XF)|(val&amp;0X7)|(val&amp;0XB)|(val&amp;0XD)|(val&amp;0XE)</li>
+<li>(val&amp;0XFF&lt;&lt;8)|(val&amp;0XFF00&gt;&gt;8)</li>
+<li>(val&amp;0XF&lt;&lt;12)|(val&gt;&gt;4)</li>
+</ol>
+<h2 id="Problem-2-4"><a href="#Problem-2-4" class="headerlink" title="Problem 2.4"></a>Problem 2.4</h2><p>Using precedence rules, evaluate the following expressions and determine the value of the variables(without running the code). Also rewrite them using parenthesis to make the order explicit.<br>• Assume (x&#x3D;0xFF33,MASK&#x3D;0xFF00).Expression: c&#x3D;x &amp; MASK &#x3D;&#x3D;0;<br>• Assume (x&#x3D;10,y&#x3D;2,z&#x3D;2;).Expression: z&#x3D;y&#x3D;x++ + ++y∗2;<br>• Assume (x&#x3D;10,y&#x3D;4,z&#x3D;1;).Expression: y&gt;&gt;&#x3D; x&amp;0x2 &amp;&amp; z</p>
+<p>ans:</p>
+<ol>
+<li>c &#x3D; 0, c &#x3D; x &amp; (MASK&#x3D;&#x3D;0);</li>
+<li>x&#x3D;11, z&#x3D;16, y&#x3D;16, z &#x3D; y &#x3D; (x++) + ++(y*2)</li>
+<li>y &gt;&gt;&#x3D; (x&amp;0x2) &amp;&amp; z; y &#x3D; y&gt;&gt;1; x&#x3D;10, y&#x3D;2, z&#x3D;1</li>
+</ol>
+<p>comment:<br>the answer to the second one should be z&#x3D;y&#x3D;(x++)+ ((++y)*2), therefore x&#x3D;11, y&#x3D;3, z&#x3D;10+6&#x3D;16</p>
+<h2 id="Problem-2-5"><a href="#Problem-2-5" class="headerlink" title="Problem 2.5"></a>Problem 2.5</h2><p>Determine if the following statements have any errors. If so, highlight them and explain why.<br>• int 2nd_value&#x3D;10;<br>• Assume (x&#x3D;0,y&#x3D;0,alliszero&#x3D;1). alliszero &#x3D;(x&#x3D;1) &amp;&amp; (y&#x3D;0);<br>• Assume (x&#x3D;10,y&#x3D;3,z&#x3D;0;). y&#x3D;++x+y;z&#x3D;z−−&gt;x;<br>• Assume that we want to test if last four bits of x are on. (int MASK&#x3D;0xF;ison&#x3D;x&amp;MASK&#x3D;&#x3D;MASK)</p>
+<ol>
+<li>number can not be the first character.</li>
+<li>alliszero &#x3D; (x&#x3D;&#x3D;1) &amp;&amp; (y&#x3D;&#x3D;0)</li>
+<li>correct</li>
+<li>ison &#x3D; (x&amp;MASK)&#x3D;&#x3D;MASK</li>
+</ol>
+<hr />
+<p style="text-align: center">
+<font face='comic'> 
+Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved
+</font>
+</p>
+]]></content>
+      <categories>
+        <category>C language</category>
+      </categories>
+      <tags>
+        <tag>C language</tag>
+        <tag>MIT Course</tag>
+        <tag>MIT 6.087</tag>
+        <tag>assignment</tag>
       </tags>
   </entry>
   <entry>
@@ -801,6 +718,90 @@ Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> 
       </categories>
       <tags>
         <tag>C language</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>6.087-4-More control flow. Input and output.</title>
+    <url>/2022/03/20/6-087-4-More-control-flow-Input-and-output/</url>
+    <content><![CDATA[<h1 id="1-Control-Flow"><a href="#1-Control-Flow" class="headerlink" title="1. Control Flow"></a>1. Control Flow</h1><h2 id="1-1-goto"><a href="#1-1-goto" class="headerlink" title="1.1 goto"></a>1.1 goto</h2><ul>
+<li><code>goto</code> allows you to jump unconditionally to arbitrary part of your code (within the same function)</li>
+<li>the location is identified using a label</li>
+<li>a label is a named location in the code. It has the same form as a variable followed by a ‘:’.</li>
+</ul>
+<p><strong>Any code that uses <code>goto</code> can be written without using one.</strong></p>
+<h3 id="1-1-1-error-handling"><a href="#1-1-1-error-handling" class="headerlink" title="1.1.1 error handling"></a>1.1.1 error handling</h3><p>Language like C++ and Java provide exception mechanism to recover from errors. In C, <code>goto</code> provides a convenient way to exit from nested blocks.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">for (..)</span><br><span class="line">&#123;</span><br><span class="line">	for (..)</span><br><span class="line">	&#123;</span><br><span class="line">		if (error_cond)</span><br><span class="line">		goto error;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">error:</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<h1 id="2-I-x2F-O"><a href="#2-I-x2F-O" class="headerlink" title="2. I&#x2F;O"></a>2. I&#x2F;O</h1><h2 id="2-1-Standard-input-and-output"><a href="#2-1-Standard-input-and-output" class="headerlink" title="2.1 Standard input and output"></a>2.1 Standard input and output</h2><p><code>int putchar(int)</code></p>
+<ul>
+<li>putchar(c) puts the character c on the standard output</li>
+<li>it returns the character printed or EOF on error</li>
+</ul>
+<p><code>int getchar()</code></p>
+<ul>
+<li>returns the next character from standard input</li>
+<li>it returns EOF on error</li>
+</ul>
+<h2 id="2-2-Standard-output-formatted"><a href="#2-2-Standard-output-formatted" class="headerlink" title="2.2 Standard output: formatted"></a>2.2 Standard output: formatted</h2><h3 id="2-2-1-prinft-format-specification"><a href="#2-2-1-prinft-format-specification" class="headerlink" title="2.2.1 prinft format specification"></a>2.2.1 prinft format specification</h3><p>The format specification has the following components:<br><code>%[flags][width][.precision][length]&lt;type&gt;</code></p>
+<h3 id="2-2-2-character-arrays"><a href="#2-2-2-character-arrays" class="headerlink" title="2.2.2 character arrays"></a>2.2.2 character arrays</h3><ul>
+<li>strings are represented as an array of characters</li>
+<li>C does not restrict the length of the string. The end of the string is specified using 0.</li>
+</ul>
+<h3 id="2-2-3-formatted-input"><a href="#2-2-3-formatted-input" class="headerlink" title="2.2.3 formatted input"></a>2.2.3 formatted input</h3><ul>
+<li>scanf ignores white spaces</li>
+<li>arguments have to be address of variables (pointers)</li>
+</ul>
+<h3 id="2-2-4-String-input-x2F-output"><a href="#2-2-4-String-input-x2F-output" class="headerlink" title="2.2.4 String input&#x2F;output"></a>2.2.4 String input&#x2F;output</h3><p>Instead of writing to the standard output, the formatted data can be written to or read from character arrays.<br><code>int sprintf(char string [], char format [], arg1, arg2)</code><br><code>int sscanf(char string [], char format [], arg1, arg2)</code></p>
+<h2 id="2-3-File-I-x2F-O"><a href="#2-3-File-I-x2F-O" class="headerlink" title="2.3 File I&#x2F;O"></a>2.3 File I&#x2F;O</h2><p>So far, we have read from the standard input and written to the standard output. C allows us to read data from text&#x2F;binary files using <code>fopen()</code></p>
+<p><code>FILE* fopen(char name[], char mode[])</code></p>
+<ul>
+<li>mode can be “r” (read only), “w” (write only), “a” (append) among other options. “b” can be appended for binary files.</li>
+<li>the standard input and output are also FILE* datatypes (stdin, stdout).</li>
+<li>stderr corresponds to standard error output (different from stdout).</li>
+</ul>
+<p><code>int fclose(FILE* fp)</code></p>
+<ul>
+<li>closes the stream (release OS resources)</li>
+<li>fclose() is automatically called on all open files when program terminates</li>
+</ul>
+<h3 id="2-3-1-File-input"><a href="#2-3-1-File-input" class="headerlink" title="2.3.1 File input"></a>2.3.1 File input</h3><p>a) <code>int getc(FILE* fp)</code></p>
+<ul>
+<li>reads a single character from the stream</li>
+<li>returns the character read or EOF on error&#x2F;end of file<br><strong>getcahr simply uses the standard input to read a character. We can implement it as follows:</strong><br><code>#define getchar() getc(stdin)</code></li>
+</ul>
+<p>b) <code>char[] fgets(char line[], int maxlen, FILE* fp)</code></p>
+<ul>
+<li>reads a single line (up to maxlen characters) from the input stream (including line break)</li>
+<li>returns a pointer to the character array that stores the line (read-only)</li>
+<li>return NULL if end of stream</li>
+</ul>
+<h3 id="2-3-2-File-output"><a href="#2-3-2-File-output" class="headerlink" title="2.3.2 File output"></a>2.3.2 File output</h3><p>a) <code>int putc(int c, FILE* fp)</code><br><code>#define putchar(c) putc(c, stdout)</code></p>
+<p>b) <code>int fputs(char line[], FILE* fp)</code></p>
+<h3 id="2-3-3-Command-line-input"><a href="#2-3-3-Command-line-input" class="headerlink" title="2.3.3 Command line input"></a>2.3.3 Command line input</h3><p><code>int main(int argc, char* argv[])</code></p>
+<ul>
+<li>argc: count of arguments</li>
+<li>argv[]: an array of pointers to each of the arguments</li>
+<li>note: the arguments include the name of the program as well</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li><code>./cat a.txt b.txt</code><br>  argc &#x3D; 3, argv[0]&#x3D;”cat”, argv[1]&#x3D;”a.txt”, argv[2]&#x3D;”b.txt”</li>
+<li><code>./cat</code><br>  argc &#x3D; 1, argv[0]&#x3D;”cat”</li>
+</ul>
+<hr />
+<p style="text-align: center">
+<font face='comic'> 
+Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved
+</font>
+</p>
+]]></content>
+      <categories>
+        <category>C language</category>
+      </categories>
+      <tags>
+        <tag>C language</tag>
+        <tag>MIT Course</tag>
+        <tag>MIT 6.087</tag>
       </tags>
   </entry>
 </search>
