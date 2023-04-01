@@ -288,12 +288,12 @@ Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> 
     <title>6.087-1-assignment</title>
     <url>/2022/02/25/6-087-1-assignment/</url>
     <content><![CDATA[<h1 id="Problem-Set-1"><a href="#Problem-Set-1" class="headerlink" title="Problem Set 1"></a>Problem Set 1</h1><h2 id="Problem-1-1"><a href="#Problem-1-1" class="headerlink" title="Problem 1.1"></a>Problem 1.1</h2><p>(a) what do curly braces denote in C? Why does it make sense to use curly braces to surround the body of a function?</p>
-<p>anw：</p>
+<p>ans：</p>
 <ul>
 <li>Curly braces mean a block of code with the aim to complete one function</li>
 <li>a function is a set of code to achieve one goal, curly brace makes it a whole block</li>
 </ul>
-<p>(b) Describe the difference between the literal values 7, “7”, and ‘7’<br>anw：</p>
+<p>(b) Describe the difference between the literal values 7, “7”, and ‘7’<br>ans：</p>
 <ul>
 <li>7 is a number, it could be int. “7” is a string, ‘7’ is a char.</li>
 </ul>
