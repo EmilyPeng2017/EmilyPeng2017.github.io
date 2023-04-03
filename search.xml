@@ -802,4 +802,101 @@ Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> 
         <tag>MIT 6.087</tag>
       </tags>
   </entry>
+  <entry>
+    <title>2023-01-08-how-to-write-a-recommendation-letter</title>
+    <url>/2022/04/22/2023-01-08-how-to-write-a-recommendation-letter-md/</url>
+    <content><![CDATA[<h1 id="1-User-defined-datatype"><a href="#1-User-defined-datatype" class="headerlink" title="1. User defined datatype"></a>1. User defined datatype</h1><h2 id="1-1-Structures"><a href="#1-1-Structures" class="headerlink" title="1.1 Structures"></a>1.1 Structures</h2><ul>
+<li>definition: A structure is a colletion of related variables (possibly different types) grouped together under a single name. This is an example of composition - building complex structures out of simple ones.</li>
+<li>struct members can be structures</li>
+<li>struct menmbers can be self referential</li>
+<li>individual members can be accessed using ‘.’ operator. If structure is nested, multiple ‘.’ are required.</li>
+<li>For large structures it is more efficient to pass pointers. Members can be accesses from structure pointers using ‘-&gt;’ operator.</li>
+<li>the size of a structure is greater than or equal to the sum of the sizes of its members.</li>
+<li>members can be explicitly aligned using compiler extensions. – <em>attribute</em>((aligned(x)))</li>
+</ul>
+<h2 id="1-2-Unions"><a href="#1-2-Unions" class="headerlink" title="1.2 Unions"></a>1.2 Unions</h2><ul>
+<li>definition: A union is a variable that may hold objects of different types&#x2F;sizes in the same memory location.<br>Example:<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">union data</span><br><span class="line">&#123;</span><br><span class="line">	int idata;</span><br><span class="line">	float fdata;</span><br><span class="line">	char* sdata;</span><br><span class="line">&#125; d1, d2, d3;</span><br><span class="line">d1.idata = 10;</span><br><span class="line">d1.fdata = 3.14F;</span><br><span class="line">d1.sdata = &quot;hello world&quot;;</span><br></pre></td></tr></table></figure></li>
+<li>The size of the union variable is equal to the size of its largest element.</li>
+</ul>
+<h2 id="1-3-Bitfields"><a href="#1-3-Bitfields" class="headerlink" title="1.3 Bitfields"></a>1.3 Bitfields</h2><ul>
+<li>definition: A bit-field is a set of adjacent bits within a single ‘word’.</li>
+<li>bit fields vs. masks</li>
+</ul>
+<h1 id="2-Data-structure"><a href="#2-Data-structure" class="headerlink" title="2. Data structure"></a>2. Data structure</h1><h2 id="2-1-Memory-allocation"><a href="#2-1-Memory-allocation" class="headerlink" title="2.1 Memory allocation"></a>2.1 Memory allocation</h2><ul>
+<li>digression</li>
+</ul>
+<ol>
+<li>void* malloc(size_t n)</li>
+</ol>
+<ul>
+<li>malloc() allocates blocks of memory</li>
+<li>returns a pointer to uninitialized block of memory on success</li>
+</ul>
+<ol start="2">
+<li>void* calloc(size_t n, size_t size)</li>
+</ol>
+<ul>
+<li>allocates an array of n elements each of which is ‘size’ bytes</li>
+<li>initializes memory to 0</li>
+</ul>
+<ol start="3">
+<li>void free(void*)</li>
+</ol>
+<ul>
+<li>frees memory allocated my malloc()</li>
+<li>common error: accessing memory after calling free</li>
+</ul>
+<h2 id="2-2-Linked-lists"><a href="#2-2-Linked-lists" class="headerlink" title="2.2 Linked lists"></a>2.2 Linked lists</h2><ul>
+<li>definition: A dynamic data structure that consists of a sequence of records where each element contains a link to the next record in the sequence.</li>
+<li>linked lists can be singly linked, doubly linked or circular. in this lecture, we only focus on singly linked list.</li>
+<li>every node has a payload and a link to the next node in the list.</li>
+<li>the start (head) of the list is maintained in a separate variable.</li>
+<li>end of the list is indicated by NULL.<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">struct node</span><br><span class="line">&#123;</span><br><span class="line">	int data; /* payload */</span><br><span class="line">	struct node* next;</span><br><span class="line">&#125;;</span><br><span class="line">struct node* head; // beginning</span><br></pre></td></tr></table></figure></li>
+<li>linked list vs. arrays<table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left">linked-list</th>
+<th align="left">array</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">size</td>
+<td align="left">dynamic</td>
+<td align="left">fixed</td>
+</tr>
+<tr>
+<td align="left">indexing</td>
+<td align="left">O(n)</td>
+<td align="left">O(1)</td>
+</tr>
+<tr>
+<td align="left">inserting</td>
+<td align="left">O(1)</td>
+<td align="left">O(n)</td>
+</tr>
+<tr>
+<td align="left">deleting</td>
+<td align="left">O(1)</td>
+<td align="left">O(n)</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h2 id="2-3-Binary-trees"><a href="#2-3-Binary-trees" class="headerlink" title="2.3 Binary trees"></a>2.3 Binary trees</h2><hr />
+<p style="text-align: center">
+<font face='comic'> 
+Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved
+</font>
+</p>
+]]></content>
+      <categories>
+        <category>C language</category>
+      </categories>
+      <tags>
+        <tag>C language</tag>
+        <tag>MIT Course</tag>
+        <tag>MIT 6.087</tag>
+      </tags>
+  </entry>
 </search>
