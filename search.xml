@@ -569,7 +569,7 @@ Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> 
 </p>
 ]]></content>
       <categories>
-        <category>Appliation</category>
+        <category>Application</category>
       </categories>
       <tags>
         <tag>Application</tag>
@@ -916,6 +916,41 @@ Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> 
 </font>
 </p>
 ]]></content>
+      <categories>
+        <category>C language</category>
+      </categories>
+      <tags>
+        <tag>C language</tag>
+        <tag>MIT Course</tag>
+        <tag>MIT 6.087</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>6.087 7 Pointers to pointers, pointer and string arrays, multidimensional arrays. Stacks and queues</title>
+    <url>/2022/07/16/6-087-7-Pointers-to-pointers-pointer-and-string-arrays-multidimensional-arrays-Stacks-and-queues/</url>
+    <content><![CDATA[<h1 id="More-about-Pointers"><a href="#More-about-Pointers" class="headerlink" title="More about Pointers"></a>More about Pointers</h1><ul>
+<li>Pointer represents address to variable in memory<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">struct div_t *pdiv;</span><br><span class="line">// pointer to struct div_t</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="Pointers-to-Pointers"><a href="#Pointers-to-Pointers" class="headerlink" title="Pointers to Pointers"></a>Pointers to Pointers</h2><ul>
+<li>Address stored by pointer also data in memory<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int n = 3;</span><br><span class="line">int *pn = &amp;n;      // pointer to n</span><br><span class="line">int **ppn = &amp;pn;   // pointer to address of n</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="Pointer-Arrays"><a href="#Pointer-Arrays" class="headerlink" title="Pointer Arrays"></a>Pointer Arrays</h2><ul>
+<li><code>int *arr[20];</code> - an array of pointers to <code>int</code>‘s</li>
+<li>pointer array example</li>
+</ul>
+<ol>
+<li>have an array in arr[100]; that contains some numbers</li>
+<li>want to have a sorted version of the array, but not modify arr</li>
+<li>can declare a pointer array <code>int *sorted_array[100];</code> containing pointers to elements of arr and sort the pointers instead of the numbers themselves.</li>
+<li>good approach for sorting arrays whose elements are very large (like strings)</li>
+</ol>
+<h2 id="Multidimensional-Arrays"><a href="#Multidimensional-Arrays" class="headerlink" title="Multidimensional Arrays"></a>Multidimensional Arrays</h2><h1 id="Data-Structures"><a href="#Data-Structures" class="headerlink" title="Data Structures"></a>Data Structures</h1><h2 id="Stacks"><a href="#Stacks" class="headerlink" title="Stacks"></a>Stacks</h2><h2 id="Queues"><a href="#Queues" class="headerlink" title="Queues"></a>Queues</h2><h2 id="Application-Calculator"><a href="#Application-Calculator" class="headerlink" title="Application: Calculator"></a>Application: Calculator</h2><hr />
+<p style="text-align: center">
+<font face='comic'> 
+Copyright &copy; 2022-<script>document.write(new Date().getFullYear())</script> Emily Peng All Rights Reserved
+</font>
+</p>
+ll]]></content>
       <categories>
         <category>C language</category>
       </categories>
