@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Out of the Shell</title>
+    <link>https://emilypeng2017.github.io/</link>
+    
+    <atom:link href="https://emilypeng2017.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    
+    <description></description>
+    <pubDate>Thu, 26 Dec 2024 15:04:26 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Hello World</title>
+      <link>https://emilypeng2017.github.io/2024/12/26/hello-world/</link>
+      <guid>https://emilypeng2017.github.io/2024/12/26/hello-world/</guid>
+      <pubDate>Thu, 26 Dec 2024 11:40:43 GMT</pubDate>
+      
+        
+        
+      <description>&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</description>
+        
+      
+      
+      
+      
+      
+      
+      <comments>https://emilypeng2017.github.io/2024/12/26/hello-world/#disqus_thread</comments>
+      
+    </item>
+    
+  </channel>
+</rss>
