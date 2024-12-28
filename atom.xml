@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Out of the Shell</title>
-  
+  <icon>https://emilypeng2017.github.io/icon.png</icon>
   
   <link href="https://emilypeng2017.github.io/atom.xml" rel="self"/>
   
@@ -23,17 +23,18 @@
     <published>2024-12-28T12:52:10.000Z</published>
     <updated>2024-12-28T19:38:39.634Z</updated>
     
-    <content type="html"><![CDATA[<div style="text-align: center;">    <img src="img/blogs/0/ewsn.jpg" alt="EWSN Sand Paiting Performance" width="600"> </div><div style="text-align: center;">    <img src="img/blogs/0/pic_prof.jpg" alt="Keynote" width="600"> </div>]]></content>
-    
     
       
       
+        
+        
     <summary type="html">&lt;div style=&quot;text-align: center;&quot;&gt;
     &lt;img src=&quot;img/blogs/0/ewsn.jpg&quot; alt=&quot;EWSN Sand Paiting Performance&quot; width=&quot;600&quot;&gt; 
 &lt;/div&gt;
 
 
-&lt;div style=</summary>
+&lt;div</summary>
+        
       
     
     
