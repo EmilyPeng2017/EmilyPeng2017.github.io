@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Out of the Shell</title>
+  <title>In the Shell</title>
   <icon>https://emilypeng2017.github.io/icon.png</icon>
   
   <link href="https://emilypeng2017.github.io/atom.xml" rel="self"/>
