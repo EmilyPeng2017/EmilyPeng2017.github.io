@@ -1,49 +1,28 @@
-/* 通用设置 */
+/* 调整页面主要内容和侧边栏的宽度 */
 .page-main {
-    display: flex;
-    justify-content: space-between; /* 主内容和侧边栏保持分布 */
-    gap: 20px; /* 统一间隔 */
-    padding: 0 20px; /* 增加页面整体内边距 */
+    width: calc(100% - 350px); /* 主内容区域宽度，350px 是侧边栏宽度 */
+    max-width: none; /* 取消最大宽度限制 */
+    margin: 0 auto;
 }
 
-/* 两栏布局 */
-.page-main .content {
-    flex: 3;
-    max-width: 1000px; /* 主内容最大宽度 */
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+.sidebar {
+    width: 350px; /* 侧边栏宽度 */
 }
 
-.page-main .sidebar {
-    flex: 1;
-    max-width: 150px; /* 侧边栏最大宽度 */
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+/* 调整整体布局 */
+.content-wrapper {
+    max-width: 1400px; /* 整体页面宽度 */
+    margin: 0 auto; /* 居中对齐 */
 }
 
-/* 移动设备优化 */
+/* 响应式调整：在较小屏幕时恢复默认布局 */
 @media (max-width: 768px) {
     .page-main {
-        flex-direction: column; /* 垂直排列 */
-        padding: 0 15px;
+        width: 100%; /* 主内容占满屏幕 */
+        padding: 0 15px; /* 增加左右留白 */
     }
-
-    .page-main .content, .page-main .sidebar {
-        max-width: 100%;
-        padding: 20px;
+    .sidebar {
+        width: 100%; /* 侧边栏宽度随屏幕变化 */
+        margin-bottom: 20px; /* 增加侧边栏下方留白 */
     }
-}
-
-/* 三栏布局（主页额外样式） */
-.page-main .widgets {
-    flex: 1;
-    max-width: 150px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
 }
