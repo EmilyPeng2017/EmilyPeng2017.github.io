@@ -1,0 +1,17 @@
+/* 调整页面内容的宽度 */
+.page-main {
+    max-width: 1200px; /* 设置页面最大宽度 */
+    margin: 0 auto; /* 居中内容 */
+    padding: 0 20px; /* 增加左右间距，防止内容贴边 */
+}
+
+/* 如果需要调整侧边栏的宽度，可以添加以下内容 */
+.sidebar {
+    max-width: 300px; /* 侧边栏宽度 */
+}
+
+/* 让头部和尾部宽度一致 */
+.page-header, .page-footer {
+    max-width: 1200px;
+    margin: 0 auto;
+}
