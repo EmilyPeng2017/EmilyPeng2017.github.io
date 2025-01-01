@@ -30,85 +30,55 @@
       window.addEventListener('hashchange', switchTab, false);
   })();
   </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="In the Shell" type="application/atom+xml">
-</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="In the Shell" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/categories/articles">Articles</a><a class="navbar-item" href="/publications">Publications</a><a class="navbar-item" href="/categories/readings">Readings</a><a class="navbar-item" href="/categories/keeplearning">Keep Learning</a><a class="navbar-item" href="/categories/fillingstation">Filling Station</a><a class="navbar-item" href="/categories/life">Life</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="GitHub" href="https://github.com/EmilyPeng2017"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2025-01-01T00:00:00.000Z" title="01/01/2025, 01:00:00">2025-01-01</time></span><span class="level-item">Updated&nbsp;<time dateTime="2025-01-01T15:16:08.577Z" title="01/01/2025, 16:16:08">2025-01-01</time></span><span class="level-item"><a class="link-muted" href="/categories/keeplearning/">keeplearning</a></span><span class="level-item">4 minutes read (About 595 words)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/01/01/ML-Ch1-The-Machine-Learning-Landscape/">ML-Ch1-The Machine Learning Landscape</a></p><div class="content"><!-- toc -->
+</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="In the Shell" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/categories/articles">Articles</a><a class="navbar-item" href="/publications">Publications</a><a class="navbar-item" href="/categories/readings">Readings</a><a class="navbar-item" href="/categories/keeplearning">Keep Learning</a><a class="navbar-item" href="/categories/fillingstation">Filling Station</a><a class="navbar-item" href="/categories/life">Life</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="GitHub" href="https://github.com/EmilyPeng2017"><i class="fab fa-github"></i></a><a class="navbar-item search" title="Search" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2025-01-01T00:00:00.000Z" title="01/01/2025, 01:00:00">2025-01-01</time></span><span class="level-item">Updated&nbsp;<time dateTime="2025-01-01T15:33:11.378Z" title="01/01/2025, 16:33:11">2025-01-01</time></span><span class="level-item"><a class="link-muted" href="/categories/keeplearning/">keeplearning</a></span><span class="level-item">4 minutes read (About 595 words)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2025/01/01/ML-Ch1-The-Machine-Learning-Landscape/">ML-Ch1-The Machine Learning Landscape</a></p><div class="content"><!-- toc -->
 <h1 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h1><p>In this blog series, I will be documenting my learning journey with the book [<em>Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow</em>] (link: <a target="_blank" rel="noopener" href="https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/">https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/</a>) by Aurélien Géron. This book is an excellent resource for gaining practical skills in machine learning and deep learning using Python libraries like Scikit-Learn, Keras, and TensorFlow. My goal is to learn and implement the algorithms discussed in the book and apply them to real-world problems.</p>
 <p>Each blog post will focus on a specific chapter or concept from the book, with practical code examples and insights.</p>
-<h1 id="Takehome-notes"><a href="#Takehome-notes" class="headerlink" title="Takehome notes"></a>Takehome notes</h1><ul>
-<li><strong>Machine learning is great for:</strong><ul>
+<h1 id="Takehome-notes"><a href="#Takehome-notes" class="headerlink" title="Takehome notes"></a>Takehome notes</h1><h2 id="Machine-learning-is-great-for"><a href="#Machine-learning-is-great-for" class="headerlink" title="Machine learning is great for:"></a><strong>Machine learning is great for:</strong></h2><ul>
 <li>problems for which existing solutions require a lot of fine-tuning or long lists of rules</li>
 <li>complex problems for which using a traditional approach yields no good solution</li>
 <li>fluctuating environments</li>
 <li>getting insights about complex problems and large amounts of data</li>
 </ul>
-</li>
-<li><strong>Types of machine learning systems</strong><ul>
-<li><strong>Training Supervision</strong><ul>
-<li>Classify principle: How they are supervised during training.</li>
-<li><em>supervised learning</em><ul>
-<li>Classify principle: the training set you feed to the algorithm includes the desired solutions, called <em>labels</em>.</li>
-<li>example: <ol>
-<li>A labeled training set for spam classification; </li>
-<li>To predict a target numeric value, a regression problem.</li>
-</ol>
-</li>
-</ul>
-</li>
-<li><em>unsupervised learning</em><ul>
-<li>Classify principle: the training data is unlabeled, the system tries to learn without a teacher.</li>
-<li>example:<ol>
-<li>To run a <em>clustering algorithm</em> to try to detect groups of similar visitors of your blog;</li>
-<li>To feed <em>visualization</em> algorithms a lot of complex and unlabeled data, and they output a 2D or 3D representation of your data that can easily be plotted.</li>
-<li>Anomaly detection.</li>
-<li>Association rule learning: in which the goal is to dig into large amounts of data and discover interesting relations between attributes.</li>
-</ol>
-</li>
-</ul>
-</li>
-<li><em>semi-supervised learning</em><ul>
-<li>Classify principle: Since labeling data is usually time-consuming and costly, you will often have plenty of unlabeled instances, and few labeled instances.</li>
-<li>example:<ol>
-<li>some photo-hosting services.</li>
-<li>most semi-supervised learning algorithms are combinations of unsupervised and supervised algorighms.</li>
-</ol>
-</li>
-</ul>
-</li>
-<li><em>self-supervised learning</em><ul>
-<li>Classify principle: generating a fully labeled dataset from a fully unlabeled one. Once the whole dataset is labeled, any supervised learning algorighm can be used.</li>
-<li>example: to repair damaged images or to erase unwanted objects from pictures.</li>
-</ul>
-</li>
-<li><em>reinforcement learning</em><ul>
-<li>Classify principle: The learning system, called an agent, can observe the environment, select and perform actions, and get rewards in return (rewards or penalties).</li>
-<li>example: <ol>
-<li>many robots implement reinforcement learning algorithms to learn how to walk;</li>
-<li>DeepMind’s AlphaGo!</li>
-</ol>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><strong>Batch versus Online Learning</strong><ul>
-<li>Classify principle: whether or not the system can learn incrementally from a stream of incoming data.</li>
-<li><em>batch learning</em><ul>
-<li>Classify principle: the system is incapable of learning incrementally: it must be trained using all the available data.</li>
-<li>also called <em>offline learning</em>: first the system is trained, and then it is launched into production and runs without learning anymore; it just applies what is has learned.</li>
-<li>pros: this solution is simple and often works fine</li>
-<li>cons: time-consuming and requires a lot of computing resources (CPU, memory space, disk space, disk I&#x2F;O, network I&#x2F;O, etc).</li>
-</ul>
-</li>
-<li><em>online learning</em><ul>
-<li>Classify principle: the system is fed by data instances sequentially, either individually or in small groups called <em>mini-batches</em>. Each learning step is fast and cheap, so the system can learn about new data on the fly, as it arrives. </li>
-<li>pros: useful for systems that need to adapt to change extremely rapidly; good for systems with limited computing resources ike training on a mobile device.</li>
-<li>cons: if bad data is fed to the system, the system’s performance will decline, possibly quickly.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+<h2 id="Types-of-machine-learning-systems"><a href="#Types-of-machine-learning-systems" class="headerlink" title="Types of machine learning systems"></a><strong>Types of machine learning systems</strong></h2><h3 id="Training-Supervision"><a href="#Training-Supervision" class="headerlink" title="Training Supervision"></a><strong>Training Supervision</strong></h3><pre><code>- Classify principle: How they are supervised during training.
+- *supervised learning*
+  - Classify principle: the training set you feed to the algorithm includes the desired solutions, called *labels*.
+  - example: 
+    1. A labeled training set for spam classification; 
+    2. To predict a target numeric value, a regression problem.
+- *unsupervised learning*
+  - Classify principle: the training data is unlabeled, the system tries to learn without a teacher.
+  - example:
+    1. To run a *clustering algorithm* to try to detect groups of similar visitors of your blog;
+    2. To feed *visualization* algorithms a lot of complex and unlabeled data, and they output a 2D or 3D representation of your data that can easily be plotted.
+    3. Anomaly detection.
+    4. Association rule learning: in which the goal is to dig into large amounts of data and discover interesting relations between attributes.
+- *semi-supervised learning*
+  - Classify principle: Since labeling data is usually time-consuming and costly, you will often have plenty of unlabeled instances, and few labeled instances.
+  - example:
+    1. some photo-hosting services.
+    2. most semi-supervised learning algorithms are combinations of unsupervised and supervised algorighms.
+- *self-supervised learning*
+  - Classify principle: generating a fully labeled dataset from a fully unlabeled one. Once the whole dataset is labeled, any supervised learning algorighm can be used.
+  - example: to repair damaged images or to erase unwanted objects from pictures.
+- *reinforcement learning*
+  - Classify principle: The learning system, called an agent, can observe the environment, select and perform actions, and get rewards in return (rewards or penalties).
+  - example: 
+    1. many robots implement reinforcement learning algorithms to learn how to walk;
+    2. DeepMind&#39;s AlphaGo!
+</code></pre>
+<h3 id="Batch-versus-Online-Learning"><a href="#Batch-versus-Online-Learning" class="headerlink" title="Batch versus Online Learning"></a><strong>Batch versus Online Learning</strong></h3><pre><code>- Classify principle: whether or not the system can learn incrementally from a stream of incoming data.
+- *batch learning*
+  - Classify principle: the system is incapable of learning incrementally: it must be trained using all the available data.
+  - also called *offline learning*: first the system is trained, and then it is launched into production and runs without learning anymore; it just applies what is has learned.
+  - pros: this solution is simple and often works fine
+  - cons: time-consuming and requires a lot of computing resources (CPU, memory space, disk space, disk I/O, network I/O, etc).
+- *online learning*
+  - Classify principle: the system is fed by data instances sequentially, either individually or in small groups called *mini-batches*. Each learning step is fast and cheap, so the system can learn about new data on the fly, as it arrives. 
+  - pros: useful for systems that need to adapt to change extremely rapidly; good for systems with limited computing resources ike training on a mobile device.
+  - cons: if bad data is fed to the system, the system&#39;s performance will decline, possibly quickly.
+
+  
+</code></pre>
 </div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2024-12-29T21:15:24.000Z" title="29/12/2024, 22:15:24">2024-12-29</time></span><span class="level-item">Updated&nbsp;<time dateTime="2024-12-30T16:21:13.343Z" title="30/12/2024, 17:21:13">2024-12-30</time></span><span class="level-item"><a class="link-muted" href="/categories/fillingstation/">fillingstation</a></span><span class="level-item">a few seconds read (About 49 words)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2024/12/29/Breathe-and-Allow-Things-to-Pass/">Breathe and Allow Things to Pass</a></p><div class="content"><div style="text-align: center;">
     <img src="/img/blogs/1/mossintherain.jpg" alt="Moss in the rain - took in Cambridge" width="600"> 
 </div>
