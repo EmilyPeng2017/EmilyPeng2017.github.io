@@ -1,8 +1,9 @@
 /* 调整页面主要内容和侧边栏的宽度 */
 .page-main {
-    width: calc(100% - 200px); /* 主内容区域宽度，350px 是侧边栏宽度 */
+    width: calc(100% - 200px); /* 主内容区域宽度，200px 是侧边栏宽度 */
     max-width: none; /* 取消最大宽度限制 */
     margin: 0 auto;
+    box-sizing: border-box; /* 包含 padding 和 border */
 }
 
 .site-title {
@@ -17,28 +18,50 @@
     margin-bottom: 20px; /* 与正文保持间距 */
 }
 
-
 .sidebar {
     width: 200px; /* 侧边栏宽度 */
+    box-sizing: border-box; /* 包含 padding 和 border */
 }
 
 /* 调整整体布局 */
 .content-wrapper {
+    display: flex;
     max-width: 1400px; /* 整体页面宽度 */
     margin: 0 auto; /* 居中对齐 */
+    flex-wrap: wrap; /* 使布局元素在较小的屏幕上换行 */
+    padding: 0 15px; /* 为整个页面提供一些内边距 */
+}
+
+/* Flexbox布局：主内容和侧边栏 */
+.content-wrapper .page-main {
+    flex: 1; /* 主内容占据剩余空间 */
+}
+
+.content-wrapper .sidebar {
+    flex: 0 0 200px; /* 侧边栏保持固定宽度 */
 }
 
 /* 响应式调整：在较小屏幕时恢复默认布局 */
 @media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column; /* 使主内容和侧边栏垂直排列 */
+    }
+
     .page-main {
         width: 100%; /* 主内容占满屏幕 */
         padding: 0 15px; /* 增加左右留白 */
     }
+
     .sidebar {
         width: 100%; /* 侧边栏宽度随屏幕变化 */
         margin-bottom: 20px; /* 增加侧边栏下方留白 */
     }
+
     .post-title, h1 {
         font-size: 2em; /* 缩小字体大小以适应小屏幕 */
+    }
+
+    .site-title {
+        font-size: 28px; /* 缩小标题字体大小 */
     }
 }
