@@ -65,3 +65,27 @@
         font-size: 28px; /* 缩小标题字体大小 */
     }
 }
+
+/* Target the main content container */
+.main-content, .content, .post {
+    width: 90%; /* Make the content container 90% of the viewport width */
+    max-width: none; /* Remove any max-width restriction */
+    margin: 0 auto; /* Center the content */
+    padding: 20px; /* Add padding around the content */
+}
+
+/* If the content is inside another container, like a wrapper, adjust it as well */
+.wrapper {
+    width: 100%;
+    max-width: 1200px; /* Set a max width for very large screens */
+    margin: 0 auto;
+}
+
+/* Adjusting for smaller screens */
+@media (max-width: 768px) {
+    .main-content, .content, .post {
+        width: 100%; /* Make sure the content takes up full width on small screens */
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+}
+
