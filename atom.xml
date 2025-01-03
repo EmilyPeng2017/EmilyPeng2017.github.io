@@ -6,7 +6,7 @@
   <link href="https://emilypeng2017.github.io/atom.xml" rel="self"/>
   
   <link href="https://emilypeng2017.github.io/"/>
-  <updated>2025-01-02T15:05:23.086Z</updated>
+  <updated>2025-01-03T07:51:35.375Z</updated>
   <id>https://emilypeng2017.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ML-Ch2-End to End Machine Learning Project</title>
+    <link href="https://emilypeng2017.github.io/2025/01/03/ML-Ch2-End-to-End-Machine-Learning-Project/"/>
+    <id>https://emilypeng2017.github.io/2025/01/03/ML-Ch2-End-to-End-Machine-Learning-Project/</id>
+    <published>2025-01-03T07:12:57.000Z</published>
+    <updated>2025-01-03T07:51:35.375Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;!-- toc --&gt;
+&lt;h1 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h1&gt;&lt;p&gt;In this chapter,</summary>
+        
+      
+    
+    
+    
+    <category term="keeplearning" scheme="https://emilypeng2017.github.io/categories/keeplearning/"/>
+    
+    
+    <category term="Machine Learning" scheme="https://emilypeng2017.github.io/tags/Machine-Learning/"/>
+    
+    <category term="Hands-On Machine Learning" scheme="https://emilypeng2017.github.io/tags/Hands-On-Machine-Learning/"/>
+    
+  </entry>
   
   <entry>
     <title>ML-Ch1-The Machine Learning Landscape</title>
