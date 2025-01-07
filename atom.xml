@@ -6,7 +6,7 @@
   <link href="https://emilypeng2017.github.io/atom.xml" rel="self"/>
   
   <link href="https://emilypeng2017.github.io/"/>
-  <updated>2025-01-07T10:11:36.060Z</updated>
+  <updated>2025-01-07T10:02:06.666Z</updated>
   <id>https://emilypeng2017.github.io/</id>
   
   <author>
@@ -15,32 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>4096 or 4095? Let&#39;s talk about ADC LSB</title>
-    <link href="https://emilypeng2017.github.io/2025/01/07/4096-or-4095-Let-s-talk-about-ADC-LSB/"/>
-    <id>https://emilypeng2017.github.io/2025/01/07/4096-or-4095-Let-s-talk-about-ADC-LSB/</id>
-    <published>2025-01-07T10:11:36.000Z</published>
-    <updated>2025-01-07T10:11:36.060Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;!-- toc --&gt;
-&lt;h1 id=&quot;Introduction&quot;&gt;&lt;a href=&quot;#Introduction&quot; class=&quot;headerlink&quot; title=&quot;Introduction&quot;&gt;&lt;/a&gt;Introduction&lt;/h1&gt;&lt;p&gt;In this blog</summary>
-        
-      
-    
-    
-    
-    
-    <category term="Machine Learning" scheme="https://emilypeng2017.github.io/tags/Machine-Learning/"/>
-    
-    <category term="Hands-On Machine Learning" scheme="https://emilypeng2017.github.io/tags/Hands-On-Machine-Learning/"/>
-    
-  </entry>
   
   <entry>
     <title>1_Multimaterial Cryogenic Printing of Three-Dimensional Soft Hydrogel Machines</title>
@@ -74,11 +48,11 @@
     
     <category term="Hydrogel" scheme="https://emilypeng2017.github.io/tags/Hydrogel/"/>
     
-    <category term="Nature Communications" scheme="https://emilypeng2017.github.io/tags/Nature-Communications/"/>
-    
     <category term="Soft Robotics" scheme="https://emilypeng2017.github.io/tags/Soft-Robotics/"/>
     
     <category term="Cryogenic Printing" scheme="https://emilypeng2017.github.io/tags/Cryogenic-Printing/"/>
+    
+    <category term="Nature Communications" scheme="https://emilypeng2017.github.io/tags/Nature-Communications/"/>
     
     <category term="Multimaterial Printing" scheme="https://emilypeng2017.github.io/tags/Multimaterial-Printing/"/>
     
