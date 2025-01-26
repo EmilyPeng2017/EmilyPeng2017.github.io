@@ -6,7 +6,7 @@
   <link href="https://emilypeng2017.github.io/atom.xml" rel="self"/>
   
   <link href="https://emilypeng2017.github.io/"/>
-  <updated>2025-01-25T17:06:39.491Z</updated>
+  <updated>2025-01-26T15:54:05.173Z</updated>
   <id>https://emilypeng2017.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://emilypeng2017.github.io/2025/01/25/Miles-and-Moments-20250125/"/>
     <id>https://emilypeng2017.github.io/2025/01/25/Miles-and-Moments-20250125/</id>
     <published>2025-01-25T15:46:03.000Z</published>
-    <updated>2025-01-25T17:06:39.491Z</updated>
+    <updated>2025-01-26T15:54:05.173Z</updated>
     
     
     <summary type="html">&lt;!-- toc --&gt;
@@ -30,6 +30,8 @@
     
     
     <category term="articles" scheme="https://emilypeng2017.github.io/categories/articles/"/>
+    
+    <category term="runEmilyRun" scheme="https://emilypeng2017.github.io/categories/articles/runEmilyRun/"/>
     
     
     <category term="Bruges" scheme="https://emilypeng2017.github.io/tags/Bruges/"/>
