@@ -6,7 +6,7 @@
   <link href="https://emilypeng2017.github.io/atom.xml" rel="self"/>
   
   <link href="https://emilypeng2017.github.io/"/>
-  <updated>2025-03-08T23:38:18.990Z</updated>
+  <updated>2025-03-09T16:19:18.017Z</updated>
   <id>https://emilypeng2017.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2025_reading_plan</title>
+    <link href="https://emilypeng2017.github.io/2025/03/09/2025-reading-plan/"/>
+    <id>https://emilypeng2017.github.io/2025/03/09/2025-reading-plan/</id>
+    <published>2025-03-09T16:16:26.000Z</published>
+    <updated>2025-03-09T16:19:18.017Z</updated>
+    
+    
+    <summary type="html">&lt;!-- toc --&gt;
+&lt;h2 id=&quot;2025-reading-plan&quot;&gt;&lt;a href=&quot;#2025-reading-plan&quot; class=&quot;headerlink&quot; title=&quot;2025 reading plan.&quot;&gt;&lt;/a&gt;2025 reading plan.&lt;br&gt;</summary>
+    
+    
+    
+    <category term="readings" scheme="https://emilypeng2017.github.io/categories/readings/"/>
+    
+    
+    <category term="reading" scheme="https://emilypeng2017.github.io/tags/reading/"/>
+    
+    <category term="plan" scheme="https://emilypeng2017.github.io/tags/plan/"/>
+    
+  </entry>
   
   <entry>
     <title>A perfect day</title>
@@ -514,33 +536,6 @@
     
     
     <category term="morning_flowers" scheme="https://emilypeng2017.github.io/tags/morning-flowers/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Regulating Emotions: Invasive or Non-invasive?</title>
-    <link href="https://emilypeng2017.github.io/2024/12/28/Regulating-Emotions-Invasive-or-Non-invasive/"/>
-    <id>https://emilypeng2017.github.io/2024/12/28/Regulating-Emotions-Invasive-or-Non-invasive/</id>
-    <published>2024-12-28T11:52:10.000Z</published>
-    <updated>2025-01-07T10:02:34.786Z</updated>
-    
-    
-    <summary type="html">&lt;!-- toc --&gt;
-
-&lt;p&gt;This month, I attended the 21st International Conference on Embedded Wireless Systems and Networks (EWSN’24) in Abu Dhabi. It was quite an eventful experience for several reasons:&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="articles" scheme="https://emilypeng2017.github.io/categories/articles/"/>
-    
-    
-    <category term="wearable devices" scheme="https://emilypeng2017.github.io/tags/wearable-devices/"/>
-    
-    <category term="questions" scheme="https://emilypeng2017.github.io/tags/questions/"/>
-    
-    <category term="depression" scheme="https://emilypeng2017.github.io/tags/depression/"/>
-    
-    <category term="conferences" scheme="https://emilypeng2017.github.io/tags/conferences/"/>
     
   </entry>
   
