@@ -6,7 +6,7 @@
   <link href="https://emilypeng2017.github.io/atom.xml" rel="self"/>
   
   <link href="https://emilypeng2017.github.io/"/>
-  <updated>2025-03-21T15:31:36.968Z</updated>
+  <updated>2025-03-21T15:38:52.017Z</updated>
   <id>https://emilypeng2017.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://emilypeng2017.github.io/2025/03/21/seminor-Cambridge-Shery-Huang/"/>
     <id>https://emilypeng2017.github.io/2025/03/21/seminor-Cambridge-Shery-Huang/</id>
     <published>2025-03-21T08:58:19.000Z</published>
-    <updated>2025-03-21T15:31:36.968Z</updated>
+    <updated>2025-03-21T15:38:52.017Z</updated>
     
     
       
@@ -36,12 +36,20 @@
     
     
     
-    <category term="category1" scheme="https://emilypeng2017.github.io/categories/category1/"/>
+    <category term="keeplearning" scheme="https://emilypeng2017.github.io/categories/keeplearning/"/>
+    
+    <category term="seminars" scheme="https://emilypeng2017.github.io/categories/keeplearning/seminars/"/>
     
     
-    <category term="tag1" scheme="https://emilypeng2017.github.io/tags/tag1/"/>
+    <category term="wearable devices" scheme="https://emilypeng2017.github.io/tags/wearable-devices/"/>
     
-    <category term="tag2" scheme="https://emilypeng2017.github.io/tags/tag2/"/>
+    <category term="seminar" scheme="https://emilypeng2017.github.io/tags/seminar/"/>
+    
+    <category term="biofabrication" scheme="https://emilypeng2017.github.io/tags/biofabrication/"/>
+    
+    <category term="University of Cambridge" scheme="https://emilypeng2017.github.io/tags/University-of-Cambridge/"/>
+    
+    <category term="3D printing" scheme="https://emilypeng2017.github.io/tags/3D-printing/"/>
     
   </entry>
   
