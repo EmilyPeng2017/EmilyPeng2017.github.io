@@ -49,6 +49,28 @@
   </entry>
   
   <entry>
+    <title>Why Do We Set Boundaries for Ourselves?</title>
+    <link href="https://emilypeng2017.github.io/2025/03/18/Interdisciplary-project/"/>
+    <id>https://emilypeng2017.github.io/2025/03/18/Interdisciplary-project/</id>
+    <published>2025-03-18T19:07:43.000Z</published>
+    <updated>2025-03-22T22:42:23.035Z</updated>
+    
+    
+    <summary type="html">&lt;!-- toc --&gt;
+&lt;p&gt;Recently, I’ve encountered several challenges while conducting material-related experiments. At the same time, I’ve been learning machine learning and trying to apply it to my project which is something I hadn’t initially planned for. This made me think about what it truly means for a project to be interdisciplinary and why we feel the need to categorize everything in our lives.  &lt;/p&gt;</summary>
+    
+    
+    
+    <category term="articles" scheme="https://emilypeng2017.github.io/categories/articles/"/>
+    
+    
+    <category term="questions" scheme="https://emilypeng2017.github.io/tags/questions/"/>
+    
+    <category term="life" scheme="https://emilypeng2017.github.io/tags/life/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2025_reading_plan</title>
     <link href="https://emilypeng2017.github.io/2025/03/09/2025-reading-plan/"/>
     <id>https://emilypeng2017.github.io/2025/03/09/2025-reading-plan/</id>
@@ -521,28 +543,6 @@
     <category term="3D-Printed" scheme="https://emilypeng2017.github.io/tags/3D-Printed/"/>
     
     <category term="PressureSensor" scheme="https://emilypeng2017.github.io/tags/PressureSensor/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ML-Ch1-The Machine Learning Landscape</title>
-    <link href="https://emilypeng2017.github.io/2025/01/01/ML-Ch1-The-Machine-Learning-Landscape/"/>
-    <id>https://emilypeng2017.github.io/2025/01/01/ML-Ch1-The-Machine-Learning-Landscape/</id>
-    <published>2025-01-01T00:00:00.000Z</published>
-    <updated>2025-02-22T20:26:11.656Z</updated>
-    
-    
-    <summary type="html">&lt;!-- toc --&gt;
-&lt;h1 id=&quot;🚀-Introduction&quot;&gt;&lt;a href=&quot;#🚀-Introduction&quot; class=&quot;headerlink&quot; title=&quot;🚀 Introduction&quot;&gt;&lt;/a&gt;🚀 Introduction&lt;/h1&gt;&lt;p&gt;Welcome to [this blog series](&lt;a href=&quot;https://emilypeng2017.github.io/tags/Hands-On-Machine-Learning/&quot;&gt;tags&amp;#x2F;Machine Learning&lt;/a&gt;), where I document my journey through the acclaimed book &lt;a href=&quot;https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/&quot;&gt;&lt;em&gt;Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow&lt;/em&gt;&lt;/a&gt; by Aurélien Géron.  &lt;/p&gt;</summary>
-    
-    
-    
-    <category term="keeplearning" scheme="https://emilypeng2017.github.io/categories/keeplearning/"/>
-    
-    
-    <category term="Machine Learning" scheme="https://emilypeng2017.github.io/tags/Machine-Learning/"/>
-    
-    <category term="Hands-On Machine Learning" scheme="https://emilypeng2017.github.io/tags/Hands-On-Machine-Learning/"/>
     
   </entry>
   
