@@ -6,7 +6,7 @@
   <link href="https://emilypeng2017.github.io/atom.xml" rel="self"/>
   
   <link href="https://emilypeng2017.github.io/"/>
-  <updated>2025-03-21T15:47:55.167Z</updated>
+  <updated>2025-03-23T15:43:03.957Z</updated>
   <id>https://emilypeng2017.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Miles and Moments_20250201_Hi, Robin!</title>
+    <link href="https://emilypeng2017.github.io/2025/03/22/Miles-and-Moments-20250322/"/>
+    <id>https://emilypeng2017.github.io/2025/03/22/Miles-and-Moments-20250322/</id>
+    <published>2025-03-22T22:43:21.000Z</published>
+    <updated>2025-03-23T15:43:03.957Z</updated>
+    
+    
+    <summary type="html">&lt;!-- toc --&gt;
+&lt;p&gt;This month has been a whirlwind of events. The previous tenant ended our contract, prompting us to search for a replacement. Fortunately, I found a suitable tenant—thanks to the power of the internet, which made communication between Belgium and Shanghai much easier. With my mom and sister’s support, the transition was swift and smooth.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="articles" scheme="https://emilypeng2017.github.io/categories/articles/"/>
+    
+    <category term="runEmilyRun" scheme="https://emilypeng2017.github.io/categories/articles/runEmilyRun/"/>
+    
+    
+    <category term="running" scheme="https://emilypeng2017.github.io/tags/running/"/>
+    
+    <category term="10 km" scheme="https://emilypeng2017.github.io/tags/10-km/"/>
+    
+    <category term="Bruges" scheme="https://emilypeng2017.github.io/tags/Bruges/"/>
+    
+  </entry>
   
   <entry>
     <title>seminar_Cambridge_Shery Huang</title>
@@ -121,7 +147,7 @@
     <link href="https://emilypeng2017.github.io/2025/03/02/Miles-and-Moments-20250302-Cambridge/"/>
     <id>https://emilypeng2017.github.io/2025/03/02/Miles-and-Moments-20250302-Cambridge/</id>
     <published>2025-03-02T11:55:01.000Z</published>
-    <updated>2025-03-09T17:00:00.799Z</updated>
+    <updated>2025-03-23T13:53:42.731Z</updated>
     
     
     <summary type="html">&lt;!-- toc --&gt;
@@ -135,11 +161,11 @@
     <category term="runEmilyRun" scheme="https://emilypeng2017.github.io/categories/articles/runEmilyRun/"/>
     
     
+    <category term="running" scheme="https://emilypeng2017.github.io/tags/running/"/>
+    
     <category term="10 km" scheme="https://emilypeng2017.github.io/tags/10-km/"/>
     
     <category term="Cambridge" scheme="https://emilypeng2017.github.io/tags/Cambridge/"/>
-    
-    <category term="runnig" scheme="https://emilypeng2017.github.io/tags/runnig/"/>
     
   </entry>
   
@@ -513,36 +539,6 @@
     <category term="Nature Communications" scheme="https://emilypeng2017.github.io/tags/Nature-Communications/"/>
     
     <category term="Multimaterial Printing" scheme="https://emilypeng2017.github.io/tags/Multimaterial-Printing/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>0_3D-printed PDMS/Graphene sensors with tunable sensitivity</title>
-    <link href="https://emilypeng2017.github.io/2025/01/03/0-3D-printed-PDMS-Graphene-sensors-with-tunable-sensitivity/"/>
-    <id>https://emilypeng2017.github.io/2025/01/03/0-3D-printed-PDMS-Graphene-sensors-with-tunable-sensitivity/</id>
-    <published>2025-01-03T13:18:16.000Z</published>
-    <updated>2025-01-07T10:01:58.938Z</updated>
-    
-    
-    <summary type="html">&lt;!-- toc --&gt;
-
-&lt;p&gt;🚀 3D-Printed PDMS&amp;#x2F;Graphene Sensors with Tunable Sensitivity&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;🗓 Published on&lt;/strong&gt;: Dec. 2024&lt;br&gt;&lt;strong&gt;📚 Journal&amp;#x2F;Conference&lt;/strong&gt;: &lt;em&gt;Advanced Electron Materials&lt;/em&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="literatureReview" scheme="https://emilypeng2017.github.io/categories/literatureReview/"/>
-    
-    
-    <category term="PDMS" scheme="https://emilypeng2017.github.io/tags/PDMS/"/>
-    
-    <category term="Graphene" scheme="https://emilypeng2017.github.io/tags/Graphene/"/>
-    
-    <category term="Materials" scheme="https://emilypeng2017.github.io/tags/Materials/"/>
-    
-    <category term="3D-Printed" scheme="https://emilypeng2017.github.io/tags/3D-Printed/"/>
-    
-    <category term="PressureSensor" scheme="https://emilypeng2017.github.io/tags/PressureSensor/"/>
     
   </entry>
   
