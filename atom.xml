@@ -6,7 +6,7 @@
   <link href="https://emilypeng2017.github.io/atom.xml" rel="self"/>
   
   <link href="https://emilypeng2017.github.io/"/>
-  <updated>2025-04-12T21:24:16.047Z</updated>
+  <updated>2025-04-19T10:43:07.078Z</updated>
   <id>https://emilypeng2017.github.io/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2_A wireless, self-powered smart insole for gait monitoring and recognition via nonlinear synergistic pressure sensing</title>
+    <link href="https://emilypeng2017.github.io/2025/04/19/2_A%20wireless%20self-powered%20smart%20insole%20for%20gait%20monitoring%20and%20recognition%20via%20nonlinear%20synergistic%20pressure%20sensing/"/>
+    <id>https://emilypeng2017.github.io/2025/04/19/2_A%20wireless%20self-powered%20smart%20insole%20for%20gait%20monitoring%20and%20recognition%20via%20nonlinear%20synergistic%20pressure%20sensing/</id>
+    <published>2025-04-19T08:36:53.000Z</published>
+    <updated>2025-04-19T10:43:07.078Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;!-- toc --&gt;
+&lt;h1</summary>
+        
+      
+    
+    
+    
+    <category term="literatureReview" scheme="https://emilypeng2017.github.io/categories/literatureReview/"/>
+    
+    
+    <category term="Materials" scheme="https://emilypeng2017.github.io/tags/Materials/"/>
+    
+    <category term="wearable devices" scheme="https://emilypeng2017.github.io/tags/wearable-devices/"/>
+    
+    <category term="self-powered" scheme="https://emilypeng2017.github.io/tags/self-powered/"/>
+    
+    <category term="smart insole" scheme="https://emilypeng2017.github.io/tags/smart-insole/"/>
+    
+    <category term="Science Advances" scheme="https://emilypeng2017.github.io/tags/Science-Advances/"/>
+    
+  </entry>
   
   <entry>
     <title>Miles and Moments_20250412</title>
@@ -501,38 +535,6 @@
     
     
     <category term="家" scheme="https://emilypeng2017.github.io/tags/%E5%AE%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>eWEAR Seminar: AI insights from wearable sensors_Stanford University</title>
-    <link href="https://emilypeng2017.github.io/2025/01/27/eWEAR-Seminar-AI-insights-from-wearable-sensors-Stanford-University/"/>
-    <id>https://emilypeng2017.github.io/2025/01/27/eWEAR-Seminar-AI-insights-from-wearable-sensors-Stanford-University/</id>
-    <published>2025-01-27T20:25:43.000Z</published>
-    <updated>2025-03-29T19:37:37.879Z</updated>
-    
-    
-    <summary type="html">&lt;!-- toc --&gt;
-&lt;p&gt;Tonight, I had the opportunity to remotely attend a seminar held at Stanford University, where two insightful presentations shed light on advancements in wearable sensors. &lt;/p&gt;</summary>
-    
-    
-    
-    <category term="keeplearning" scheme="https://emilypeng2017.github.io/categories/keeplearning/"/>
-    
-    <category term="seminars" scheme="https://emilypeng2017.github.io/categories/keeplearning/seminars/"/>
-    
-    
-    <category term="SJTU" scheme="https://emilypeng2017.github.io/tags/SJTU/"/>
-    
-    <category term="wearable devices" scheme="https://emilypeng2017.github.io/tags/wearable-devices/"/>
-    
-    <category term="wearable sensors" scheme="https://emilypeng2017.github.io/tags/wearable-sensors/"/>
-    
-    <category term="seminar" scheme="https://emilypeng2017.github.io/tags/seminar/"/>
-    
-    <category term="Stanford University" scheme="https://emilypeng2017.github.io/tags/Stanford-University/"/>
-    
-    <category term="deep learning" scheme="https://emilypeng2017.github.io/tags/deep-learning/"/>
     
   </entry>
   
