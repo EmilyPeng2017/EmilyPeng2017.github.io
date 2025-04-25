@@ -6,7 +6,7 @@
   <link href="https://emilypeng2017.github.io/atom.xml" rel="self"/>
   
   <link href="https://emilypeng2017.github.io/"/>
-  <updated>2025-04-21T18:42:13.940Z</updated>
+  <updated>2025-04-25T18:33:52.216Z</updated>
   <id>https://emilypeng2017.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Material research for wearable and implantable devices_Stanford University&#39;</title>
+    <link href="https://emilypeng2017.github.io/2025/04/25/Seminar-Material%20research%20for%20wearables%20and%20implantable%20devices/"/>
+    <id>https://emilypeng2017.github.io/2025/04/25/Seminar-Material%20research%20for%20wearables%20and%20implantable%20devices/</id>
+    <published>2025-04-25T18:30:03.000Z</published>
+    <updated>2025-04-25T18:33:52.216Z</updated>
+    
+    
+    <summary type="html">&lt;!-- toc --&gt;
+
+&lt;p&gt;Tonight, I had the pleasure of virtually attending a seminar hosted by &lt;strong&gt;Stanford University&lt;/strong&gt;. The first presentation immediately resonated with my own research interests in sensor design and fabrication.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="keeplearning" scheme="https://emilypeng2017.github.io/categories/keeplearning/"/>
+    
+    <category term="seminars" scheme="https://emilypeng2017.github.io/categories/keeplearning/seminars/"/>
+    
+    
+    <category term="wearable devices" scheme="https://emilypeng2017.github.io/tags/wearable-devices/"/>
+    
+    <category term="wearable sensors" scheme="https://emilypeng2017.github.io/tags/wearable-sensors/"/>
+    
+    <category term="seminar" scheme="https://emilypeng2017.github.io/tags/seminar/"/>
+    
+    <category term="Stanford University" scheme="https://emilypeng2017.github.io/tags/Stanford-University/"/>
+    
+  </entry>
   
   <entry>
     <title>The Eagerness to Help Can Be Selfish</title>
@@ -495,30 +524,6 @@
     <category term="running" scheme="https://emilypeng2017.github.io/tags/running/"/>
     
     <category term="10 km" scheme="https://emilypeng2017.github.io/tags/10-km/"/>
-    
-    <category term="Bruges" scheme="https://emilypeng2017.github.io/tags/Bruges/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Miles and Moments_20250201_Hi, Robin!</title>
-    <link href="https://emilypeng2017.github.io/2025/02/01/Miles-and-Moments-20250201-Hi-Robin/"/>
-    <id>https://emilypeng2017.github.io/2025/02/01/Miles-and-Moments-20250201-Hi-Robin/</id>
-    <published>2025-02-01T22:43:21.000Z</published>
-    <updated>2025-03-29T19:39:02.599Z</updated>
-    
-    
-    <summary type="html">&lt;!-- toc --&gt;
-&lt;p&gt;Today, I started my day with a refreshing 5 km run, followed by a visit to the Saturday morning market. I picked up some fresh fruits and a beautiful flower for a colleague. Later in the afternoon, I met with a group of Chinese colleagues and made dumplings together.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="articles" scheme="https://emilypeng2017.github.io/categories/articles/"/>
-    
-    <category term="runEmilyRun" scheme="https://emilypeng2017.github.io/categories/articles/runEmilyRun/"/>
-    
-    
-    <category term="running" scheme="https://emilypeng2017.github.io/tags/running/"/>
     
     <category term="Bruges" scheme="https://emilypeng2017.github.io/tags/Bruges/"/>
     
