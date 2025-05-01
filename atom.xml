@@ -6,7 +6,7 @@
   <link href="https://emilypeng2017.github.io/atom.xml" rel="self"/>
   
   <link href="https://emilypeng2017.github.io/"/>
-  <updated>2025-04-27T07:15:13.822Z</updated>
+  <updated>2025-05-01T16:40:50.912Z</updated>
   <id>https://emilypeng2017.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Electronic skin and the future of wearable technology</title>
+    <link href="https://emilypeng2017.github.io/2025/05/01/Electronic%20skin%20and%20the%20future%20of%20wearable%20technology/"/>
+    <id>https://emilypeng2017.github.io/2025/05/01/Electronic%20skin%20and%20the%20future%20of%20wearable%20technology/</id>
+    <published>2025-05-01T13:22:03.000Z</published>
+    <updated>2025-05-01T16:40:50.912Z</updated>
+    
+    
+    <summary type="html">&lt;!-- toc --&gt;
+&lt;p&gt;I’m not sure what qualifies as &lt;em&gt;fundamental research&lt;/em&gt;—I’m feeling a bit confused. So I’m looking at how &lt;strong&gt;Zhenan Bao&lt;/strong&gt; described her lab’s research in this podcast:&lt;/p&gt;
+&lt;p&gt;🎧 &lt;a href=&quot;https://www.buzzsprout.com/2112871/episodes/15357588&quot;&gt;Podcast episode&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="keeplearning" scheme="https://emilypeng2017.github.io/categories/keeplearning/"/>
+    
+    
+    <category term="wearable devices" scheme="https://emilypeng2017.github.io/tags/wearable-devices/"/>
+    
+    <category term="wearable sensors" scheme="https://emilypeng2017.github.io/tags/wearable-sensors/"/>
+    
+    <category term="seminar" scheme="https://emilypeng2017.github.io/tags/seminar/"/>
+    
+    <category term="Stanford University" scheme="https://emilypeng2017.github.io/tags/Stanford-University/"/>
+    
+    <category term="Fundamental research" scheme="https://emilypeng2017.github.io/tags/Fundamental-research/"/>
+    
+  </entry>
   
   <entry>
     <title>Miles and Moments_20250426</title>
@@ -506,31 +535,6 @@ But I also told myself: if this is something new for me, why not take the chance
     <category term="10 km" scheme="https://emilypeng2017.github.io/tags/10-km/"/>
     
     <category term="Bruges" scheme="https://emilypeng2017.github.io/tags/Bruges/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Valentine&#39;s Day: A test for generating a video for my friend</title>
-    <link href="https://emilypeng2017.github.io/2025/02/14/Valentine&#39;s-day/"/>
-    <id>https://emilypeng2017.github.io/2025/02/14/Valentine&#39;s-day/</id>
-    <published>2025-02-14T19:28:28.000Z</published>
-    <updated>2025-04-07T21:41:04.264Z</updated>
-    
-    
-    <summary type="html">&lt;!-- toc --&gt;
-
-&lt;p&gt;Last night, I received a Valentine-themed video in Arabic from a colleague. Although I couldn’t understand the lyrics, I caught the words “إيميلي إيميلي” at the end, which means “Emily, Emily.” I was deeply moved, not just by the song but by the warmth of having such a thoughtful colleague and friend. However, this friend has been separated from his wife for nearly two years due to circumstances beyond their control. The thought of their situation brought tears to my eyes as I drifted off to sleep. 😢&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="articles" scheme="https://emilypeng2017.github.io/categories/articles/"/>
-    
-    
-    <category term="questions" scheme="https://emilypeng2017.github.io/tags/questions/"/>
-    
-    <category term="Interesting Things" scheme="https://emilypeng2017.github.io/tags/Interesting-Things/"/>
-    
-    <category term="AI" scheme="https://emilypeng2017.github.io/tags/AI/"/>
     
   </entry>
   
