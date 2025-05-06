@@ -6,7 +6,7 @@
   <link href="https://emilypeng2017.github.io/atom.xml" rel="self"/>
   
   <link href="https://emilypeng2017.github.io/"/>
-  <updated>2025-05-03T08:30:23.770Z</updated>
+  <updated>2025-05-06T18:39:09.639Z</updated>
   <id>https://emilypeng2017.github.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>seminar_Professor Olli Ikkala_Multiscale Biofabrication Towards System &#39;Engineering&#39; Biology</title>
+    <link href="https://emilypeng2017.github.io/2025/05/06/seminor-Professor%20Olli%20Ikkala/"/>
+    <id>https://emilypeng2017.github.io/2025/05/06/seminor-Professor%20Olli%20Ikkala/</id>
+    <published>2025-05-06T18:51:19.000Z</published>
+    <updated>2025-05-06T18:39:09.639Z</updated>
+    
+    
+    <summary type="html">&lt;!-- toc --&gt;
+
+&lt;h1 id=&quot;Multiscale-Biofabrication-Towards-System-‘Engineering’-Biology&quot;&gt;&lt;a href=&quot;#Multiscale-Biofabrication-Towards-System-‘Engineering’-Biology&quot; class=&quot;headerlink&quot; title=&quot;Multiscale Biofabrication Towards System ‘Engineering’ Biology&quot;&gt;&lt;/a&gt;Multiscale Biofabrication Towards System ‘Engineering’ Biology&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Presenter:&lt;/strong&gt; Prof. Olli Ikkala&lt;br&gt;&lt;strong&gt;Professor of Bioengineering, Aalto University (Finland)&lt;/strong&gt;  &lt;/p&gt;
+&lt;p&gt;Prof. Olli Ikkala is a distinguished researcher at the Department of Applied Physics, Aalto University in the Helsinki metropolitan area. Originally trained in quantum physics, he spent a decade in industry working on supramolecular self-assemblies of electrically conducting polymers, tailoring them for real-world applications. His current research focuses on &lt;strong&gt;bioinspiration&lt;/strong&gt;—using nature as a guide to create &lt;strong&gt;novel static and dynamic properties&lt;/strong&gt; in soft matter. His work spans &lt;strong&gt;hierarchical self-assemblies&lt;/strong&gt;, &lt;strong&gt;nacre-mimetic materials&lt;/strong&gt;, &lt;strong&gt;functional nanocelluloses&lt;/strong&gt;, and &lt;strong&gt;stimulus-responsive soft systems&lt;/strong&gt; that mimic behavioral learning like &lt;strong&gt;Pavlovian conditioning&lt;/strong&gt;, &lt;strong&gt;habituation&lt;/strong&gt;, and &lt;strong&gt;sensitization&lt;/strong&gt;.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="keeplearning" scheme="https://emilypeng2017.github.io/categories/keeplearning/"/>
+    
+    <category term="seminars" scheme="https://emilypeng2017.github.io/categories/keeplearning/seminars/"/>
+    
+    
+    <category term="wearable devices" scheme="https://emilypeng2017.github.io/tags/wearable-devices/"/>
+    
+    <category term="seminar" scheme="https://emilypeng2017.github.io/tags/seminar/"/>
+    
+    <category term="biofabrication" scheme="https://emilypeng2017.github.io/tags/biofabrication/"/>
+    
+    <category term="University of Cambridge" scheme="https://emilypeng2017.github.io/tags/University-of-Cambridge/"/>
+    
+    <category term="3D printing" scheme="https://emilypeng2017.github.io/tags/3D-printing/"/>
+    
+  </entry>
   
   <entry>
     <title>Miles and Moments_20250503</title>
@@ -531,32 +563,6 @@ Today is International Goddess Day, and I couldn’t think of a better way to ce
     
     
     <category term="morning_flowers" scheme="https://emilypeng2017.github.io/tags/morning-flowers/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>The Toxicity of Solvents: A Closer Look at Why Most Solvents Are Harmful!</title>
-    <link href="https://emilypeng2017.github.io/2025/02/23/The-Toxicity-of-Solvents-A-Closer-Look-at-Why-Most-Solvents-Are-Harmful/"/>
-    <id>https://emilypeng2017.github.io/2025/02/23/The-Toxicity-of-Solvents-A-Closer-Look-at-Why-Most-Solvents-Are-Harmful/</id>
-    <published>2025-02-23T08:49:10.000Z</published>
-    <updated>2025-05-03T21:45:06.849Z</updated>
-    
-    
-    <summary type="html">&lt;!-- toc --&gt;
-
-&lt;p&gt;In my current research, I frequently use &lt;strong&gt;n-hexane&lt;/strong&gt; as a solvent to mix the components in my experiments. While it is effective for this purpose, I am always mindful of its &lt;strong&gt;toxicity&lt;/strong&gt;.&lt;/p&gt;
-&lt;div style=&quot;text-align: center;&quot;&gt; &lt;img src=&quot;/img/blogs/14_toxic/toxic.jpeg&quot; alt=&quot;Dangerous!!!&quot; width=&quot;400&quot;&gt; &lt;/div&gt;</summary>
-    
-    
-    
-    <category term="articles" scheme="https://emilypeng2017.github.io/categories/articles/"/>
-    
-    
-    <category term="solvent" scheme="https://emilypeng2017.github.io/tags/solvent/"/>
-    
-    <category term="n-hexane" scheme="https://emilypeng2017.github.io/tags/n-hexane/"/>
-    
-    <category term="chemistry" scheme="https://emilypeng2017.github.io/tags/chemistry/"/>
     
   </entry>
   
