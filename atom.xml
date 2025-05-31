@@ -6,7 +6,7 @@
   <link href="https://emilypeng2017.github.io/atom.xml" rel="self"/>
   
   <link href="https://emilypeng2017.github.io/"/>
-  <updated>2025-05-31T14:19:31.374Z</updated>
+  <updated>2025-05-31T14:22:59.618Z</updated>
   <id>https://emilypeng2017.github.io/</id>
   
   <author>
@@ -17,24 +17,33 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>4_A linear flexible graphene pressure sensor</title>
     <link href="https://emilypeng2017.github.io/2025/05/31/4_nonlinear/"/>
     <id>https://emilypeng2017.github.io/2025/05/31/4_nonlinear/</id>
-    <published>2025-05-31T13:08:03.561Z</published>
-    <updated>2025-05-31T14:19:31.374Z</updated>
+    <published>2025-05-31T13:11:28.000Z</published>
+    <updated>2025-05-31T14:22:59.618Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;hr&gt;
-&lt;h2</summary>
-        
-      
+    <summary type="html">&lt;!-- toc --&gt;
+&lt;div align=&quot;center&quot;&gt;
+    &lt;img src=&quot;/img/blogs/34_paper/2.png&quot; alt=&quot;Assembled pressure sensor&quot; style=&quot;width:100%;&quot;&gt;
+    &lt;p&gt;&lt;strong&gt;Figure 0:&lt;/strong&gt; Photo of the assembled pressure sensor.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;🗓 Published&lt;/strong&gt;: October 2024&lt;br&gt;&lt;strong&gt;📚 Journal&amp;#x2F;Conference&lt;/strong&gt;: &lt;em&gt;Advanced Materials&lt;/em&gt;&lt;/p&gt;</summary>
     
     
     
+    <category term="articles" scheme="https://emilypeng2017.github.io/categories/articles/"/>
+    
+    <category term="literatureReview" scheme="https://emilypeng2017.github.io/categories/articles/literatureReview/"/>
+    
+    
+    <category term="Materials" scheme="https://emilypeng2017.github.io/tags/Materials/"/>
+    
+    <category term="wearable devices" scheme="https://emilypeng2017.github.io/tags/wearable-devices/"/>
+    
+    <category term="Advanced Materials" scheme="https://emilypeng2017.github.io/tags/Advanced-Materials/"/>
     
   </entry>
   
