@@ -6,7 +6,7 @@
   <link href="https://emilypeng2017.github.io/atom.xml" rel="self"/>
   
   <link href="https://emilypeng2017.github.io/"/>
-  <updated>2025-05-31T14:22:59.618Z</updated>
+  <updated>2025-06-02T21:37:10.459Z</updated>
   <id>https://emilypeng2017.github.io/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>seminar_eWEAR Seminar_Sleep wearables</title>
+    <link href="https://emilypeng2017.github.io/2025/06/02/seminor-/"/>
+    <id>https://emilypeng2017.github.io/2025/06/02/seminor-/</id>
+    <published>2025-06-02T21:51:19.000Z</published>
+    <updated>2025-06-02T21:37:10.459Z</updated>
+    
+    
+    <summary type="html">&lt;!-- toc --&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+    &lt;img src=&quot;/img/blogs/35_seminar/1.png&quot; alt=&quot;&quot; width=&quot;600&quot;&gt;
+&lt;/div&gt;
+To be honest, today&#39;s talks were not that attractive. I think the problem with sleep cannot be resolved by wearable devices. And the presenters could not persuade me by the introductions. That&#39;s why there is no interest to continue listening to it.</summary>
+    
+    
+    
+    <category term="keeplearning" scheme="https://emilypeng2017.github.io/categories/keeplearning/"/>
+    
+    <category term="seminars" scheme="https://emilypeng2017.github.io/categories/keeplearning/seminars/"/>
+    
+    
+    <category term="wearable devices" scheme="https://emilypeng2017.github.io/tags/wearable-devices/"/>
+    
+    <category term="seminar" scheme="https://emilypeng2017.github.io/tags/seminar/"/>
+    
+    <category term="Stanford University" scheme="https://emilypeng2017.github.io/tags/Stanford-University/"/>
+    
+    <category term="3D printing" scheme="https://emilypeng2017.github.io/tags/3D-printing/"/>
+    
+  </entry>
   
   <entry>
     <title>4_A linear flexible graphene pressure sensor</title>
@@ -564,38 +595,6 @@ This month has been a whirlwind of events. The previous tenant ended our contrac
     <category term="10 km" scheme="https://emilypeng2017.github.io/tags/10-km/"/>
     
     <category term="Bruges" scheme="https://emilypeng2017.github.io/tags/Bruges/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>seminar_Cambridge_Shery Huang</title>
-    <link href="https://emilypeng2017.github.io/2025/03/21/seminor-Cambridge-Shery-Huang/"/>
-    <id>https://emilypeng2017.github.io/2025/03/21/seminor-Cambridge-Shery-Huang/</id>
-    <published>2025-03-21T08:58:19.000Z</published>
-    <updated>2025-03-29T19:39:25.275Z</updated>
-    
-    
-    <summary type="html">&lt;!-- toc --&gt;
-
-&lt;h1 id=&quot;Multiscale-Biofabrication-Towards-System-‘Engineering’-Biology&quot;&gt;&lt;a href=&quot;#Multiscale-Biofabrication-Towards-System-‘Engineering’-Biology&quot; class=&quot;headerlink&quot; title=&quot;Multiscale Biofabrication Towards System ‘Engineering’ Biology&quot;&gt;&lt;/a&gt;Multiscale Biofabrication Towards System ‘Engineering’ Biology&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Presenter:&lt;/strong&gt; Prof. Yan Yan Shery Huang&lt;br&gt;&lt;strong&gt;Professor of Bioengineering&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;Funding:&lt;/strong&gt; ERC (European Research Council)  &lt;/p&gt;
-&lt;h2 id=&quot;Context&quot;&gt;&lt;a href=&quot;#Context&quot; class=&quot;headerlink&quot; title=&quot;Context&quot;&gt;&lt;/a&gt;Context&lt;/h2&gt;&lt;p&gt;Medical and technological innovations bring direct health and economic benefits in the near and intermediate terms. But what about the future? Multiscale biofabrication opens new possibilities for:&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="keeplearning" scheme="https://emilypeng2017.github.io/categories/keeplearning/"/>
-    
-    <category term="seminars" scheme="https://emilypeng2017.github.io/categories/keeplearning/seminars/"/>
-    
-    
-    <category term="wearable devices" scheme="https://emilypeng2017.github.io/tags/wearable-devices/"/>
-    
-    <category term="seminar" scheme="https://emilypeng2017.github.io/tags/seminar/"/>
-    
-    <category term="biofabrication" scheme="https://emilypeng2017.github.io/tags/biofabrication/"/>
-    
-    <category term="University of Cambridge" scheme="https://emilypeng2017.github.io/tags/University-of-Cambridge/"/>
-    
-    <category term="3D printing" scheme="https://emilypeng2017.github.io/tags/3D-printing/"/>
     
   </entry>
   
