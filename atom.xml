@@ -6,7 +6,7 @@
   <link href="https://emilypeng2017.github.io/atom.xml" rel="self"/>
   
   <link href="https://emilypeng2017.github.io/"/>
-  <updated>2025-06-23T22:38:25.788Z</updated>
+  <updated>2025-06-27T16:53:15.625Z</updated>
   <id>https://emilypeng2017.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>A Special Day in Leuven</title>
+    <link href="https://emilypeng2017.github.io/2025/06/26/knowWhereYouAre/"/>
+    <id>https://emilypeng2017.github.io/2025/06/26/knowWhereYouAre/</id>
+    <published>2025-06-26T21:58:07.000Z</published>
+    <updated>2025-06-27T16:53:15.625Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Today I went to Leuven to do SEM characterization. Since I needed to put my samples into a vacuum chamber, I was told it would be best</summary>
+        
+      
+    
+    
+    
+    <category term="life" scheme="https://emilypeng2017.github.io/categories/life/"/>
+    
+    <category term="Education" scheme="https://emilypeng2017.github.io/categories/life/Education/"/>
+    
+    
+    <category term="Belgium" scheme="https://emilypeng2017.github.io/tags/Belgium/"/>
+    
+    <category term="Education" scheme="https://emilypeng2017.github.io/tags/Education/"/>
+    
+  </entry>
   
   <entry>
     <title>Chemistry experiments as meditation</title>
@@ -567,37 +596,6 @@ I&#39;m so happy today—I made big progress on my 3D printing experiment! After
     <category term="3D printing" scheme="https://emilypeng2017.github.io/tags/3D-printing/"/>
     
     <category term="workshops" scheme="https://emilypeng2017.github.io/tags/workshops/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Miles and Moments_20250406</title>
-    <link href="https://emilypeng2017.github.io/2025/04/06/Miles-and-Moments-20250406/"/>
-    <id>https://emilypeng2017.github.io/2025/04/06/Miles-and-Moments-20250406/</id>
-    <published>2025-04-06T14:58:01.000Z</published>
-    <updated>2025-05-19T22:03:15.744Z</updated>
-    
-    
-    <summary type="html">&lt;!-- toc --&gt;
-&lt;div style=&quot;display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-bottom: 20px;&quot;&gt; 
-  &lt;img src=&quot;/img/blogs/22_running/2025-04-06 085022.jpg&quot; alt=&quot;a new friend&quot; width=&quot;400&quot;&gt;
-&lt;/div&gt;
-We absorb a vast amount of information every day—some consciously, some passively. In an age where everyone can be a broadcaster on social media, it becomes increasingly difficult to discern what is true and what is false, what is good and what is harmful.
-
-&lt;p&gt;As researchers, we are trained to question everything with a critical mind. But without a calm inner center, even we can be swept away by the noise.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="life" scheme="https://emilypeng2017.github.io/categories/life/"/>
-    
-    <category term="runEmilyRun" scheme="https://emilypeng2017.github.io/categories/life/runEmilyRun/"/>
-    
-    
-    <category term="running" scheme="https://emilypeng2017.github.io/tags/running/"/>
-    
-    <category term="10 km" scheme="https://emilypeng2017.github.io/tags/10-km/"/>
-    
-    <category term="Bruges" scheme="https://emilypeng2017.github.io/tags/Bruges/"/>
     
   </entry>
   
