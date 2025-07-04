@@ -10,7 +10,7 @@
     font-size: 36px;
     font-weight: bold;
     text-align: center;
-    font-family: 'Arial', sans-serif; /* Change the font-family */
+    font-family: 'JetBrains Mono', monospace; /* Change the font-family */
     color: #333333; /* 标题颜色 */
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* 添加阴影 */
     border-bottom: 2px solid #ddd; /* 底部划线 */
