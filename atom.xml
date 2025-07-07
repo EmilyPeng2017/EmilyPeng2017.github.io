@@ -6,7 +6,7 @@
   <link href="https://emilypeng2017.github.io/atom.xml" rel="self"/>
   
   <link href="https://emilypeng2017.github.io/"/>
-  <updated>2025-07-05T11:53:56.498Z</updated>
+  <updated>2025-07-07T21:54:34.413Z</updated>
   <id>https://emilypeng2017.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Teamwork makes dream work!</title>
+    <link href="https://emilypeng2017.github.io/2025/07/07/teamwork/"/>
+    <id>https://emilypeng2017.github.io/2025/07/07/teamwork/</id>
+    <published>2025-07-07T20:31:07.000Z</published>
+    <updated>2025-07-07T21:54:34.413Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;I was recently invited to join a competition—but there was a catch: teams had to include at least three people. So, I reached out to two</summary>
+        
+      
+    
+    
+    
+    <category term="life" scheme="https://emilypeng2017.github.io/categories/life/"/>
+    
+    <category term="Education" scheme="https://emilypeng2017.github.io/categories/life/Education/"/>
+    
+    
+    <category term="Belgium" scheme="https://emilypeng2017.github.io/tags/Belgium/"/>
+    
+    <category term="Education" scheme="https://emilypeng2017.github.io/tags/Education/"/>
+    
+  </entry>
   
   <entry>
     <title>Miles and Moments_20250705</title>
@@ -560,41 +589,6 @@ But I also told myself: if this is something new for me, why not take the chance
     
     
     <category term="life" scheme="https://emilypeng2017.github.io/tags/life/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2_A wireless, self-powered smart insole for gait monitoring and recognition via nonlinear synergistic pressure sensing</title>
-    <link href="https://emilypeng2017.github.io/2025/04/19/2_A%20wireless%20self-powered%20smart%20insole%20for%20gait%20monitoring%20and%20recognition%20via%20nonlinear%20synergistic%20pressure%20sensing/"/>
-    <id>https://emilypeng2017.github.io/2025/04/19/2_A%20wireless%20self-powered%20smart%20insole%20for%20gait%20monitoring%20and%20recognition%20via%20nonlinear%20synergistic%20pressure%20sensing/</id>
-    <published>2025-04-19T08:36:53.000Z</published>
-    <updated>2025-05-19T22:07:27.686Z</updated>
-    
-    
-    <summary type="html">&lt;!-- toc --&gt;
-&lt;div align=&quot;center&quot;&gt;
-    &lt;img src=&quot;/img/blogs/24_paper/prototype.png&quot; alt=&quot;Photographs of the smart insole system&quot; style=&quot;width:100%;&quot;&gt;
-    &lt;p&gt;&lt;strong&gt;Figure 1:&lt;/strong&gt; Prototype of the smart insole system&lt;/p&gt;
-&lt;/div&gt;
-**🗓 Published**: April 2025  
-**📚 Journal/Conference**: *Science Advances*</summary>
-    
-    
-    
-    <category term="articles" scheme="https://emilypeng2017.github.io/categories/articles/"/>
-    
-    <category term="literatureReview" scheme="https://emilypeng2017.github.io/categories/articles/literatureReview/"/>
-    
-    
-    <category term="Materials" scheme="https://emilypeng2017.github.io/tags/Materials/"/>
-    
-    <category term="wearable devices" scheme="https://emilypeng2017.github.io/tags/wearable-devices/"/>
-    
-    <category term="self-powered" scheme="https://emilypeng2017.github.io/tags/self-powered/"/>
-    
-    <category term="smart insole" scheme="https://emilypeng2017.github.io/tags/smart-insole/"/>
-    
-    <category term="Science Advances" scheme="https://emilypeng2017.github.io/tags/Science-Advances/"/>
     
   </entry>
   
