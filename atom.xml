@@ -6,7 +6,7 @@
   <link href="https://emilypeng2017.github.io/atom.xml" rel="self"/>
   
   <link href="https://emilypeng2017.github.io/"/>
-  <updated>2025-08-26T15:21:54.020Z</updated>
+  <updated>2025-09-15T20:07:32.764Z</updated>
   <id>https://emilypeng2017.github.io/</id>
   
   <author>
@@ -15,6 +15,64 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>seminar_a seminar I cannot understand</title>
+    <link href="https://emilypeng2017.github.io/2025/09/08/seminor-september/"/>
+    <id>https://emilypeng2017.github.io/2025/09/08/seminor-september/</id>
+    <published>2025-09-08T21:58:19.000Z</published>
+    <updated>2025-09-15T20:07:32.764Z</updated>
+    
+    
+    <summary type="html">&lt;!-- toc --&gt;
+
+&lt;h1 id=&quot;From-silicon-to-neurons-from-neurons-to-furrows-Sensor-technologies-for-high-resolution-high-density-data-in-neural-and-environmental-systems&quot;&gt;&lt;a href=&quot;#From-silicon-to-neurons-from-neurons-to-furrows-Sensor-technologies-for-high-resolution-high-density-data-in-neural-and-environmental-systems&quot; class=&quot;headerlink&quot; title=&quot;From silicon to neurons, from neurons to furrows: Sensor technologies for high-resolution, high-density data in neural and environmental systems&quot;&gt;&lt;/a&gt;From silicon to neurons, from neurons to furrows: Sensor technologies for high-resolution, high-density data in neural and environmental systems&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Presenter:&lt;/strong&gt; Pingyu Wang&lt;br&gt;&lt;strong&gt;Postdoctoral scholar, Chemical Engineering&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;Stanford University&lt;/strong&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="keeplearning" scheme="https://emilypeng2017.github.io/categories/keeplearning/"/>
+    
+    <category term="seminars" scheme="https://emilypeng2017.github.io/categories/keeplearning/seminars/"/>
+    
+    
+    <category term="wearable devices" scheme="https://emilypeng2017.github.io/tags/wearable-devices/"/>
+    
+    <category term="seminar" scheme="https://emilypeng2017.github.io/tags/seminar/"/>
+    
+    <category term="biofabrication" scheme="https://emilypeng2017.github.io/tags/biofabrication/"/>
+    
+    <category term="MIT" scheme="https://emilypeng2017.github.io/tags/MIT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Miles and Moments_20250830</title>
+    <link href="https://emilypeng2017.github.io/2025/08/30/Miles-and-Moments-20250830/"/>
+    <id>https://emilypeng2017.github.io/2025/08/30/Miles-and-Moments-20250830/</id>
+    <published>2025-08-30T19:46:03.000Z</published>
+    <updated>2025-09-15T20:01:10.406Z</updated>
+    
+    
+    <summary type="html">&lt;!-- toc --&gt;
+&lt;p&gt;It was a very nice weather today, so I went for a 10 km run in Brugge. Running always helps me clear my mind and feel more energetic.&lt;/p&gt;
+&lt;div style=&quot;display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; margin-bottom: 20px;&quot;&gt;
+    &lt;img src=&quot;/img/blogs/20250830/2025-08-30 093751.jpg&quot; alt=&quot;&quot; width=&quot;300&quot; title=&quot;&quot;&gt;
+&lt;/div&gt;</summary>
+    
+    
+    
+    <category term="life" scheme="https://emilypeng2017.github.io/categories/life/"/>
+    
+    <category term="runEmilyRun" scheme="https://emilypeng2017.github.io/categories/life/runEmilyRun/"/>
+    
+    
+    <category term="Bruges" scheme="https://emilypeng2017.github.io/tags/Bruges/"/>
+    
+    <category term="running" scheme="https://emilypeng2017.github.io/tags/running/"/>
+    
+    <category term="10 km" scheme="https://emilypeng2017.github.io/tags/10-km/"/>
+    
+  </entry>
   
   <entry>
     <title>江小涓学术自传-读书笔记</title>
@@ -527,68 +585,6 @@
     <category term="Bruges" scheme="https://emilypeng2017.github.io/tags/Bruges/"/>
     
     <category term="running" scheme="https://emilypeng2017.github.io/tags/running/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>seminar_eWEAR Seminar_Sleep wearables</title>
-    <link href="https://emilypeng2017.github.io/2025/06/02/seminor-/"/>
-    <id>https://emilypeng2017.github.io/2025/06/02/seminor-/</id>
-    <published>2025-06-02T21:51:19.000Z</published>
-    <updated>2025-07-10T15:13:27.278Z</updated>
-    
-    
-    <summary type="html">&lt;!-- toc --&gt;
-&lt;div style=&quot;text-align: center;&quot;&gt;
-    &lt;img src=&quot;/img/blogs/35_seminar/1.png&quot; alt=&quot;&quot; width=&quot;600&quot;&gt;
-&lt;/div&gt;
-To be honest, today&#39;s talks were not that attractive. I think the problem with sleep cannot be resolved by wearable devices. And the presenters could not persuade me by the introductions. That&#39;s why there is no interest to continue listening to it.</summary>
-    
-    
-    
-    <category term="keeplearning" scheme="https://emilypeng2017.github.io/categories/keeplearning/"/>
-    
-    <category term="seminars" scheme="https://emilypeng2017.github.io/categories/keeplearning/seminars/"/>
-    
-    
-    <category term="wearable devices" scheme="https://emilypeng2017.github.io/tags/wearable-devices/"/>
-    
-    <category term="seminar" scheme="https://emilypeng2017.github.io/tags/seminar/"/>
-    
-    <category term="Stanford University" scheme="https://emilypeng2017.github.io/tags/Stanford-University/"/>
-    
-    <category term="3D printing" scheme="https://emilypeng2017.github.io/tags/3D-printing/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>4_A linear flexible graphene pressure sensor</title>
-    <link href="https://emilypeng2017.github.io/2025/05/31/4_nonlinear/"/>
-    <id>https://emilypeng2017.github.io/2025/05/31/4_nonlinear/</id>
-    <published>2025-05-31T13:11:28.000Z</published>
-    <updated>2025-07-10T15:13:15.013Z</updated>
-    
-    
-    <summary type="html">&lt;!-- toc --&gt;
-&lt;div align=&quot;center&quot;&gt;
-    &lt;img src=&quot;/img/blogs/34_paper/2.png&quot; alt=&quot;Assembled pressure sensor&quot; style=&quot;width:100%;&quot;&gt;
-    &lt;p&gt;&lt;strong&gt;Figure 0:&lt;/strong&gt; Photo of the assembled pressure sensor.&lt;/p&gt;
-&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;🗓 Published&lt;/strong&gt;: October 2024&lt;br&gt;&lt;strong&gt;📚 Journal&amp;#x2F;Conference&lt;/strong&gt;: &lt;em&gt;Advanced Materials&lt;/em&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="articles" scheme="https://emilypeng2017.github.io/categories/articles/"/>
-    
-    <category term="literatureReview" scheme="https://emilypeng2017.github.io/categories/articles/literatureReview/"/>
-    
-    
-    <category term="Materials" scheme="https://emilypeng2017.github.io/tags/Materials/"/>
-    
-    <category term="wearable devices" scheme="https://emilypeng2017.github.io/tags/wearable-devices/"/>
-    
-    <category term="Advanced Materials" scheme="https://emilypeng2017.github.io/tags/Advanced-Materials/"/>
     
   </entry>
   
