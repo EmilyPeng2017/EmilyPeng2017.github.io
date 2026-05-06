@@ -6,7 +6,6 @@ node_modules/
 public/
 .deploy*/
 _multiconfig.yml
-academic-homepage/
 source/
 scaffolds/
 themes/

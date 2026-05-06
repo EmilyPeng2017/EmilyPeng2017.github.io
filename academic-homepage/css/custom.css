@@ -1,0 +1,91 @@
+/* Adjust the width of the main content and sidebar */
+.page-main {
+    width: calc(100% - 200px); /* Main content width, 200px is the sidebar width */
+    max-width: none; /* Remove max-width restriction */
+    margin: 0 auto;
+    box-sizing: border-box; /* Include padding and border */
+}
+
+.site-title {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace; /* Change the font-family */
+    color: #333333; /* Title color */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow */
+    border-bottom: 2px solid #ddd; /* Bottom line */
+    padding-bottom: 10px; /* Adjust bottom padding */
+    margin-bottom: 20px; /* Space from content */
+}
+
+.sidebar {
+    width: 200px; /* Sidebar width */
+    box-sizing: border-box; /* Include padding and border */
+}
+
+/* Adjust overall layout */
+.content-wrapper {
+    display: flex;
+    max-width: 1400px; /* Overall page width */
+    margin: 0 auto; /* Center align */
+    flex-wrap: wrap; /* Let elements wrap on smaller screens */
+    padding: 0 15px; /* Provide page padding */
+}
+
+/* Flexbox layout: main content and sidebar */
+.content-wrapper .page-main {
+    flex: 1; /* Main content takes remaining space */
+}
+
+.content-wrapper .sidebar {
+    flex: 0 0 200px; /* Sidebar keeps fixed width */
+}
+
+/* Responsive adjustment: restore default layout on smaller screens */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column; /* Stack main content and sidebar vertically */
+    }
+
+    .page-main {
+        width: 100%; /* Main content fills screen */
+        padding: 0 15px; /* Add left and right spacing */
+    }
+
+    .sidebar {
+        width: 100%; /* Sidebar follows screen width */
+        margin-bottom: 20px; /* Add space below sidebar */
+    }
+
+    .post-title, h1 {
+        font-size: 2em; /* Reduce font size for small screens */
+    }
+
+    .site-title {
+        font-size: 28px; /* Reduce title font size */
+    }
+}
+
+/* Target the main content container */
+.main-content, .content, .post {
+    width: 90%; /* Make the content container 90% of the viewport width */
+    max-width: none; /* Remove any max-width restriction */
+    margin: 0 auto; /* Center the content */
+    padding: 20px; /* Add padding around the content */
+}
+
+/* If the content is inside another container, like a wrapper, adjust it as well */
+.wrapper {
+    width: 100%;
+    max-width: 1200px; /* Set a max width for very large screens */
+    margin: 0 auto;
+}
+
+/* Adjusting for smaller screens */
+@media (max-width: 768px) {
+    .main-content, .content, .post {
+        width: 100%; /* Make sure the content takes up full width on small screens */
+        padding: 10px; /* Reduce padding on smaller screens */
+    }
+}
+
