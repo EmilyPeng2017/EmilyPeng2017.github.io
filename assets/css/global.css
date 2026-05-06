@@ -33,20 +33,17 @@ a:hover {
 }
 
 .topbar {
-  background-color: var(--header-bg);
-  color: var(--header-text);
-  padding: 0;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   position: sticky;
   top: 0;
-  width: 100%;
-  z-index: 1000;
+  z-index: 18;
+  background: #202936;
+  box-shadow: 0 8px 24px rgba(16, 24, 40, 0.14);
 }
 
 .nav-inner {
   max-width: 1160px;
   margin: 0 auto;
-  min-height: 56px;
+  min-height: 90px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -184,20 +181,20 @@ a:hover {
 .section h2,
 .page-title {
   margin: 0;
-  font-size: 1.35rem;
-  line-height: 1.25;
+  font-size: 2rem;
+  line-height: 1.8;
   letter-spacing: 0;
 }
 
 .page-title {
-  font-size: 1.75rem;
+  font-size: 2rem;
 }
 
 .kicker {
   margin: 0 0 0.35rem;
   color: var(--accent);
   font-family: var(--code);
-  font-size: 0.82rem;
+  font-size: 1.5rem;
   font-weight: 800;
 }
 
