@@ -7,7 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Fira+Sans:wght@400;500;700;800&family=Source+Code+Pro:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/dongma-style.css">
 </head>
 <body data-page="home">
   <header class="topbar">
@@ -31,12 +32,13 @@
         <p class="role">Ph.D. Researcher</p>
         <p class="role">KU Leuven, Belgium</p>
         <p class="role">Embedded systems, wearable devices, smart sensors, and soft robotics</p>
-        <a class="email" href="mailto:emily.peng0627@gmail.com">emily.peng0627@gmail.com</a>
+        <a class="email" href="mailto:emily.peng@kuleuven.be">emily.peng0627@gmail.com</a>
         <div class="socials">
-          <a href="https://github.com/EmilyPeng2017">GitHub</a>
-          <a href="https://www.linkedin.com/in/sai-emily-peng/">LinkedIn</a>
-          <a href="https://www.researchgate.net/profile/Sai-Peng">ResearchGate</a>
-          <a href="https://scholar.google.com/citations?user=I-YA-aMAAAAJ&hl=en">Scholar</a>
+          <a href="mailto:emily.peng0627@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://github.com/EmilyPeng2017" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/sai-emily-peng/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://scholar.google.com/citations?user=I-YA-aMAAAAJ&hl=en" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+          <a href="https://www.researchgate.net/profile/Sai-Peng" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
         </div>
       </section>
     </aside>
@@ -140,25 +142,30 @@
         </div>
       </section>
 
-      <section class="card section">
+      <section class="card section news-section">
         <div class="section-header">
           <h2>News</h2>
         </div>
-        <ul class="news-list">
-          <li>
-            <span class="news-date">2024</span>
-            <span>Published a review on recent advances in 3-D printed wearable pressure sensors for plantar pressure monitoring in IEEE Sensors Journal.</span>
-          </li>
-          <li>
-            <span class="news-date">2024</span>
-            <span>Presented work on a wireless readout system for pressure monitoring using FFF-printed mold fabricated flexible piezoresistive sensors at IEEE SENSORS.</span>
-          </li>
-          <li>
-            <span class="news-date">2024</span>
-            <span>Received an EWSN'24 grant.</span>
-          </li>
-        </ul>
-      </section>
+        <div class="news-groups">
+          <div class="news-group">
+            <div class="news-year">2024</div>
+            <ul class="news-list">
+              <li>
+                <span class="news-text"><strong>Published a review</strong> on recent advances in 3-D printed wearable pressure sensors for plantar pressure monitoring in IEEE Sensors Journal.</span>
+                <span class="news-date">Nov 15</span>
+              </li>
+              <li>
+                <span class="news-text"><strong>Presented work</strong> on a wireless readout system for pressure monitoring using FFF-printed mold fabricated flexible piezoresistive sensors at IEEE SENSORS.</span>
+                <span class="news-date">Sep 10</span>
+              </li>
+              <li>
+                <span class="news-text"><strong>Grant!</strong>Received an EWSN'24 student grant.</span>
+                <span class="news-date">Jul 20</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section> 
 
       <section class="card section">
         <div class="section-header">
@@ -166,7 +173,13 @@
           <a class="link-pill" href="publications.html">view all</a>
         </div>
         <article class="publication">
-          <div class="pub-cover">IEEE Sensors Journal</div>
+          <div class="pub-cover">
+            <div class="pub-cover-top">
+              <span class="pub-cover-type">Journal</span>
+              <span class="pub-cover-venue">IEEE Sensors Journal</span>
+            </div>
+            <div class="pub-cover-title">Sensors</div>
+          </div>
           <div>
             <h3><a href="https://ieeexplore.ieee.org/abstract/document/10680984">Recent Advances in 3-D Printed, Wearable Pressure Sensors for Plantar Pressure Monitoring: A Review</a></h3>
             <p><strong>Sai Peng</strong>; Hytham Hassan; Stijn Rosseel; Giovanni A. Matricali; Kevin Deschamps; Veerle Vandeginste; Hans Hallez</p>
@@ -175,7 +188,13 @@
           </div>
         </article>
         <article class="publication">
-          <div class="pub-cover">IEEE SENSORS</div>
+          <div class="pub-cover">
+            <div class="pub-cover-top">
+              <span class="pub-cover-type">Conference</span>
+              <span class="pub-cover-venue">IEEE SENSORS</span>
+            </div>
+            <div class="pub-cover-title">Sensors</div>
+          </div>
           <div>
             <h3><a href="https://ieeexplore.ieee.org/abstract/document/10785155">Wireless Readout System for Pressure Monitoring Using FFF-Printed Mold Fabricated Flexible Piezoresistive Sensors</a></h3>
             <p><strong>Sai Peng</strong>; Arthur Camelbeke; Kevin Deschamps; Veerle Vandeginste; Hans Hallez</p>
@@ -187,7 +206,7 @@
     </section>
   </main>
 
-  <footer class="footer">Independent prototype inspired by the academic-homepage layout.</footer>
+  <footer class="footer">@ Sai (Emily) Peng All rights reserved.</footer>
   <script src="assets/js/common.js"></script>
 </body>
 </html>
