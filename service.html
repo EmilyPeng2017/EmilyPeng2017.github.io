@@ -7,9 +7,252 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Fira+Sans:wght@400;500;700;800&family=Source+Code+Pro:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/global.css">
+  <style>
+    /* Global Styles (inline version for self-contained HTML) */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #fafaf9;
+      color: #1c1e21;
+      font-family: 'Lato', 'Segoe UI', system-ui, -apple-system, sans-serif;
+      font-weight: 400;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    /* TOPBAR - black background with white text */
+    .topbar {
+      background: #000000;
+      border-bottom: 1px solid #2a2a2a;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    .nav-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+    }
+
+    .brand {
+      font-family: 'Fira Sans', sans-serif;
+      font-weight: 800;
+      font-size: 1.5rem;
+      letter-spacing: -0.3px;
+      color: #ffffff;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .brand:hover {
+      opacity: 0.8;
+      color: #dddddd;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      font-family: 'Lato', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #f0f0f0;
+      text-decoration: none;
+      padding: 0.25rem 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      border-bottom-color: #ffffff;
+      color: #ffffff;
+    }
+
+    main {
+      max-width: 1280px;
+      margin: 2rem auto 4rem;
+      padding: 0 2rem;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02), 0 2px 6px rgba(0,0,0,0.03);
+      padding: 2rem;
+      transition: box-shadow 0.2s;
+      border: 1px solid #edeff2;
+    }
+
+    .section-header {
+      border-left: 5px solid #1f6e8c;
+      padding-left: 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+    .section-header h2 {
+      font-family: 'Fira Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.8rem;
+      letter-spacing: -0.3px;
+      color: #1f3b4a;
+    }
+
+    .kicker {
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      color: #1f6e8c;
+      margin-bottom: 0.5rem;
+    }
+
+    .page-title {
+      font-family: 'Fira Sans', sans-serif;
+      font-weight: 800;
+      font-size: 2.8rem;
+      letter-spacing: -1px;
+      line-height: 1.2;
+      color: #0f2c3b;
+    }
+
+    /* student & teaching lists */
+    .supervision-grid, .teaching-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .student-item {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.5rem 1rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px dashed #eef2f5;
+      transition: background 0.1s;
+    }
+    .student-name {
+      font-weight: 800;
+      font-family: 'Fira Sans', sans-serif;
+      font-size: 1.1rem;
+      color: #1c3b4f;
+      min-width: 180px;
+    }
+    .student-thesis {
+      font-weight: 600;
+      color: #2c5a6e;
+      background: #f0f5f8;
+      padding: 0.2rem 0.7rem;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      white-space: nowrap;
+    }
+    .student-desc {
+      color: #2d3e48;
+      flex: 1;
+    }
+    .student-year {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.8rem;
+      color: #6b7c85;
+      background: #f8f9fa;
+      padding: 0.2rem 0.6rem;
+      border-radius: 20px;
+      font-weight: 500;
+    }
+
+    .teaching-entry {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.6rem 1.2rem;
+      padding: 0.7rem 0;
+      border-bottom: 1px solid #f0f2f4;
+    }
+    .teaching-title {
+      font-weight: 700;
+      font-size: 1rem;
+      color: #1f4e64;
+    }
+    .teaching-semester {
+      font-family: 'Source Code Pro', monospace;
+      background: #eef3f6;
+      padding: 0.2rem 0.8rem;
+      border-radius: 24px;
+      font-size: 0.8rem;
+    }
+
+    .badge-icon {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: #2c8aa5;
+      border-radius: 50%;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+    .subheading {
+      font-weight: 600;
+      font-size: 1.25rem;
+      margin: 0 0 0.75rem 0;
+      color: #2e576e;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    hr {
+      margin: 0.5rem 0 1rem 0;
+      border: none;
+      border-top: 2px dotted #dce5ea;
+    }
+    .footer-note {
+      margin-top: 20px;
+      font-size: 0.8rem;
+      color: #7c8e98;
+      text-align: right;
+      border-top: 1px solid #e9ecef;
+      padding-top: 1rem;
+    }
+
+    @media (max-width: 700px) {
+      .nav-inner {
+        flex-direction: column;
+        align-items: center;
+      }
+      .page-title {
+        font-size: 2rem;
+      }
+      .card {
+        padding: 1.5rem;
+      }
+      .student-name {
+        min-width: 100%;
+      }
+      .student-thesis, .student-year {
+        font-size: 0.75rem;
+      }
+    }
+  </style>
 </head>
 <body data-page="service">
+  <!-- Topbar with black background and white text -->
   <header class="topbar">
     <div class="nav-inner">
       <a class="brand" href="index.html">Sai (Emily) Peng</a>
@@ -17,38 +260,169 @@
         <a href="index.html" data-page="home">Home</a>
         <a href="publications.html" data-page="publications">Publications</a>
         <a href="awards.html" data-page="awards">Awards</a>
-        <a href="service.html" data-page="service">Service</a>
+        <a href="service.html" data-page="service" class="active">Service</a>
         <a href="blogs.html" data-page="blogs">Blogs</a>
       </nav>
     </div>
   </header>
 
   <main class="layout layout--fullwidth">
-    <section class="content">
+    <div class="content">
+      <!-- Intro & title card -->
       <section class="card section">
-        <p class="kicker">community</p>
+        <p class="kicker">mentorship & academic citizenship</p>
         <h1 class="page-title">Service</h1>
+        <p style="margin-top: 0.8rem; font-size: 1.05rem; color: #2f5b6e;">Student supervision and teaching contributions that bridge embedded systems, wearable health, and intelligent sensor design.</p>
       </section>
+
+      <!-- STUDENT SUPERVISION SECTION (latest to oldest) -->
       <section class="card section">
-        <div class="section-header"><h2>Seminars and Workshops</h2></div>
-        <article class="publication">
-          <div class="pub-cover">Seminars</div>
-          <div>
-            <h3><a href="../public/categories/keeplearning/seminars/index.html">Seminar Notes</a></h3>
-            <p>Notes and reflections from academic seminars on wearable devices, soft robotics, bioelectronics, and related research areas.</p>
+        <div class="section-header">
+          <h2>Student Supervision</h2>
+        </div>
+        <div class="supervision-grid">
+          <!-- Year 2026 entries (latest) -->
+          <div class="student-item">
+            <span class="student-name">Jelle Tommeleyn</span>
+            <span class="student-thesis">Master Lab Project</span>
+            <span class="student-desc">“Data Mining Design Knowledge from Scientific Documents for Flexible Sensors”</span>
+            <span class="student-year">2026</span>
           </div>
-        </article>
-        <article class="publication">
-          <div class="pub-cover">Workshops</div>
-          <div>
-            <h3><a href="../public/categories/keeplearning/workshop/index.html">Workshop Notes</a></h3>
-            <p>Workshop participation and learning records collected as part of ongoing research training.</p>
+          <div class="student-item">
+            <span class="student-name">Cheickné Kagnassi</span>
+            <span class="student-thesis">Summer Intern</span>
+            <span class="student-desc">“Machine Learning-Driven Foot Posture and Gait Analysis For Diabetic Foot Monitoring”</span>
+            <span class="student-year">2026</span>
           </div>
-        </article>
+          <div class="student-item">
+            <span class="student-name">Julien Evrard</span>
+            <span class="student-thesis">Summer Intern</span>
+            <span class="student-desc">“Integration of Literature-Derived Design Knowledge into Data-Driven Sensor Design”</span>
+            <span class="student-year">2026</span>
+          </div>
+          <!-- Year 2024 entries -->
+          <div class="student-item">
+            <span class="student-name">Timon Claerhout</span>
+            <span class="student-thesis">Bachelor Thesis</span>
+            <span class="student-desc">“Development of an Android Application for Plantar Pressure Sensor Data Collection”</span>
+            <span class="student-year">2024</span>
+          </div>
+          <div class="student-item">
+            <span class="student-name">Alexandra Gascoin</span>
+            <span class="student-thesis">Summer Intern</span>
+            <span class="student-desc">“Android Database Management System for Diabetic Foot Pressure Monitoring”</span>
+            <span class="student-year">2024</span>
+          </div>
+          <div class="student-item">
+            <span class="student-name">Yari Depreeuw</span>
+            <span class="student-thesis">Master Thesis</span>
+            <span class="student-desc">“Dynamic Power Management in Wearable Devices: Enhancing Battery Life in a Smart Insole System”</span>
+            <span class="student-year">2024</span>
+          </div>
+          <!-- Year 2023 entry -->
+          <div class="student-item">
+            <span class="student-name">Arthur Camelbeke</span>
+            <span class="student-thesis">Master Thesis</span>
+            <span class="student-desc">“Ultra Low-Power Embedded System for Diabetic Pressure Sensing Foot Insoles”</span>
+            <span class="student-year">2023</span>
+          </div>
+        </div>
+        <p style="margin-top: 1.2rem; font-size: 0.9rem; background: #F4F9FC; padding: 0.6rem 1rem; border-radius: 20px;">Projects span ultra-low-power embedded systems, Android health monitoring, dynamic power management, machine learning for gait analysis, and sensor design knowledge mining.
+        </p>
       </section>
-    </section>
+
+      <!-- TEACHING TASKS section (latest to oldest) -->
+      <section class="card section">
+        <div class="section-header">
+          <h2>Teaching Tasks</h2>
+        </div>
+        <div class="teaching-list">
+          <div class="teaching-entry">
+            <span class="teaching-title">Industrial Internet of Things Lab Session</span>
+            <span class="teaching-semester">Fall 2025</span>
+          </div>
+          <div class="teaching-entry">
+            <span class="teaching-title">Industrial Internet of Things Lab Session</span>
+            <span class="teaching-semester">Fall 2024</span>
+          </div>
+          <div class="teaching-entry">
+            <span class="teaching-title">Industrial Internet of Things Lab Session</span>
+            <span class="teaching-semester">Fall 2023</span>
+          </div>
+        </div>
+        <p style="margin-top: 1.2rem; font-size: 0.9rem; background: #F4F9FC; padding: 0.6rem 1rem; border-radius: 20px;">
+          Lab sessions focus on hands-on IoT protocols, wireless sensor integration, edge computing, and real-time industrial communication paradigms.
+        </p>
+      </section>
+
+      <!-- additional seminars/workshops (preserved with original design) -->
+      <section class="card section">
+        <div class="section-header">
+          <h2>Seminars & Workshops</h2>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 1.2rem;">
+          <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+            <div style="background: #EFF6FA; border-radius: 16px; padding: 0.5rem 1rem; font-weight: 700; min-width: 100px; text-align: center;">Seminars</div>
+            <div>
+              <strong><a href="#" style="color:#1f6e8c; text-decoration: none; border-bottom: 1px dotted;">Seminar Notes</a></strong>
+              <p style="margin-top: 0.2rem;">Notes and reflections from academic seminars on wearable devices, soft robotics, bioelectronics, and related research areas.</p>
+            </div>
+          </div>
+          <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center;">
+            <div style="background: #EFF6FA; border-radius: 16px; padding: 0.5rem 1rem; font-weight: 700; min-width: 100px; text-align: center;">Workshops</div>
+            <div>
+              <strong><a href="#" style="color:#1f6e8c; text-decoration: none; border-bottom: 1px dotted;">Workshop Notes</a></strong>
+              <p style="margin-top: 0.2rem;">Workshop participation and learning records collected as part of ongoing research training.</p>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <p style="margin-top: 1.2rem; font-size: 0.9rem; background: #F4F9FC; padding: 0.6rem 1rem; border-radius: 20px;">
+          Continuous engagement with emerging topics in intelligent health systems, flexible electronics, and embedded AI.
+        </p>
+      </section>
+    </div>
   </main>
 
-  <script src="assets/js/common.js"></script>
+  <!-- simple JS for active state and placeholder seminar links -->
+  <script>
+    (function() {
+      // highlight current page in nav
+      const currentPageAttr = document.body.getAttribute('data-page') || 'service';
+      const navLinks = document.querySelectorAll('.nav-links a');
+      navLinks.forEach(link => {
+        const linkPage = link.getAttribute('data-page');
+        if (linkPage === currentPageAttr) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+        if (currentPageAttr === 'service' && link.getAttribute('href') === 'service.html') {
+          link.classList.add('active');
+        }
+      });
+      
+      // placeholder for seminar/workshop links (avoid broken navigation)
+      const seminarLinks = document.querySelectorAll('a[href="#"]');
+      seminarLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          alert('Full seminar and workshop notes repository will be available soon. Thank you for your interest!');
+        });
+      });
+
+      // optional: add subtle hover effect for student items
+      const studentItems = document.querySelectorAll('.student-item');
+      studentItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+          item.style.backgroundColor = '#fefcf8';
+          item.style.transition = '0.1s';
+        });
+        item.addEventListener('mouseleave', () => {
+          item.style.backgroundColor = 'transparent';
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

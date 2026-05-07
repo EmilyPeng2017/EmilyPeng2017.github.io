@@ -7,44 +7,259 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Fira+Sans:wght@400;500;700;800&family=Source+Code+Pro:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/global.css">
+  <style>
+    /* ---------- GLOBAL STYLES (matching publications/awards/service) ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fafaf9;
+      color: #1c1e21;
+      font-family: 'Lato', 'Segoe UI', system-ui, -apple-system, sans-serif;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    /* TOPBAR — black background with white text */
+    .topbar {
+      background: #000000;
+      border-bottom: 1px solid #2a2a2a;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    .nav-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+    }
+
+    .brand {
+      font-family: 'Fira Sans', sans-serif;
+      font-weight: 800;
+      font-size: 1.5rem;
+      letter-spacing: -0.3px;
+      color: #ffffff;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .brand:hover {
+      opacity: 0.8;
+      color: #dddddd;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      font-family: 'Lato', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #f0f0f0;
+      text-decoration: none;
+      padding: 0.25rem 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      border-bottom-color: #ffffff;
+      color: #ffffff;
+    }
+
+    /* MAIN LAYOUT */
+    .layout {
+      max-width: 1200px;
+      margin: 2rem auto 4rem;
+      padding: 0 2rem;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    /* card styling */
+    .card {
+      background: #ffffff;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02), 0 2px 6px rgba(0,0,0,0.03);
+      padding: 2rem;
+      border: 1px solid #edeff2;
+      transition: box-shadow 0.2s;
+    }
+
+    .kicker {
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      color: #1f6e8c;
+      margin-bottom: 0.5rem;
+    }
+
+    .page-title {
+      font-family: 'Fira Sans', sans-serif;
+      font-weight: 800;
+      font-size: 2.8rem;
+      letter-spacing: -1px;
+      line-height: 1.2;
+      color: #0f2c3b;
+    }
+
+    .archive-summary {
+      color: #4a6272;
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    .section-header {
+      border-left: 5px solid #1f6e8c;
+      padding-left: 1.2rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .section-header h2 {
+      font-family: 'Fira Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.6rem;
+      color: #1f3b4a;
+    }
+
+    .link-pill {
+      font-size: 0.75rem;
+      background: #eef3f6;
+      padding: 0.3rem 0.9rem;
+      border-radius: 20px;
+      text-decoration: none;
+      color: #1f6e8c;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    /* Blog list styling - matches original structure */
+    #blog-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .blog-item {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid #f0f2f5;
+    }
+    .blog-item:last-child {
+      border-bottom: none;
+    }
+
+    .blog-title {
+      font-family: 'Fira Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #1c3b4f;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .blog-title:hover {
+      color: #1f6e8c;
+      text-decoration: underline;
+    }
+
+    .blog-date {
+      font-size: 0.75rem;
+      font-family: 'Source Code Pro', monospace;
+      color: #8a9ba8;
+      margin-left: 0.75rem;
+    }
+
+    @media (max-width: 700px) {
+      .nav-inner {
+        flex-direction: column;
+        align-items: center;
+      }
+      .page-title {
+        font-size: 2rem;
+      }
+      .card {
+        padding: 1.5rem;
+      }
+      .blog-date {
+        display: block;
+        margin-left: 0;
+        margin-top: 0.25rem;
+      }
+    }
+  </style>
 </head>
+
 <body data-page="blogs">
-  <header class="topbar">
-    <div class="nav-inner">
-      <a class="brand" href="index.html">Sai (Emily) Peng</a>
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="index.html" data-page="home">Home</a>
-        <a href="publications.html" data-page="publications">Publications</a>
-        <a href="awards.html" data-page="awards">Awards</a>
-        <a href="service.html" data-page="service">Service</a>
-        <a href="blogs.html" data-page="blogs">Blogs</a>
-      </nav>
-    </div>
-  </header>
 
-  <main class="layout layout--fullwidth">
-    <section class="content">
-      <section class="card section">
-        <p class="kicker">archive</p>
-        <h1 class="page-title">Blogs</h1>
-        <p class="archive-summary">This page collects posts from the previous Hexo site and links to their published URLs.</p>
-      </section>
+<header class="topbar">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">Sai (Emily) Peng</a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html" data-page="home">Home</a>
+      <a href="publications.html" data-page="publications">Publications</a>
+      <a href="awards.html" data-page="awards">Awards</a>
+      <a href="service.html" data-page="service">Service</a>
+      <a href="blogs.html" data-page="blogs" class="active">Blogs</a>
+    </nav>
+  </div>
+</header>
 
-      <section class="card section">
-        <div class="section-header">
-          <h2>All Posts</h2>
-          <span id="blog-count" class="link-pill">0 posts</span>
-        </div>
-        <div id="blog-list"></div>
-      </section>
+<main class="layout layout--fullwidth">
+  <section class="content">
+    <section class="card section">
+      <p class="kicker">archive</p>
+      <h1 class="page-title">Blogs</h1>
+      <p class="archive-summary">This page collects posts from the previous Hexo site and links to their published URLs.</p>
     </section>
-  </main>
 
-  <script src="assets/js/blogs-data.js"></script>
-  <script src="assets/js/blogs.js"></script>
-  <script src="assets/js/common.js"></script>
+    <section class="card section">
+      <div class="section-header">
+        <h2>All Posts</h2>
+        <span id="blog-count" class="link-pill">0 posts</span>
+      </div>
+      <div id="blog-list"></div>
+    </section>
+  </section>
+</main>
+
+<script src="assets/js/blogs-data.js"></script>
+<script src="assets/js/blogs.js"></script>
+<script>
+  // Active navigation highlight (preserving original functionality)
+  (function() {
+    const currentPage = 'blogs';
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      if (href === 'blogs.html' || (href && href.includes('blogs'))) {
+        link.classList.add('active');
+      }
+      if (link.getAttribute('data-page') === currentPage) {
+        link.classList.add('active');
+      }
+    });
+  })();
+</script>
+
 </body>
 </html>
-
-

@@ -8,223 +8,645 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Fira+Sans:wght@400;500;700;800&family=Source+Code+Pro:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="css/emily.css">
+  <style>
+    /* ---------- GLOBAL STYLES (matching publications/awards/service) ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fafaf9;
+      color: #1c1e21;
+      font-family: 'Lato', 'Segoe UI', system-ui, -apple-system, sans-serif;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    /* TOPBAR — black background with white text */
+    .topbar {
+      background: #000000;
+      border-bottom: 1px solid #2a2a2a;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    .nav-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+    }
+
+    .brand {
+      font-family: 'Fira Sans', sans-serif;
+      font-weight: 800;
+      font-size: 1.5rem;
+      letter-spacing: -0.3px;
+      color: #ffffff;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .brand:hover {
+      opacity: 0.8;
+      color: #dddddd;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      font-family: 'Lato', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #f0f0f0;
+      text-decoration: none;
+      padding: 0.25rem 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      border-bottom-color: #ffffff;
+      color: #ffffff;
+    }
+
+    /* MAIN LAYOUT: two columns (profile sidebar + content) */
+    .layout {
+      max-width: 1400px;
+      margin: 2rem auto 4rem;
+      padding: 0 2rem;
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    /* PROFILE SIDEBAR */
+    .profile {
+      flex: 0 0 300px;
+      position: sticky;
+      top: 90px;
+    }
+
+    .profile-card {
+      background: #ffffff;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02), 0 2px 6px rgba(0,0,0,0.03);
+      padding: 1.8rem;
+      border: 1px solid #edeff2;
+      text-align: center;
+    }
+
+    .portrait {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 3px solid #1f6e8c;
+    }
+
+    .profile-card h1 {
+      font-family: 'Fira Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #1f3b4a;
+      margin-bottom: 0.5rem;
+    }
+
+    .role {
+      font-size: 0.9rem;
+      color: #4a6272;
+      margin-bottom: 0.3rem;
+    }
+
+    .email {
+      display: inline-block;
+      margin-top: 0.8rem;
+      font-size: 0.8rem;
+      color: #1f6e8c;
+      text-decoration: none;
+      font-family: 'Source Code Pro', monospace;
+    }
+    .email:hover {
+      text-decoration: underline;
+    }
+
+    .socials {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .socials a {
+      color: #4a6272;
+      font-size: 1.2rem;
+      transition: color 0.2s;
+    }
+    .socials a:hover {
+      color: #1f6e8c;
+    }
+
+    /* MAIN CONTENT */
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    /* card styling */
+    .card {
+      background: #ffffff;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02), 0 2px 6px rgba(0,0,0,0.03);
+      padding: 2rem;
+      border: 1px solid #edeff2;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      border-left: 5px solid #1f6e8c;
+      padding-left: 1.2rem;
+      margin-bottom: 1.2rem;
+    }
+    .section-header h2 {
+      font-family: 'Fira Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #1f3b4a;
+    }
+
+    .link-pill {
+      font-size: 0.75rem;
+      background: #eef3f6;
+      padding: 0.3rem 0.9rem;
+      border-radius: 20px;
+      text-decoration: none;
+      color: #1f6e8c;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .link-pill:hover {
+      background: #e0eef4;
+    }
+
+    /* Grid two columns */
+    .grid-two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    /* Compact list for experience */
+    .compact-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .compact-list li {
+      margin-bottom: 1.2rem;
+    }
+    .item-row {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+    .item-media img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+    .item-details {
+      flex: 1;
+    }
+    .item-title {
+      font-weight: 800;
+      font-family: 'Fira Sans', sans-serif;
+      font-size: 1rem;
+      color: #1c3b4f;
+    }
+    .item-meta {
+      font-size: 0.8rem;
+      color: #5d6f7c;
+    }
+    .item-time {
+      font-size: 0.75rem;
+      color: #8a9ba8;
+      font-family: 'Source Code Pro', monospace;
+    }
+
+    /* Topic list */
+    .topic-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+    .topic-list li {
+      background: #eef3f6;
+      padding: 0.4rem 1rem;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #1f6e8c;
+    }
+
+    /* News section */
+    .news-groups {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    .news-group {
+      border-left: 3px solid #1f6e8c;
+      padding-left: 1rem;
+    }
+    .news-year {
+      font-family: 'Fira Sans', sans-serif;
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: #2c5e7a;
+      margin-bottom: 0.8rem;
+    }
+    .news-list {
+      list-style: none;
+    }
+    .news-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 1px dashed #eef2f5;
+    }
+    .news-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .news-text {
+      font-size: 0.9rem;
+      color: #2d3e48;
+      flex: 1;
+    }
+    .news-date {
+      font-size: 0.7rem;
+      font-family: 'Source Code Pro', monospace;
+      color: #8a9ba8;
+      white-space: nowrap;
+    }
+
+    /* Publication item for selected publications */
+    .publication {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid #f0f2f5;
+    }
+    .publication:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .pub-cover {
+      flex: 0 0 100px;
+      font-family: 'Source Code Pro', monospace;
+      font-weight: 700;
+      background: #eef3f6;
+      border-radius: 12px;
+      padding: 0.4rem 0.6rem;
+      font-size: 0.7rem;
+      color: #1f6e8c;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .pub-cover-venue {
+      font-weight: 800;
+      font-size: 0.7rem;
+    }
+    .publication h3 {
+      font-family: 'Fira Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #1c3b4f;
+      margin-bottom: 0.4rem;
+    }
+    .publication h3 a {
+      color: #1c3b4f;
+      text-decoration: none;
+    }
+    .publication h3 a:hover {
+      color: #1f6e8c;
+      text-decoration: underline;
+    }
+    .publication p {
+      font-size: 0.85rem;
+      color: #4a6272;
+      margin: 0.2rem 0;
+    }
+    .pub-links {
+      margin-top: 0.5rem;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.75rem;
+      color: #8a9ba8;
+      border-top: 1px solid #e9ecef;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 900px) {
+      .layout {
+        flex-direction: column;
+      }
+      .profile {
+        position: static;
+        flex: auto;
+        width: 100%;
+      }
+      .grid-two {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      .nav-inner {
+        flex-direction: column;
+        align-items: center;
+      }
+      .card {
+        padding: 1.5rem;
+      }
+    }
+  </style>
 </head>
+
 <body data-page="home">
-  <header class="topbar">
-    <div class="nav-inner">
-      <a class="brand" href="index.html">Sai (Emily) Peng</a>
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="index.html" data-page="home">Home</a>
-        <a href="publications.html" data-page="publications">Publications</a>
-        <a href="awards.html" data-page="awards">Awards</a>
-        <a href="service.html" data-page="service">Service</a>
-        <a href="blogs.html" data-page="blogs">Blogs</a>
-      </nav>
+
+<header class="topbar">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">Sai (Emily) Peng</a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html" data-page="home" class="active">Home</a>
+      <a href="publications.html" data-page="publications">Publications</a>
+      <a href="awards.html" data-page="awards">Awards</a>
+      <a href="service.html" data-page="service">Service</a>
+      <a href="blogs.html" data-page="blogs">Blogs</a>
+    </nav>
+  </div>
+</header>
+
+<main class="layout">
+  <!-- PROFILE SIDEBAR -->
+  <aside class="profile">
+    <div class="profile-card">
+      <img class="portrait" src="img/avatar.png" alt="Portrait of Sai (Emily) Peng" onerror="this.src='https://placehold.co/160x160/1f6e8c/white?text=Emily'">
+      <h1>Sai (Emily) Peng</h1>
+      <p class="role">Ph.D. Researcher</p>
+      <p class="role">KU Leuven, Belgium</p>
+      <p class="role">Embedded systems, wearable devices, smart sensors, and soft robotics</p>
+      <a class="email" href="mailto:emily.peng0627@gmail.com">emily.peng0627@gmail.com</a>
+      <div class="socials">
+        <a href="mailto:emily.peng0627@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="https://github.com/EmilyPeng2017" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/sai-emily-peng/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://scholar.google.com/citations?user=I-YA-aMAAAAJ&hl=en" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+        <a href="https://www.researchgate.net/profile/Sai-Peng" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
+      </div>
     </div>
-  </header>
+  </aside>
 
-  <main class="layout">
-    <aside class="profile">
-      <section class="card profile-card">
-        <img class="portrait" src="img/avatar.png" alt="Portrait of Sai (Emily) Peng">
-        <h1>Sai (Emily) Peng</h1>
-        <p class="role">Ph.D. Researcher</p>
-        <p class="role">KU Leuven, Belgium</p>
-        <p class="role">Embedded systems, wearable devices, smart sensors, and soft robotics</p>
-        <a class="email" href="mailto:emily.peng@kuleuven.be">emily.peng0627@gmail.com</a>
-        <div class="socials">
-          <a href="mailto:emily.peng0627@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-          <a href="https://github.com/EmilyPeng2017" title="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/sai-emily-peng/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-          <a href="https://scholar.google.com/citations?user=I-YA-aMAAAAJ&hl=en" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-          <a href="https://www.researchgate.net/profile/Sai-Peng" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
-        </div>
-      </section>
-    </aside>
-
-    <section class="content">
-      <section class="card section">
-        <div class="section-header">
-          <h2>About Me</h2>
-        </div>
-        <p>
-          I am a Ph.D. researcher at KU Leuven in Belgium, working on embedded systems,
-          wearable devices, smart sensors, and soft robotics. My long-term goal is to develop
-          sensing technologies that can make a real difference in healthcare and rehabilitation.
-        </p>
-        <p>
-          Before starting my Ph.D., I worked at Microsoft and Micron. This website is a research
-          portfolio, a publication record, and a notebook for writing about research, reading,
-          learning, and life.
-        </p>
-      </section>
-
-      <section class="card section">
-        <div class="grid-two">
-          <div>
-            <div class="section-header">
-              <h2>Experience</h2>
-            </div>
-            <ul class="compact-list">
-              <li>
-                <span class="badge-dot"></span>
-                <div class="item-row">
-                  <span class="item-media"><img src="img/ku_leuven_logo.png" alt="KU Leuven logo"></span>
-                  <div class="item-details">
-                    <div class="item-title">KU Leuven</div>
-                    <div class="item-meta">Ph.D. Researcher · Current</div>
-                    <div class="item-time">Aug. 2023 – Present</div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <span class="badge-dot"></span>
-                <div class="item-row">
-                  <span class="item-media"><img src="img/micron_logo.png" alt="Micron logo"></span>
-                  <div class="item-details">
-                    <div class="item-title">Micron</div>
-                    <div class="item-meta">SSD Firmware Development Engineer</div>
-                    <div class="item-time">Dec. 2020 – Apr. 2023</div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <span class="badge-dot"></span>
-                <div class="item-row">
-                  <span class="item-media"><img src="img/microsoft_logo.png" alt="Microsoft logo"></span>
-                  <div class="item-details">
-                    <div class="item-title">Microsoft</div>
-                    <div class="item-meta">Operating System Support Engineer</div>
-                    <div class="item-time">Mar. 2019 – Dec. 2020</div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <span class="badge-dot"></span>
-                <div class="item-row">
-                  <span class="item-media"><img src="img/sjtu_logo.png" alt="Micron logo"></span>
-                  <div class="item-details">
-                    <div class="item-title">Shanghai Jiao Tong University</div>
-                    <div class="item-meta">Master Student</div>
-                    <div class="item-time">Sep. 2016 – Mar. 2019</div>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <span class="badge-dot"></span>
-                <div class="item-row">
-                  <span class="item-media"><img src="img/shu_logo.png" alt="Micron logo"></span>
-                  <div class="item-details">
-                    <div class="item-title">Shanghai University</div>
-                    <div class="item-meta">Bachelor Student</div>
-                    <div class="item-time">Sep. 2012 – Jun. 2016</div>
-                  </div>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <div class="section-header">
-              <h2>Research Topics</h2>
-            </div>
-            <ul class="topic-list">
-              <li>Wearable Devices</li>
-              <li>Smart Sensors</li>
-              <li>Embedded Systems</li>
-              <li>Soft Robotics</li>
-              <li>3D Printed Sensors</li>
-              <li>Healthcare</li>
-              <li>Internet of Things (IoT)</li>
-              <li>Low-Power Electronics</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="card section news-section">
-        <div class="section-header">
-          <h2>News</h2>
-        </div>
-        <div class="news-groups">
-          <div class="news-group">
-            <div class="news-year">2026</div>
-            <ul class="news-list">
-              <li class="news-item">
-                <span class="news-text"><strong>EMBC paper accepted! </strong> Our paper entitled "Dynamic Power Management with Context-Aware Optimization for Long-Term Wearable Plantar Pressure Monitoring via a Smart Insole System" has been accepted for presentation at the 48th Annual International Conference of the IEEE Engineering in Medicine and Biology Society. Thank you for all the coauthors!</span>
-                <span class="news-date">Apr 15</span>
-              </li>
-            </ul>
-          </div>
-          <div class="news-group">
-            <div class="news-year">2024</div>
-            <ul class="news-list">
-              <li class="news-item">
-                <span class="news-text"><strong>IEEE Sensors Journal paper accepted! </strong> Our paper entitled "Recent Advances in 3-D Printed, Wearable Pressure Sensors for Plantar Pressure Monitoring: A Review", has been accepted for publication in IEEE Sensors Journal. Thank you for all the coauthors!</span>
-                <span class="news-date">Sep 5</span>
-              </li>
-              <li class="news-item">
-                <span class="news-text"><strong>Grant aceepted! </strong>Received an EWSN'24 student grant.</span>
-                <span class="news-date">Oct 22</span>
-              </li>
-              <li class="news-item">
-                <span class="news-text"><strong>IEEE Sensors conference paper accepted! </strong> Our paper entitled "Wireless Readout System for Pressure Monitoring Using FFF-Printed Mold Fabricated Flexible Piezoresistive Sensors", has been accepted for Poster presentation at the 2024 IEEE SENSORS. Thank you for all the coauthors!</span>
-                <span class="news-date">Aug 16</span>
-              </li>
-              <li class="news-item">
-                <span class="news-text"><strong>EWSN conference paper accepted! </strong> Our paper entitled "Navigating Multidisciplinary Challenges: Taking A Low-power Wireless Plantar Pressure Monitoring System with 3D-Printed Sensors as An Example" has been accepted for presentation at the 2024 European Wireless Sensor Networks Conference. Thank you for all the coauthors!</span>
-                <span class="news-date">July 10</span>
-              </li>
-              <li class="news-item">
-                <span class="news-text"><strong>Attended summer school! </strong> Attended the first year INTERNATIONAL SUMMER SCHOOL ON WEARABLE SENSORS at Università Campus Bio-Medico di Roma. The International Summer School on Wearable Sensors is an initiative of the European Network on Wearable Sensors (ENWS) and is organized in collaboration with the University Campus Bio-Medico of Rome, Italy. Very nice experience!</span>
-                <span class="news-date">July 10</span>
-              </li>
-              
-            </ul>
-          </div>
-        </div>
-      </section> 
-
-      <section class="card section">
-        <div class="section-header">
-          <h2>Selected Publications</h2>
-          <a class="link-pill" href="publications.html">view all</a>
-        </div>
-        <article class="publication">
-          <div class="pub-cover">
-            <div class="pub-cover-top">
-              <span class="pub-cover-type">Journal</span>
-              <span class="pub-cover-venue">IEEE Sensors Journal</span>
-            </div>
-            <div class="pub-cover-title">Sensors</div>
-          </div>
-          <div>
-            <h3><a href="https://ieeexplore.ieee.org/abstract/document/10680984">Recent Advances in 3-D Printed, Wearable Pressure Sensors for Plantar Pressure Monitoring: A Review</a></h3>
-            <p><strong>Sai Peng</strong>; Hytham Hassan; Stijn Rosseel; Giovanni A. Matricali; Kevin Deschamps; Veerle Vandeginste; Hans Hallez</p>
-            <p>IEEE Sensors Journal, 2024</p>
-            <div class="pub-links"><a class="link-pill" href="https://ieeexplore.ieee.org/abstract/document/10680984">Paper</a></div>
-          </div>
-        </article>
-        <article class="publication">
-          <div class="pub-cover">
-            <div class="pub-cover-top">
-              <span class="pub-cover-type">Conference</span>
-              <span class="pub-cover-venue">IEEE SENSORS</span>
-            </div>
-            <div class="pub-cover-title">Sensors</div>
-          </div>
-          <div>
-            <h3><a href="https://ieeexplore.ieee.org/abstract/document/10785155">Wireless Readout System for Pressure Monitoring Using FFF-Printed Mold Fabricated Flexible Piezoresistive Sensors</a></h3>
-            <p><strong>Sai Peng</strong>; Arthur Camelbeke; Kevin Deschamps; Veerle Vandeginste; Hans Hallez</p>
-            <p>IEEE SENSORS, 2024</p>
-            <div class="pub-links"><a class="link-pill" href="https://ieeexplore.ieee.org/abstract/document/10785155">Paper</a></div>
-          </div>
-        </article>
-      </section>
+  <!-- MAIN CONTENT -->
+  <div class="content">
+    <!-- About Me -->
+    <section class="card section">
+      <div class="section-header">
+        <h2>About Me</h2>
+      </div>
+      <p>
+        I am a Ph.D. researcher at KU Leuven in Belgium, working on embedded systems,
+        wearable devices, smart sensors, and soft robotics. My long-term goal is to develop
+        sensing technologies that can make a real difference in healthcare and rehabilitation.
+      </p>
+      <p style="margin-top: 0.8rem;">
+        Before starting my Ph.D., I worked at Microsoft and Micron. This website is a research
+        portfolio, a publication record, and a notebook for writing about research, reading,
+        learning, and life.
+      </p>
     </section>
-  </main>
 
-  <footer class="footer">@ Sai (Emily) Peng All rights reserved.</footer>
-  <script src="assets/js/common.js"></script>
+    <!-- Experience & Research Topics (grid) -->
+    <section class="card section">
+      <div class="grid-two">
+        <div>
+          <div class="section-header" style="margin-bottom: 1rem;">
+            <h2>Experience</h2>
+          </div>
+          <ul class="compact-list">
+            <li>
+              <div class="item-row">
+                <span class="item-media"><img src="img/ku_leuven_logo.png" alt="KU Leuven logo" onerror="this.style.display='none'"> <span style="font-size: 2rem;"></span></span>
+                <div class="item-details">
+                  <div class="item-title">KU Leuven</div>
+                  <div class="item-meta">Ph.D. Researcher</div>
+                  <div class="item-time">Aug. 2023 – Present</div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-row">
+                <span class="item-media"><img src="img/micron_logo.png" alt="Micron logo" onerror="this.style.display='none'"> <span style="font-size: 2rem;"></span></span>
+                <div class="item-details">
+                  <div class="item-title">Micron</div>
+                  <div class="item-meta">SSD Firmware Development Engineer</div>
+                  <div class="item-time">Dec. 2020 – Apr. 2023</div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-row">
+                <span class="item-media"><img src="img/microsoft_logo.png" alt="Microsoft logo" onerror="this.style.display='none'"> <span style="font-size: 2rem;"></span></span>
+                <div class="item-details">
+                  <div class="item-title">Microsoft</div>
+                  <div class="item-meta">Operating System Support Engineer</div>
+                  <div class="item-time">Mar. 2019 – Dec. 2020</div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-row">
+                <span class="item-media"><img src="img/sjtu_logo.png" alt="SJTU logo" onerror="this.style.display='none'"> <span style="font-size: 2rem;"></span></span>
+                <div class="item-details">
+                  <div class="item-title">Shanghai Jiao Tong University</div>
+                  <div class="item-meta">Master Student</div>
+                  <div class="item-time">Sep. 2016 – Mar. 2019</div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="item-row">
+                <span class="item-media"><img src="img/shu_logo.png" alt="SHU logo" onerror="this.style.display='none'"> <span style="font-size: 2rem;"></span></span>
+                <div class="item-details">
+                  <div class="item-title">Shanghai University</div>
+                  <div class="item-meta">Bachelor Student</div>
+                  <div class="item-time">Sep. 2012 – Jun. 2016</div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <div class="section-header" style="margin-bottom: 1rem;">
+            <h2>Research Topics</h2>
+          </div>
+          <ul class="topic-list">
+            <li>Wearable Devices</li>
+            <li>Smart Sensors</li>
+            <li>Embedded Systems</li>
+            <li>Soft Robotics</li>
+            <li>3D Printed Sensors</li>
+            <li>Healthcare</li>
+            <li>Internet of Things (IoT)</li>
+            <li>Low-Power Electronics</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="card section news-section">
+      <div class="section-header">
+        <h2>News</h2>
+      </div>
+      <div class="news-groups">
+        <div class="news-group">
+          <div class="news-year">2026</div>
+          <ul class="news-list">
+            <li class="news-item">
+              <span class="news-text"><strong>EMBC paper accepted!</strong> Our paper entitled "Dynamic Power Management with Context-Aware Optimization for Long-Term Wearable Plantar Pressure Monitoring via a Smart Insole System" has been accepted for presentation at the 48th Annual International Conference of the IEEE Engineering in Medicine and Biology Society.</span>
+              <span class="news-date">Apr 15</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="news-groups">
+        <div class="news-group">
+          <div class="news-year">2025</div>
+          <ul class="news-list">
+            <li class="news-item">
+              <span class="news-text"><strong>My second master student Yari graduated.</strong> He got 15.5/20! The study journey was not easy! Wish him all the best!</span>
+              <span class="news-date">June 22</span>
+            </li>
+          </ul>
+        </div>
+
+
+        <div class="news-group">
+          <div class="news-year">2024</div>
+          <ul class="news-list">
+            <li class="news-item">
+              <span class="news-text"><strong>Jan retired.</strong> My good friend, Mr. Jan Poelaert, who has helped me a lot at the beginning of my research journey, has retired. Best wishes to him!</span>
+              <span class="news-date">Oct 1</span>
+            </li>
+            <li class="news-item">
+              <span class="news-text"><strong>IEEE Sensors Journal paper accepted!</strong> "Recent Advances in 3-D Printed, Wearable Pressure Sensors for Plantar Pressure Monitoring: A Review" accepted for publication.</span>
+              <span class="news-date">Sep 5</span>
+            </li>
+            <li class="news-item">
+              <span class="news-text"><strong>Grant accepted!</strong> Received an EWSN'24 student grant.</span>
+              <span class="news-date">Oct 22</span>
+            </li>
+            <li class="news-item">
+              <span class="news-text"><strong>IEEE Sensors conference paper accepted!</strong> "Wireless Readout System for Pressure Monitoring Using FFF-Printed Mold Fabricated Flexible Piezoresistive Sensors" accepted for Poster presentation.</span>
+              <span class="news-date">Aug 16</span>
+            </li>
+            <li class="news-item">
+              <span class="news-text"><strong>Summer intern on board.</strong> My first summer intern Alexandre is on board today! Hope he enjoys his experience!</span>
+              <span class="news-date">June 22</span>
+            </li>
+            <li class="news-item">
+              <span class="news-text"><strong>EWSN conference paper accepted!</strong> "Navigating Multidisciplinary Challenges: Taking A Low-power Wireless Plantar Pressure Monitoring System." accepted for presentation.</span>
+              <span class="news-date">July 10</span>
+            </li>
+            <li class="news-item">
+              <span class="news-text"><strong>Attended summer school!</strong> International Summer School on Wearable Sensors at Università Campus Bio-Medico di Roma.</span>
+              <span class="news-date">July 10</span>
+            </li>
+            <li class="news-item">
+              <span class="news-text"><strong>My first master student Arthur graduated.</strong> He got 16.5/20! Enjoyed the days working together. Best wishes to him!</span>
+              <span class="news-date">June 24</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Selected Publications -->
+    <section class="card section">
+      <div class="section-header">
+        <h2>Selected Publications</h2>
+        <a class="link-pill" href="publications.html">view all →</a>
+      </div>
+      <article class="publication">
+        <div class="pub-cover">
+          <span class="pub-cover-venue">IEEE Sensors J.</span>
+        </div>
+        <div>
+          <h3><a href="https://ieeexplore.ieee.org/abstract/document/10680984">Recent Advances in 3-D Printed, Wearable Pressure Sensors for Plantar Pressure Monitoring: A Review</a></h3>
+          <p><strong>Sai Peng</strong>; Hytham Hassan; Stijn Rosseel; Giovanni A. Matricali; Kevin Deschamps; Veerle Vandeginste; Hans Hallez</p>
+          <p>IEEE Sensors Journal, 2024</p>
+          <div class="pub-links"><a class="link-pill" href="https://ieeexplore.ieee.org/abstract/document/10680984">Paper →</a></div>
+        </div>
+      </article>
+      <article class="publication">
+        <div class="pub-cover">
+          <span class="pub-cover-venue">IEEE SENSORS</span>
+        </div>
+        <div>
+          <h3><a href="https://ieeexplore.ieee.org/abstract/document/10785155">Wireless Readout System for Pressure Monitoring Using FFF-Printed Mold Fabricated Flexible Piezoresistive Sensors</a></h3>
+          <p><strong>Sai Peng</strong>; Arthur Camelbeke; Kevin Deschamps; Veerle Vandeginste; Hans Hallez</p>
+          <p>IEEE SENSORS, 2024</p>
+          <div class="pub-links"><a class="link-pill" href="https://ieeexplore.ieee.org/abstract/document/10785155">Paper →</a></div>
+        </div>
+      </article>
+    </section>
+  </div>
+</main>
+
+<footer class="footer">
+  © Sai (Emily) Peng. All rights reserved.
+</footer>
+
+<script>
+  (function() {
+    // Active navigation highlight
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+      if (link.getAttribute('href') === 'index.html' || link.getAttribute('data-page') === 'home') {
+        link.classList.add('active');
+      }
+    });
+  })();
+</script>
+
 </body>
 </html>

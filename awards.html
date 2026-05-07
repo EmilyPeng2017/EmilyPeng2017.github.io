@@ -8,7 +8,183 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Fira+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/global.css">
+  
+  <style>
+    /* ---------- GLOBAL STYLES (modern, matching service page but for awards) ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fafaf9;
+      color: #1c1e21;
+      font-family: 'Lato', 'Segoe UI', system-ui, -apple-system, sans-serif;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    /* TOPBAR — black background with white text (exactly as requested) */
+    .topbar {
+      background: #000000;
+      border-bottom: 1px solid #2a2a2a;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    .nav-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+    }
+
+    .brand {
+      font-family: 'Fira Sans', sans-serif;
+      font-weight: 800;
+      font-size: 1.5rem;
+      letter-spacing: -0.3px;
+      color: #ffffff;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .brand:hover {
+      opacity: 0.8;
+      color: #dddddd;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      font-family: 'Lato', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #f0f0f0;
+      text-decoration: none;
+      padding: 0.25rem 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      border-bottom-color: #ffffff;
+      color: #ffffff;
+    }
+
+    /* Main layout */
+    main {
+      max-width: 1280px;
+      margin: 2rem auto 4rem;
+      padding: 0 2rem;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02), 0 2px 6px rgba(0,0,0,0.03);
+      padding: 2rem;
+      transition: box-shadow 0.2s;
+      border: 1px solid #edeff2;
+    }
+
+    .kicker {
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      color: #1f6e8c;
+      margin-bottom: 0.5rem;
+    }
+
+    .page-title {
+      font-family: 'Fira Sans', sans-serif;
+      font-weight: 800;
+      font-size: 2.8rem;
+      letter-spacing: -1px;
+      line-height: 1.2;
+      color: #0f2c3b;
+      margin-top: 0;
+    }
+
+    /* Compact list styling (original awards style but refined) */
+    .compact-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .compact-list li {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid #f0f2f5;
+      padding-bottom: 1rem;
+    }
+    .compact-list li:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .badge-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: #2c8aa5;
+      border-radius: 50%;
+      margin-top: 0.6rem;
+      flex-shrink: 0;
+    }
+    .item-title {
+      font-weight: 800;
+      font-family: 'Fira Sans', sans-serif;
+      font-size: 1rem;
+      color: #1c3b4f;
+      letter-spacing: -0.2px;
+    }
+    .item-meta {
+      font-size: 0.85rem;
+      color: #5d6f7c;
+      margin-top: 0.15rem;
+      font-family: 'Lato', monospace;
+    }
+
+    /* subtle responsive */
+    @media (max-width: 700px) {
+      .nav-inner {
+        flex-direction: column;
+        align-items: center;
+      }
+      .page-title {
+        font-size: 2rem;
+      }
+      .card {
+        padding: 1.5rem;
+      }
+      .compact-list li {
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+      .badge-dot {
+        margin-top: 0.2rem;
+      }
+    }
+  </style>
 </head>
 
 <body data-page="awards">
@@ -19,7 +195,7 @@
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="publications.html">Publications</a>
-      <a href="awards.html">Awards</a>
+      <a href="awards.html" class="active">Awards</a>
       <a href="service.html">Service</a>
       <a href="blogs.html">Blogs</a>
     </nav>
@@ -27,102 +203,118 @@
 </header>
 
 <main class="layout layout--fullwidth">
-<section class="content">
+  <section class="content">
 
-<section class="card section">
-  <p class="kicker">recognition</p>
-  <h1 class="page-title">Awards & Honors</h1>
-</section>
+    <!-- Awards header card -->
+    <section class="card section">
+      <p class="kicker">Recognition</p>
+      <h1 class="page-title">Awards & Honors</h1>
+    </section>
 
-<section class="card section">
-<ul class="compact-list">
+    <!-- Awards list (original content, preserved fully, sorted descending by year) -->
+    <section class="card section">
+      <ul class="compact-list">
 
-  <!-- 2024 -->
-  <li>
-    <span class="badge-dot"></span>
-    <div>
-      <div class="item-title">EWSN Student Grant.</div>
-      <div class="item-meta">EWSN Grant Committee · 2024</div>
-    </div>
-  </li>
+        <!-- 2024 -->
+        <li>
+          <span class="badge-dot"></span>
+          <div>
+            <div class="item-title">EWSN Student Grant.</div>
+            <div class="item-meta">EWSN Grant Committee · 2024</div>
+          </div>
+        </li>
 
-  <!-- 2019 -->
-  <li>
-    <span class="badge-dot"></span>
-    <div>
-      <div class="item-title">Outstanding Graduate Award of Shanghai Municipality</div>
-      <div class="item-meta">Shanghai Education Committee · Top &lt;5% · 2019</div>
-    </div>
-  </li>
+        <!-- 2019 -->
+        <li>
+          <span class="badge-dot"></span>
+          <div>
+            <div class="item-title">Outstanding Graduate Award of Shanghai Municipality</div>
+            <div class="item-meta">Shanghai Education Committee · Top &lt;5% · 2019</div>
+          </div>
+        </li>
 
-  <!-- 2018 -->
-  <li>
-    <span class="badge-dot"></span>
-    <div>
-      <div class="item-title">Zhou Weigan & Ren Yuehua Academic Excellence Scholarship</div>
-      <div class="item-meta">Shanghai Jiao Tong University · Top &lt;7% · 2018</div>
-    </div>
-  </li>
+        <!-- 2018 -->
+        <li>
+          <span class="badge-dot"></span>
+          <div>
+            <div class="item-title">Zhou Weigan & Ren Yuehua Academic Excellence Scholarship</div>
+            <div class="item-meta">Shanghai Jiao Tong University · Top &lt;7% · 2018</div>
+          </div>
+        </li>
 
-  <!-- 2017 -->
-  <li>
-    <span class="badge-dot"></span>
-    <div>
-      <div class="item-title">Merit Student Honor</div>
-      <div class="item-meta">Shanghai Jiao Tong University · Top &lt;10% · 2017</div>
-    </div>
-  </li>
+        <!-- 2017 -->
+        <li>
+          <span class="badge-dot"></span>
+          <div>
+            <div class="item-title">Merit Student Honor</div>
+            <div class="item-meta">Shanghai Jiao Tong University · Top &lt;10% · 2017</div>
+          </div>
+        </li>
 
-  <li>
-    <span class="badge-dot"></span>
-    <div>
-      <div class="item-title">Second Prize, Soft Robotics Innovative Design Competition</div>
-      <div class="item-meta">Shanghai Jiao Tong University · 2017</div>
-    </div>
-  </li>
+        <li>
+          <span class="badge-dot"></span>
+          <div>
+            <div class="item-title">Second Prize, Soft Robotics Innovative Design Competition</div>
+            <div class="item-meta">Shanghai Jiao Tong University · 2017</div>
+          </div>
+        </li>
 
-  <li>
-    <span class="badge-dot"></span>
-    <div>
-      <div class="item-title">Second Prize, China Postgraduate Mathematical Contest in Modeling</div>
-      <div class="item-meta">Ministry of Education of China · Group Leader · Top &lt;10% · 2017</div>
-    </div>
-  </li>
+        <li>
+          <span class="badge-dot"></span>
+          <div>
+            <div class="item-title">Second Prize, China Postgraduate Mathematical Contest in Modeling</div>
+            <div class="item-meta">Ministry of Education of China · Group Leader · Top &lt;10% · 2017</div>
+          </div>
+        </li>
 
-  <!-- 2016 -->
-  <li>
-    <span class="badge-dot"></span>
-    <div>
-      <div class="item-title">Outstanding Graduate Award of Shanghai Municipality</div>
-      <div class="item-meta">Shanghai Education Committee · Top &lt;3% · 2016</div>
-    </div>
-  </li>
+        <!-- 2016 -->
+        <li>
+          <span class="badge-dot"></span>
+          <div>
+            <div class="item-title">Outstanding Graduate Award of Shanghai Municipality</div>
+            <div class="item-meta">Shanghai Education Committee · Top &lt;3% · 2016</div>
+          </div>
+        </li>
 
-  <!-- 2015 -->
-  <li>
-    <span class="badge-dot"></span>
-    <div>
-      <div class="item-title">First Prize, Robotic Simulation Contest</div>
-      <div class="item-meta">Shanghai University · Top &lt;3% · 2015</div>
-    </div>
-  </li>
+        <!-- 2015 -->
+        <li>
+          <span class="badge-dot"></span>
+          <div>
+            <div class="item-title">First Prize, Robotic Simulation Contest</div>
+            <div class="item-meta">Shanghai University · Top &lt;3% · 2015</div>
+          </div>
+        </li>
 
-  <!-- 2014–2015 -->
-  <li>
-    <span class="badge-dot"></span>
-    <div>
-      <div class="item-title">Merit Student Honor</div>
-      <div class="item-meta">Shanghai University · Top &lt;3% · 2014–2015</div>
-    </div>
-  </li>
+        <!-- 2014–2015 -->
+        <li>
+          <span class="badge-dot"></span>
+          <div>
+            <div class="item-title">Merit Student Honor</div>
+            <div class="item-meta">Shanghai University · Top &lt;3% · 2014–2015</div>
+          </div>
+        </li>
 
-</ul>
-</section>
+      </ul>
+    </section>
 
-</section>
+  </section>
 </main>
 
-<script src="assets/js/common.js"></script>
+<script>
+  // simple active state sync for topbar
+  (function() {
+    const currentPage = 'awards';
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      if (href === 'awards.html' || (href === 'awards.html' && currentPage === 'awards')) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  })();
+</script>
 
 </body>
 </html>

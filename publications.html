@@ -7,7 +7,317 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Fira+Sans:wght@400;500;700;800&family=Source+Code+Pro:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/global.css">
+  <style>
+    /* ---------- GLOBAL STYLES ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #fafaf9;
+      color: #1c1e21;
+      font-family: 'Lato', 'Segoe UI', system-ui, -apple-system, sans-serif;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    /* TOPBAR — black background with white text */
+    .topbar {
+      background: #000000;
+      border-bottom: 1px solid #2a2a2a;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    .nav-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 1rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+    }
+
+    .brand {
+      font-family: 'Fira Sans', sans-serif;
+      font-weight: 800;
+      font-size: 1.5rem;
+      letter-spacing: -0.3px;
+      color: #ffffff;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .brand:hover {
+      opacity: 0.8;
+      color: #dddddd;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      font-family: 'Lato', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #f0f0f0;
+      text-decoration: none;
+      padding: 0.25rem 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+      border-bottom-color: #ffffff;
+      color: #ffffff;
+    }
+
+    /* MAIN LAYOUT: two columns */
+    .layout {
+      max-width: 1400px;
+      margin: 2rem auto 4rem;
+      padding: 0 2rem;
+    }
+
+    .publications-container {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    /* LEFT PANEL — year navigation */
+    .year-nav {
+      flex: 0 0 180px;
+      position: sticky;
+      top: 90px;
+      background: #ffffff;
+      border-radius: 24px;
+      padding: 1.5rem 1rem;
+      border: 1px solid #edeff2;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    }
+
+    .year-nav h3 {
+      font-family: 'Fira Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #1f3b4a;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #e2e8f0;
+    }
+
+    .year-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .year-link {
+      font-family: 'Source Code Pro', monospace;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: #3c6e8c;
+      text-decoration: none;
+      padding: 0.3rem 0.6rem;
+      border-radius: 20px;
+      transition: all 0.2s;
+      display: inline-block;
+      width: fit-content;
+      cursor: pointer;
+    }
+
+    .year-link:hover {
+      background: #eef3f6;
+      color: #1a4e6e;
+      transform: translateX(4px);
+    }
+
+    /* RIGHT CONTENT */
+    .publications-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    /* card styling */
+    .card {
+      background: #ffffff;
+      border-radius: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02), 0 2px 6px rgba(0,0,0,0.03);
+      padding: 2rem;
+      border: 1px solid #edeff2;
+    }
+
+    .kicker {
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      color: #1f6e8c;
+      margin-bottom: 0.5rem;
+    }
+
+    .page-title {
+      font-family: 'Fira Sans', sans-serif;
+      font-weight: 800;
+      font-size: 2.5rem;
+      letter-spacing: -1px;
+      line-height: 1.2;
+      color: #0f2c3b;
+    }
+
+    /* publication year headings */
+    .pub-year-heading {
+      font-family: 'Fira Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1.4rem;
+      color: #2c5e7a;
+      margin: 1.5rem 0 1rem 0;
+      padding-top: 0.8rem;
+      border-top: 2px dotted #e2e8f0;
+      scroll-margin-top: 100px;
+    }
+    .pub-year-heading:first-of-type {
+      border-top: none;
+      margin-top: 0;
+      padding-top: 0;
+    }
+
+    /* publication item */
+    .publication {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.2rem;
+      border-bottom: 1px solid #f0f2f5;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+    .publication:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    /* left column: journal/conference badge (kept at beginning) */
+    .pub-badge {
+      flex: 0 0 100px;
+      font-family: 'Source Code Pro', monospace;
+      font-weight: 700;
+      background: #eef3f6;
+      border-radius: 12px;
+      padding: 0.4rem 0.6rem;
+      font-size: 0.75rem;
+      color: #1f6e8c;
+      text-align: center;
+      letter-spacing: 0.3px;
+    }
+
+    /* middle column: publication details */
+    .pub-details {
+      flex: 1;
+      min-width: 200px;
+    }
+    .pub-details h3 {
+      font-family: 'Fira Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #1c3b4f;
+      margin-bottom: 0.4rem;
+    }
+    .pub-details p {
+      font-size: 0.85rem;
+      color: #4a6272;
+      margin: 0.2rem 0;
+    }
+    .pub-venue {
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.72rem;
+      background: #f4f9fc;
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      border-radius: 16px;
+      margin-top: 0.3rem;
+    }
+
+    /* right column: link button at the end */
+    .pub-link-wrapper {
+      flex: 0 0 auto;
+      display: flex;
+      align-items: center;
+    }
+    .pub-link-btn {
+      background: #f0f5f8;
+      border: none;
+      border-radius: 20px;
+      padding: 0.3rem 0.9rem;
+      font-size: 0.75rem;
+      font-family: 'Source Code Pro', monospace;
+      color: #1f6e8c;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      white-space: nowrap;
+    }
+    .pub-link-btn:hover {
+      background: #e0eef4;
+      transform: translateY(-1px);
+    }
+    .pub-link-btn.disabled-link {
+      opacity: 0.55;
+      cursor: pointer;
+      background: #f5f7f9;
+    }
+    .pub-link-btn.disabled-link:hover {
+      transform: none;
+      background: #f5f7f9;
+    }
+
+    @media (max-width: 850px) {
+      .publications-container {
+        flex-direction: column;
+      }
+      .year-nav {
+        position: static;
+        flex: auto;
+        width: 100%;
+      }
+      .year-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .nav-inner {
+        flex-direction: column;
+        align-items: center;
+      }
+      .card {
+        padding: 1.5rem;
+      }
+      .publication {
+        flex-direction: column;
+      }
+      .pub-badge {
+        flex: auto;
+        width: fit-content;
+      }
+      .pub-link-wrapper {
+        align-self: flex-end;
+        margin-top: 0.3rem;
+      }
+    }
+  </style>
 </head>
 
 <body data-page="publications">
@@ -25,150 +335,264 @@
   </div>
 </header>
 
-<main class="layout layout--fullwidth">
-<section class="content">
+<main class="layout">
+  <div class="publications-container">
+    
+    <!-- LEFT PANEL: YEAR LINKS -->
+    <aside class="year-nav">
+      <h3>Browse by Year</h3>
+      <div class="year-list" id="year-list-container"></div>
+    </aside>
 
-<section class="card section">
-  <p class="kicker">research output</p>
-  <h1 class="page-title">Publications</h1>
-</section>
+    <!-- RIGHT CONTENT: ALL PUBLICATIONS TOGETHER (chronological desc) -->
+    <div class="publications-content">
+      <div class="card">
+        <p class="kicker">research output</p>
+        <h1 class="page-title">Publications</h1>
+        <p style="margin-top: 0.6rem; color: #4a6a7c;">Peer-reviewed journals and conference proceedings in soft electronics, wearable sensors, and IoT health systems.</p>
+      </div>
 
-<!-- ================= JOURNALS ================= -->
-<section class="card section">
-<div class="section-header"><h2>Journals</h2></div>
+      <div class="card" id="all-publications">
+        <!-- 2026 -->
+        <div class="pub-year-heading" data-year="2026" id="year-2026">2026</div>
 
-<h3>2024</h3>
+        <div class="publication" data-type="conference" data-year="2026">
+          <div class="pub-badge">IEEE EMBC</div>
+          <div class="pub-details">
+            <h3>Dynamic Power Management with Context-Aware Optimization for Long-Term Wearable Plantar Pressure Monitoring via a Smart Insole System</h3>
+            <p><strong>Peng, S.</strong>, Depreeuw, Y., Deschamps, K., Vandeginste, V., & Hallez, H.</p>
+            <p>IEEE EMBC, 2026 <span class="pub-venue">Conference</span></p>
+          </div>
+          <div class="pub-link-wrapper">
+            <a href="#" class="pub-link-btn disabled-link" data-paper-id="pengembc2026">🔗 Link</a>
+          </div>
+        </div>
+        
+        <!-- 2024 entries -->
+        <div class="pub-year-heading" data-year="2024" id="year-2024">2024</div>
+        
+        <!-- Journal 2024 -->
+        <div class="publication" data-type="journal" data-year="2024">
+          <div class="pub-badge">IEEE Sensors J.</div>
+          <div class="pub-details">
+            <h3>Recent Advances in 3-D Printed, Wearable Pressure Sensors for Plantar Pressure Monitoring: A Review</h3>
+            <p><strong>Sai Peng</strong>; H. Hassan; S. Rosseel; G. A. Matricali; K. Deschamps; V. Vandeginste; H. Hallez</p>
+            <p>IEEE Sensors Journal, 2024 <span class="pub-venue">Journal</span></p>
+          </div>
+          <div class="pub-link-wrapper">
+            <a href="https://ieeexplore.ieee.org/abstract/document/10680984" class="pub-link-btn" data-paper-id="peng2024recent">🔗 Link</a>
+          </div>
+        </div>
 
-<article class="publication">
-  <div class="pub-cover">ISJ</div>
-  <div>
-    <h3>Recent Advances in 3-D Printed, Wearable Pressure Sensors for Plantar Pressure Monitoring: A Review</h3>
-    <p><strong>Sai Peng</strong>; H. Hassan; S. Rosseel; G. A. Matricali; K. Deschamps; V. Vandeginste; H. Hallez</p>
-    <p>IEEE Sensors Journal, 2024</p>
+        <!-- Conference 2024 -->
+        <div class="publication" data-type="conference" data-year="2024">
+          <div class="pub-badge">IEEE SENSORS</div>
+          <div class="pub-details">
+            <h3>Wireless Readout System for Pressure Monitoring Using FFF-Printed Mold Fabricated Flexible Piezoresistive Sensors</h3>
+            <p><strong>Sai Peng</strong>; A. Camelbeke; K. Deschamps; V. Vandeginste; H. Hallez</p>
+            <p>IEEE SENSORS, 2024 <span class="pub-venue">Conference</span></p>
+          </div>
+          <div class="pub-link-wrapper">
+            <a href="https://ieeexplore.ieee.org/abstract/document/10785155?casa_token=CARyIB7anw0AAAAA:_522lRHVJIEr1n-P58Q4FRUlPPRSu6XVgGV8B_TSCU0lQrhNKQWbnppd7ACERfZtcDPCT449tZS2" class="pub-link-btn" data-paper-id="peng2024wireless">🔗 Link</a>
+          </div>
+        </div>
+
+        <div class="publication" data-type="conference" data-year="2024">
+          <div class="pub-badge">EWSN</div>
+          <div class="pub-details">
+            <h3>Navigating Interdisciplinary Challenges: Wireless Plantar Pressure Monitoring System</h3>
+            <p><strong>Sai Peng</strong>; Y. Depreeuw; A. Gascoin; H. Hallez</p>
+            <p>PhD School, 2024 <span class="pub-venue">Conference</span></p>
+          </div>
+          <div class="pub-link-wrapper">
+            <a href="https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=Navigating+Interdisciplinary+Challenges%3A+Taking+A+Low-power+Wireless+Plantar+Pressure+Monitoring+System+with+3D-Printed+Sensors+as+An+Example&btnG=" class="pub-link-btn" data-paper-id="peng2024navigating">🔗 Link</a>
+          </div>
+        </div>
+
+        <!-- 2019 -->
+        <div class="pub-year-heading" data-year="2019" id="year-2019">2019</div>
+        
+        <div class="publication" data-type="journal" data-year="2019">
+          <div class="pub-badge">Soft Robotics</div>
+          <div class="pub-details">
+            <h3>Integrated Soft Ionotronic Skin with Stretchable and Transparent Hydrogel–Elastomer Ionic Sensors for Hand-Motion Monitoring</h3>
+            <p>G. Gu; H. Xu; <strong>Sai Peng</strong>; L. Li; S. Chen; T. Lu; X. Guo</p>
+            <p>Soft Robotics, 2019 <span class="pub-venue">Journal</span></p>
+          </div>
+          <div class="pub-link-wrapper">
+            <a href="https://journals.sagepub.com/doi/abs/10.1089/soro.2018.0116" class="pub-link-btn" data-paper-id="gu2019integrated">🔗 Link</a>
+          </div>
+        </div>
+
+        <div class="publication" data-type="journal" data-year="2019">
+          <div class="pub-badge">Adv. Mater. Technol.</div>
+          <div class="pub-details">
+            <h3>Scalable Processing Ultrathin Polymer Dielectric Films with a Generic Solution Based Approach for Wearable Soft Electronics</h3>
+            <p>S. Chen; <strong>Sai Peng</strong>; W. Sun; G. Gu; Q. Zhang; X. Guo</p>
+            <p>Advanced Materials Technologies, 2019 <span class="pub-venue">Journal</span></p>
+          </div>
+          <div class="pub-link-wrapper">
+            <a href="https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/admt.201800681" class="pub-link-btn" data-paper-id="chen2019scalable">🔗 Link</a>
+          </div>
+        </div>
+
+        <!-- 2018 -->
+        <div class="pub-year-heading" data-year="2018" id="year-2018">2018</div>
+        
+        <div class="publication" data-type="journal" data-year="2018">
+          <div class="pub-badge">IEEE Sensors Lett.</div>
+          <div class="pub-details">
+            <h3>High Sensitivity Capacitive Pressure Sensor with Bi-Layer Porous Structure Elastomeric Dielectric</h3>
+            <p><strong>Sai Peng</strong>; S. Chen; Y. Huang; S. Pei; X. Guo</p>
+            <p>IEEE Sensors Letters, 2018 <span class="pub-venue">Journal</span></p>
+          </div>
+          <div class="pub-link-wrapper">
+            <a href="https://ieeexplore.ieee.org/abstract/document/8579618" class="pub-link-btn" data-paper-id="peng2018high">🔗 Link</a>
+          </div>
+        </div>
+
+        <div class="publication" data-type="journal" data-year="2018">
+          <div class="pub-badge">J. Semicond.</div>
+          <div class="pub-details">
+            <h3>Silver Nanowire/Polymer Composite Soft Conductive Film for Flexible Pressure Sensor Array</h3>
+            <p>S. Chen; S. Li; <strong>Sai Peng</strong>; Y. Huang; J. Zhao; W. Tang; X. Guo</p>
+            <p>Journal of Semiconductors, 2018 <span class="pub-venue">Journal</span></p>
+          </div>
+          <div class="pub-link-wrapper">
+            <a href="https://iopscience-iop-org.kuleuven.e-bronnen.be/article/10.1088/1674-4926/39/1/013001/meta" class="pub-link-btn" data-paper-id="chen2018silver">🔗 Link</a>
+          </div>
+        </div>
+
+        <div class="publication" data-type="journal" data-year="2018">
+          <div class="pub-badge">IEEE Sensors Lett.</div>
+          <div class="pub-details">
+            <h3>Improved Sensitivity of Inkjet-Printed PEDOT:PSS Ammonia Sensor</h3>
+            <p>S. Li; Y. Li; S. Chen; W. Tang; Y. Huang; <strong>Sai Peng</strong>; J. Qi; X. Guo</p>
+            <p>IEEE Sensors Letters, 2018 <span class="pub-venue">Journal</span></p>
+          </div>
+          <div class="pub-link-wrapper">
+            <a href="https://ieeexplore.ieee.org/abstract/document/8283698" class="pub-link-btn" data-paper-id="li2018improved">🔗 Link</a>
+          </div>
+        </div>
+
+        <div class="publication" data-type="journal" data-year="2018">
+          <div class="pub-badge">IEEE Electron Device Lett.</div>
+          <div class="pub-details">
+            <h3>Integrated Low Voltage Ion Sensing Organic Field Effect Transistor System on Plastic</h3>
+            <p>Q. Li; J. Zhao; Y. Huang; W. Tang; <strong>Sai Peng</strong>; S. Qiu; Q. Zhang; X. Guo</p>
+            <p>IEEE Electron Device Letters, 2018 <span class="pub-venue">Journal</span></p>
+          </div>
+          <div class="pub-link-wrapper">
+            <a href="https://ieeexplore.ieee.org/abstract/document/8295213" class="pub-link-btn" data-paper-id="li2018integrated">🔗 Link</a>
+          </div>
+        </div>
+
+        <div class="publication" data-type="journal" data-year="2018">
+          <div class="pub-badge">IEEE Electron Device Lett.</div>
+          <div class="pub-details">
+            <h3>Silver Nanowire Mesh-Based Fuse Type WORM Memory</h3>
+            <p>L. Zhu; S. Chen; H. Zhou; <strong>Sai Peng</strong>; Q. Zhang; X. Zhang; X. Guo</p>
+            <p>IEEE Electron Device Letters, 2018 <span class="pub-venue">Journal</span></p>
+          </div>
+          <div class="pub-link-wrapper">
+            <a href="https://ieeexplore.ieee.org/abstract/document/8263168" class="pub-link-btn" data-paper-id="zhu2018silver">🔗 Link</a>
+          </div>
+        </div>
+
+        <!-- 2017 -->
+        <div class="pub-year-heading" data-year="2017" id="year-2017">2017</div>
+        
+        <div class="publication" data-type="journal" data-year="2017">
+          <div class="pub-badge">IEEE Electron Device Lett.</div>
+          <div class="pub-details">
+            <h3>Stable Thin-Film Reference Electrode on Plastic Substrate for ISFET System</h3>
+            <p>Q. Li; W. Tang; Y. Su; Y. Huang; <strong>Sai Peng</strong>; B. Zhuo; S. Qiu; L. Ding; Y. Li; X. Guo</p>
+            <p>IEEE Electron Device Letters, 2017 <span class="pub-venue">Journal</span></p>
+          </div>
+          <div class="pub-link-wrapper">
+            <a href="https://ieeexplore.ieee.org/abstract/document/7994680" class="pub-link-btn" data-paper-id="li2017stable">🔗 Link</a>
+          </div>
+        </div>
+
+        <div class="publication" data-type="conference" data-year="2017">
+          <div class="pub-badge">IEEE IEDM</div>
+          <div class="pub-details">
+            <h3>Manufactured-on-Demand Steep Subthreshold OFET for Low Power Sensing</h3>
+            <p>J. Zhao; Q. Li; Y. Huang; S. Li; W. Tang; <strong>Sai Peng</strong>; S. Chen; W. Liu; X. Guo</p>
+            <p>IEEE IEDM, 2017 <span class="pub-venue">Conference</span></p>
+          </div>
+          <div class="pub-link-wrapper">
+            <a href="https://ieeexplore.ieee.org/abstract/document/8268351" class="pub-link-btn" data-paper-id="zhao2017manufactured">🔗 Link</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
-</article>
-
-<h3>2019</h3>
-
-<article class="publication">
-  <div class="pub-cover">SR</div>
-  <div>
-    <h3>Integrated Soft Ionotronic Skin with Stretchable and Transparent Hydrogel–Elastomer Ionic Sensors for Hand-Motion Monitoring</h3>
-    <p>G. Gu; H. Xu; <strong>Sai Peng</strong>; L. Li; S. Chen; T. Lu; X. Guo</p>
-    <p>Soft Robotics, 2019</p>
-  </div>
-</article>
-
-<article class="publication">
-  <div class="pub-cover">AMT</div>
-  <div>
-    <h3>Scalable Processing Ultrathin Polymer Dielectric Films with a Generic Solution Based Approach for Wearable Soft Electronics</h3>
-    <p>S. Chen; <strong>Sai Peng</strong>; W. Sun; G. Gu; Q. Zhang; X. Guo</p>
-    <p>Advanced Materials Technologies, 2019</p>
-  </div>
-</article>
-
-<h3>2018</h3>
-
-<article class="publication">
-  <div class="pub-cover">ISL</div>
-  <div>
-    <h3>High Sensitivity Capacitive Pressure Sensor with Bi-Layer Porous Structure Elastomeric Dielectric</h3>
-    <p><strong>Sai Peng</strong>; S. Chen; Y. Huang; S. Pei; X. Guo</p>
-    <p>IEEE Sensors Letters, 2018</p>
-  </div>
-</article>
-
-<article class="publication">
-  <div class="pub-cover">JS</div>
-  <div>
-    <h3>Silver Nanowire/Polymer Composite Soft Conductive Film for Flexible Pressure Sensor Array</h3>
-    <p>S. Chen; S. Li; <strong>Sai Peng</strong>; Y. Huang; J. Zhao; W. Tang; X. Guo</p>
-    <p>Journal of Semiconductors, 2018</p>
-  </div>
-</article>
-
-<article class="publication">
-  <div class="pub-cover">ISL</div>
-  <div>
-    <h3>Improved Sensitivity of Inkjet-Printed PEDOT:PSS Ammonia Sensor</h3>
-    <p>S. Li; Y. Li; S. Chen; W. Tang; Y. Huang; <strong>Sai Peng</strong>; J. Qi; X. Guo</p>
-    <p>IEEE Sensors Letters, 2018</p>
-  </div>
-</article>
-
-<article class="publication">
-  <div class="pub-cover">IEDL</div>
-  <div>
-    <h3>Integrated Low Voltage Ion Sensing Organic Field Effect Transistor System on Plastic</h3>
-    <p>Q. Li; J. Zhao; Y. Huang; W. Tang; <strong>Sai Peng</strong>; S. Qiu; Q. Zhang; X. Guo</p>
-    <p>IEEE Electron Device Letters, 2018</p>
-  </div>
-</article>
-
-<article class="publication">
-  <div class="pub-cover">IEDL</div>
-  <div>
-    <h3>Silver Nanowire Mesh-Based Fuse Type WORM Memory</h3>
-    <p>L. Zhu; S. Chen; H. Zhou; <strong>Sai Peng</strong>; Q. Zhang; X. Zhang; X. Guo</p>
-    <p>IEEE Electron Device Letters, 2018</p>
-  </div>
-</article>
-
-<h3>2017</h3>
-
-<article class="publication">
-  <div class="pub-cover">IEDL</div>
-  <div>
-    <h3>Stable Thin-Film Reference Electrode on Plastic Substrate for ISFET System</h3>
-    <p>Q. Li; W. Tang; Y. Su; Y. Huang; <strong>Sai Peng</strong>; B. Zhuo; S. Qiu; L. Ding; Y. Li; X. Guo</p>
-    <p>IEEE Electron Device Letters, 2017</p>
-  </div>
-</article>
-
-</section>
-
-<!-- ================= CONFERENCES ================= -->
-<section class="card section">
-<div class="section-header"><h2>Conferences</h2></div>
-
-<h3>2024</h3>
-
-<article class="publication">
-  <div class="pub-cover">IEEE SENSORS</div>
-  <div>
-    <h3>Wireless Readout System for Pressure Monitoring Using FFF-Printed Mold Fabricated Flexible Piezoresistive Sensors</h3>
-    <p><strong>Sai Peng</strong>; A. Camelbeke; K. Deschamps; V. Vandeginste; H. Hallez</p>
-    <p>IEEE SENSORS, 2024</p>
-  </div>
-</article>
-
-<article class="publication">
-  <div class="pub-cover">EWSN</div>
-  <div>
-    <h3>Navigating Interdisciplinary Challenges: Wireless Plantar Pressure Monitoring System</h3>
-    <p><strong>Sai Peng</strong>; Y. Depreeuw; A. Gascoin; H. Hallez</p>
-    <p>PhD School, 2024</p>
-  </div>
-</article>
-
-<h3>2017</h3>
-
-<article class="publication">
-  <div class="pub-cover">IEDM</div>
-  <div>
-    <h3>Manufactured-on-Demand Steep Subthreshold OFET for Low Power Sensing</h3>
-    <p>J. Zhao; Q. Li; Y. Huang; S. Li; W. Tang; <strong>Sai Peng</strong>; S. Chen; W. Liu; X. Guo</p>
-    <p>IEEE IEDM, 2017</p>
-  </div>
-</article>
-
-</section>
-
-</section>
 </main>
 
-<script src="assets/js/common.js"></script>
+<script>
+  (function() {
+    // Active navigation highlight
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+      if (link.getAttribute('href') === 'publications.html') {
+        link.classList.add('active');
+      }
+    });
+
+    // Build year navigation from existing year headings
+    const yearHeadings = document.querySelectorAll('.pub-year-heading');
+    const yearSet = new Set();
+    yearHeadings.forEach(heading => {
+      const year = heading.getAttribute('data-year');
+      if (year) yearSet.add(year);
+    });
+    const sortedYears = Array.from(yearSet).sort((a,b) => Number(b) - Number(a));
+    
+    const yearContainer = document.getElementById('year-list-container');
+    if (yearContainer) {
+      sortedYears.forEach(year => {
+        const yearLink = document.createElement('a');
+        yearLink.className = 'year-link';
+        yearLink.textContent = year;
+        yearLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          const targetHeading = document.getElementById(`year-${year}`);
+          if (targetHeading) {
+            targetHeading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            targetHeading.style.transition = 'background 0.2s';
+            targetHeading.style.background = '#eaf4f8';
+            setTimeout(() => { targetHeading.style.background = ''; }, 700);
+          }
+        });
+        yearContainer.appendChild(yearLink);
+      });
+    }
+
+    // Handle hash links on load
+    if (window.location.hash) {
+      const target = document.querySelector(window.location.hash);
+      if (target) {
+        setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+      }
+    }
+
+    // Link buttons: currently placeholders - user can replace href with actual URL and remove 'disabled-link' class
+    // Fixed JavaScript - only prevent default for disabled links
+    const linkButtons = document.querySelectorAll('.pub-link-btn');
+    linkButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        if (btn.classList.contains('disabled-link')) {
+          e.preventDefault();
+          const paperId = btn.getAttribute('data-paper-id');
+          alert(`🔗 Link placeholder for "${paperId}".\nCurrently unavailable.`);
+        }
+        // For non-disabled links, do nothing - let browser navigate normally
+      });
+    });
+  })();
+</script>
 
 </body>
 </html>
