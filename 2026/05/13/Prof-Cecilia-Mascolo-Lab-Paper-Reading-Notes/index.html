@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paper Reading Notes — Prof. Cecilia Mascolo Lab - Sai (Emily) Peng</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Fira+Sans:wght@400;500;700;800&family=Source+Code+Pro:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../../css/blog-post.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="nav-inner">
+      <a class="brand" href="../../../../index.html">Sai (Emily) Peng</a>
+      <nav class="nav-links">
+        <a href="../../../../index.html">Home</a>
+        <a href="../../../../publications.html">Publications</a>
+        <a href="../../../../awards.html">Awards</a>
+        <a href="../../../../service.html">Service</a>
+        <a href="../../../../blogs.html" class="active">Blogs</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="post-shell">
+    <article class="post-card">
+      <a class="back-link" href="../../../../blogs.html">Back to blogs</a>
+      <p class="kicker">readings / paper_notes</p>
+      <h1>Paper Reading Notes — Prof. Cecilia Mascolo Lab</h1>
+      <div class="post-meta">
+        <time datetime="2026-05-13">2026-05-13</time>
+        <div class="tags"><span>ReadingNotes</span><span>Wearables</span><span>Earables</span><span>HealthAI</span></div>
+      </div>
+      <div class="post-content">
+<blockquote>
+<p>A structured reading note for the main earable and wearable sensing papers from Prof. Cecilia Mascolo's research group.</p>
+</blockquote>
+<h2 id="why-prof-cecilia-mascolo-s-lab">Why Prof. Cecilia Mascolo's lab?</h2>
+<ul>
+<li>The lab focuses on wearable sensing, mobile health, and AI for human-centric sensing.</li>
+<li>Earables are a distinctive sensing modality in this work: in-ear microphones, respiration monitoring, gait analysis, and interactive health applications.</li>
+<li>These papers span signals, machine learning, low-power systems, and user-centered evaluation.</li>
+</ul>
+<h2 id="research-themes-in-this-reading">Research themes in this reading</h2>
+<ul>
+<li>Earable sensing for respiration, heart rate, gait, and oral behavior.</li>
+<li>Robust signal processing under motion and daily activity.</li>
+<li>On-device event detection and uncertainty-aware models.</li>
+<li>Contrastive learning for non-stationary time series.</li>
+<li>Human-centered applications with data-driven features.</li>
+</ul>
+<h2 id="paper-summary-table">Paper summary table</h2>
+<table>
+<thead><tr><th>No.</th><th>Paper</th><th>Main focus</th><th>Key contribution</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>An evaluation of heart rate monitoring with in-ear microphones under motion</td><td>In-ear heartbeat sensing</td><td>Motion-robust heart rate extraction from ear audio</td><td>TODO: fill in dataset, method, accuracy, limitations</td></tr>
+<tr><td>2</td><td>BreathPro: Monitoring Breathing Mode during Running with Earables</td><td>Running respiration sensing</td><td>Classify breathing modes during exercise using ear microphones</td><td>TODO: fill in model, sensors, evaluation</td></tr>
+<tr><td>3</td><td>UR2M: Uncertainty and Resource-Aware Event Detection on Microcontrollers</td><td>Embedded event detection</td><td>Uncertainty-aware models for microcontroller deployment</td><td>TODO: fill in architecture, energy use, task examples</td></tr>
+<tr><td>4</td><td>RespEar: Earable-Based Robust Respiratory Rate Monitoring</td><td>Respiratory rate monitoring</td><td>Robust respiration estimation from ear-based audio</td><td>TODO: fill in signal pipeline, robustness tests</td></tr>
+<tr><td>5</td><td>EarMeter: Continuous Respiration Volume Monitoring with Earables</td><td>Respiration volume estimation</td><td>Continuous tidal volume tracking using ear sensors</td><td>TODO: note equation, calibration, results</td></tr>
+<tr><td>6</td><td>AI on Wearable Sensing Data for Human Health and Fitness</td><td>Wearable AI survey/review</td><td>Overview of data-driven wearable sensing for health and fitness</td><td>TODO: summarize trends and future directions</td></tr>
+<tr><td>7</td><td>WalkEar: holistic gait monitoring using earables</td><td>Gait monitoring</td><td>Holistic gait analysis using ear-worn devices</td><td>TODO: list gait metrics and evaluation</td></tr>
+<tr><td>8</td><td>StatioCl: Contrastive Learning for Time Series via Non-Stationary and Temporal Contrast</td><td>Time series learning</td><td>Contrastive learning tailored for non-stationary time series</td><td>TODO: detail loss, datasets, impact</td></tr>
+<tr><td>9</td><td>SmarTeeth: augmenting manual toothbrushing with in-ear microphones</td><td>Toothbrushing monitoring</td><td>Detect brushing actions and quality using ear audio</td><td>TODO: note user study, sensing setup, outcomes</td></tr>
+<tr><td>10</td><td>HearForce: Force Estimation for Manual Toothbrushing with Earables</td><td>Brushing force estimation</td><td>Estimate brushing force from ear-worn sensor signals</td><td>TODO: describe model, validation, real-world use</td></tr>
+</tbody></table>
+<h2 id="paper-notes">Paper notes</h2>
+<h3 id="1-an-evaluation-of-heart-rate-monitoring-with-in-ear-microphones-under-motion">1. An evaluation of heart rate monitoring with in-ear microphones under motion</h3>
+<p><strong>Abstract:</strong> extract heart rate reliably when the wearer is moving.</p>
+<h4 id="key-idea">Key idea</h4>
+<ul>
+<li>Use in-ear microphone audio and motion-aware preprocessing to recover heartbeat signals under motion.</li>
+<li>Transform audio into log-mel spectrograms and denoise them with a U-Net encoder-decoder.</li>
+<li>Reconstruct clean audio and estimate HR from the recovered waveform.</li>
+</ul>
+<h4 id="system-pipeline">System pipeline</h4>
+<ol>
+<li>Collect in-ear microphone audio and motion sensor data.</li>
+<li>Convert audio to log-mel spectrograms.</li>
+<li>Denoise spectrograms with a pretrained U-Net.</li>
+<li>Use SSIM loss to preserve local structure during spectrogram reconstruction.</li>
+<li>Reconstruct waveform with Griffin-Lim and extract heart rate.</li>
+</ol>
+<div style="text-align: center;">
+<img src="../../../../img/blogs/20260514/system_workflow.png" alt="hEARt system flowchart" width="600">
+</div>
+<h4 id="architecture">Architecture</h4>
+<ul>
+<li>U-Net encoder-decoder for spectrogram denoising.</li>
+<li>Pretraining on the PASCAL heart sound dataset to improve performance given a small in-ear dataset.</li>
+<li>Input and target are both log-mel spectrograms of heart sound recordings.</li>
+</ul>
+<div style="text-align: center;">
+<img src="../../../../img/blogs/20260514/unet.png" alt="U-Net architecture" width="600">
+</div>
+<h4 id="prototype">Prototype</h4>
+<ul>
+<li>Custom 3D-printed earbud with an ear-hook shape for secure placement.</li>
+<li>Designed to leave space for additional sensors and electronics.</li>
+<li>Focused on stable contact and practical form factor for earable health sensing.</li>
+</ul>
+<h4 id="evaluation-metrics">Evaluation metrics</h4>
+<ul>
+<li>Mean Absolute Error (MAE) of HR compared to reference device.</li>
+<li>Mean Absolute Percentage Error (MAPE) for relative accuracy.</li>
+<li>Bland-Altman agreement analysis across heart rate ranges.</li>
+</ul>
+<h4 id="notes-questions">Notes & questions</h4>
+<ul>
+<li>Transfer learning is used because the in-ear dataset is small; need to confirm whether the U-Net was fine-tuned on ear audio or only on heart sounds.</li>
+<li>Check whether there are baseline comparisons beyond standard denoising models.</li>
+<li>Reflection: does the paper compare this earable approach with other wearable HR methods such as foot pressure or chest strap?</li>
+</ul>
+<h3 id="2-breathpro-monitoring-breathing-mode-during-running-with-earables">2. BreathPro: Monitoring Breathing Mode during Running with Earables</h3>
+<p><strong>Abstract:</strong> classify breathing patterns during running in real time.</p>
+<h4 id="notes">Notes</h4>
+<ul>
+<li>This paper is an extension of the previous work, applying earable sensing to respiration monitoring during exercise.</li>
+</ul>
+<div style="text-align: center;">
+<img src="../../../../img/blogs/20260514/2_systemPipeline.png" alt="The methodological pipeline of BreathPro" width="600">
+</div>
+<h4 id="summary">Summary</h4>
+<ul>
+<li>Earable audio is used to recognize breathing mode while running.</li>
+<li>A lightweight classifier distinguishes between different respiratory states.</li>
+</ul>
+<h3 id="3-ur2m-uncertainty-and-resource-aware-event-detection-on-microcontrollers">3. UR2M: Uncertainty and Resource-Aware Event Detection on Microcontrollers</h3>
+<p><strong>Abstract:</strong> they presented a novel Uncertainty and Resource-Aware Event Detection approach for microcontrollers.</p>
+<h4 id="notes">Notes</h4>
+<ul>
+<li>Methods:</li>
+</ul>
+<ol>
+<li>implemented an architecture search to find the optimal model structure automatically</li>
+<li>conducted scalar quantization of the model weights into 8-bit integers to decrease the model size and further save memory</li>
+<li>removed unnecessary components that are not utilized in the models</li>
+</ol>
+<div style="text-align: center;">
+<img src="../../../../img/blogs/20260514/3_systemOverview.png" alt="System overview of UR2M" width="600">
+</div>
+<ol>
+<li>The UR2M system includes two stages: model training and deployment.</li>
+</ol>
+<ol>
+<li>Hardware:</li>
+</ol>
+<ul>
+<li>training stage: Linux server equipped with an Intel Xeon Gold 5218 GPU and NVIDIA Quadro RTX 8000 GPU.</li>
+<li>deployment stage: deployed the shared backbone and heads on two MCUs</li>
+<p>(STM32F446ZE with M4 processor 128 KB of SRAM and 512 KB of flash memory, and STM32F746ZG with M7 processor 1 MB of SRAM and 1 MB of flash memory).</p>
+<li>adopted TensorFlow Lite Micro for MCU deployment due to its portability, ease of use, and support for numerous neural network layers and optimized kernels (converted the model to TensorFlow Lite using ONNX representation and the TF Lite converter).</li>
+</ul>
+<p>compared with three wearable datasets: in-ear activity recognition, autido event keyword spotting, and heart disorder event detection.</p>
+<h4 id="summary">Summary</h4>
+<ul>
+<li>Lightweight models are combined with uncertainty estimation and resource-aware scheduling.</li>
+<li>The design targets microcontroller deployment for wearable and edge applications.</li>
+</ul>
+<p>Very nice paper.</p>
+<h3 id="4-respear-earable-based-robust-respiratory-rate-monitoring">4. RespEar: Earable-Based Robust Respiratory Rate Monitoring</h3>
+<p><strong>Abstract:</strong> estimate respiratory rate robustly from ear-worn sensors.</p>
+<p>Background: performing reliable and non-obtrusive respiratory rate monitoring in daily life is challenging due to motion artifacts and environmental noise. Earables with in-ear microphones offer a promising sensing modality for respiration monitoring, but require robust signal processing to handle real-world conditions.</p>
+<p>Methods: RespEar enables the use of respiratory sinus arrhythmia and locomotor respiratory coupling, physiological couplings between cardiovascular activity, gait and respiration, to determin the respiratory rate.</p>
+<p>Data collection: they collected in-ear audio when a subjust naturally breathing under 3 conditions: sitting still, walking, and running on treadmill. They also collected reference respiratory rate using a chest strap.</p>
+<div style="text-align: center;">
+<img src="../../../../img/blogs/20260514/4_system.png" alt="System overview of RespEar" width="600">
+</div>
+<p>System design:</p>
+<ul>
+<li>60s estimation windows with 30s overlap for continuous monitoring.</li>
+<li>two paths for RR estimation: presence of rhythmic footsteps or clear heartbeat sounds in the audio</li>
+</ul>
+<h4 id="summary">Summary</h4>
+<ul>
+<li>Signal processing pipeline combines ear audio and respiratory motion features.</li>
+<li>Emphasis on robustness under noise and movement.</li>
+</ul>
+<h3 id="5-earmeter-continuous-respiration-volume-monitoring-with-earables">5. EarMeter: Continuous Respiration Volume Monitoring with Earables</h3>
+<p><strong>Abstract:</strong> track respiration volume continuously using ear-worn sensors.</p>
+<p>###Methodology</p>
+<ul>
+<li>the best area on the body to learn breathing volume from sound is the are with the highest breathing signal-to-noise ratio.</li>
+<li>to leverage the representations learned from the nose, they proposed a novel knowledge transfer framework, where the in-ear respiration volume model, acting as the student network, leverages the nose model, acting as the teacher network, to better learn weights, representations, and predictors of breathing volume.</li>
+</ul>
+<div style="text-align: center;">
+<img src="../../../../img/blogs/20260514/5_framework.png" alt="System overview of EarMeter" width="600">
+</div>
+<h4 id="summary">Summary</h4>
+<ul>
+<li>Maps ear audio or mechanical signals to tidal volume estimates.</li>
+<li>Targets continuous, non-invasive respiratory volume monitoring.</li>
+</ul>
+<h3 id="6-ai-on-wearable-sensing-data-for-human-health-and-fitness">6. AI on Wearable Sensing Data for Human Health and Fitness</h3>
+<p><strong>Abstract:</strong> survey AI methods for wearable health data. This article discusses the challenges and potential impact of articicial intelligence for wearable data on our health and fitness, suggesting that there are areas where these devices could be leveraged <strong>to offer clinicians unprecedentd value</strong>.</p>
+<h4 id="summary">Summary</h4>
+<ul>
+<li>Wearable devices are commonly equipped with the following sensors: IMU, microphone, positioning systems, wireless radios, and phtoplethysmography (PPG) sensors.</li>
+<li>sometimes the sensors' potential purposes might not have been evident yet when the device was designed.</li>
+<p>-</p>
+</ul>
+<h4 id="notes">Notes</h4>
+<ul>
+<li>This paper gives me a good overview of the current state of AI for wearable sensing, and highlights some key challenges and opportunities in this space. I also came up with an idea for a future project. Stay tuned!</li>
+</ul>
+<h3 id="7-walkear-holistic-gait-monitoring-using-earables">7. WalkEar: holistic gait monitoring using earables</h3>
+<p><strong>Abstract:</strong> monitor gait holistically from ear-worn data. <strong>Keywords:</strong> IMU</p>
+<h4 id="summary">Summary</h4>
+<ul>
+<li>Uses ear balance and motion features to infer gait patterns.</li>
+<li>Focuses on multiple gait metrics from a single earable device.</li>
+</ul>
+<div style="text-align: center;">
+<img src="../../../../img/blogs/20260514/6_framework.png" alt="System overview of EarMeter" width="600">
+</div>
+<h3 id="8-statiocl-contrastive-learning-for-time-series-via-non-stationary-and-temporal-contrast">8. StatioCl: Contrastive Learning for Time Series via Non-Stationary and Temporal Contrast</h3>
+<p><strong>Abstract:</strong> improve contrastive learning for non-stationary time series.</p>
+<h4 id="summary">Summary</h4>
+<ul>
+<li>contrastive learning (CL) has emerged as a promising approach for representation learning in time series data by embedding similar pairs closely while distancing dissimilar ones.</li>
+<li>Designs a contrastive loss that accounts for temporal drift and non-stationarity.</li>
+<li>Aims to improve representation learning on wearable and sensor data.</li>
+</ul>
+<h4 id="notes">Notes</h4>
+<ul>
+<li>This is a good paper which mentions a lot of useful datasets which I can use for my future experiments. I will read it in more detail and take notes on the specific loss design and evaluation results.</li>
+</ul>
+<h3 id="9-smarteeth-augmenting-manual-toothbrushing-with-in-ear-microphones">9. SmarTeeth: augmenting manual toothbrushing with in-ear microphones</h3>
+<p><strong>Abstract:</strong> support better toothbrushing behavior with in-ear sensing.</p>
+<h4 id="summary">Summary</h4>
+<ul>
+<li>Detects brushing actions and quality from ear audio.</li>
+<li>Targets oral care feedback and habit improvement.</li>
+</ul>
+<h4 id="notes">Notes</h4>
+<ul>
+<li>Results: TODO — study outcomes, detection accuracy, user acceptance.</li>
+<li>Reflection: how can this be integrated into everyday routines?</li>
+</ul>
+<h3 id="10-hearforce-force-estimation-for-manual-toothbrushing-with-earables">10. HearForce: Force Estimation for Manual Toothbrushing with Earables</h3>
+<p><strong>Abstract:</strong> estimate brushing force using ear-worn sensor data.</p>
+<h4 id="summary">Summary</h4>
+<ul>
+<li>Maps audio/motion features to brushing force magnitude.</li>
+<li>Aims to support safer and more effective toothbrushing.</li>
+</ul>
+<h4 id="notes">Notes</h4>
+<ul>
+<li>Results: TODO — estimation error and validation protocol.</li>
+<li>Reflection: is force estimation robust across toothbrush types and users?</li>
+</ul>
+<h2 id="key-takeaways-so-far">Key takeaways so far</h2>
+<ul>
+<li>Earables are a promising modality for physiological monitoring and behavior sensing.</li>
+<li>Motion robustness and signal quality are central challenges.</li>
+<li>On-device uncertainty estimation and resource-aware design are critical for real products.</li>
+<li>Contrastive learning and cross-modal feature design may improve generalization.</li>
+</ul>
+<h2 id="follow-up-questions">Follow-up questions</h2>
+<ul>
+<li>Which papers provide shared datasets or public code?</li>
+<li>What are the main gaps between lab prototypes and commercial earable products?</li>
+</ul>
+<p>---</p>
+<ul>
+<li>Last modified time: [2026-05-13]</li>
+</ul>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Sai (Emily) Peng</p>
+  </footer>
+</body>
+</html>
