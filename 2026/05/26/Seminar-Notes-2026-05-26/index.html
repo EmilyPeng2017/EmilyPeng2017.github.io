@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI-assisted software development (By Delaware) - Sai (Emily) Peng</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Fira+Sans:wght@400;500;700;800&family=Source+Code+Pro:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../../css/blog-post.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="nav-inner">
+      <a class="brand" href="../../../../index.html">Sai (Emily) Peng</a>
+      <nav class="nav-links">
+        <a href="../../../../index.html">Home</a>
+        <a href="../../../../publications.html">Publications</a>
+        <a href="../../../../awards.html">Awards</a>
+        <a href="../../../../service.html">Service</a>
+        <a href="../../../../blogs.html" class="active">Blogs</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="post-shell">
+    <article class="post-card">
+      <a class="back-link" href="../../../../blogs.html">Back to blogs</a>
+      <p class="kicker">seminars / notes</p>
+      <h1>AI-assisted software development (By Delaware)</h1>
+      <div class="post-meta">
+        <time datetime="2026-05-26">2026-05-26</time>
+        <div class="tags"><span>SeminarNotes</span><span>Research</span></div>
+      </div>
+      <div class="post-content">
+<blockquote>
+<p>Live notes from a research seminar. These notes are intended to capture the main ideas, methods, examples, questions, and follow-up readings while the seminar is still fresh.</p>
+</blockquote>
+<h2 id="seminar-information">Seminar information</h2>
+<ul>
+<li><strong>Speaker:</strong> TODO</li>
+<li><strong>Affiliation:</strong> TODO</li>
+<li><strong>Title:</strong> AI-assisted software development</li>
+<li><strong>Date:</strong> 2026-05-26</li>
+<li><strong>Venue / event:</strong> TODO</li>
+<li><strong>Topic keywords:</strong> TODO</li>
+</ul>
+<h2 id="one-sentence-takeaway">One-sentence takeaway</h2>
+<p>TODO: Write the central message of the seminar in one sentence.</p>
+<h2 id="why-this-seminar-matters">Why this seminar matters</h2>
+<p>-</p>
+<h2 id="key-ideas">Key ideas</h2>
+<ul>
+<li>what happens when you send a message to a large language model (LLM) and it responds with code?</li>
+<li>spectrum of AI-assisted research: completion, collaboration, operation, and delegation.</li>
+</ul>
+<h2 id="background-and-motivation">Background and motivation</h2>
+<p>TODO: Capture the broader context, prior work, assumptions, and motivation.</p>
+<h2 id="method-approach">Method / approach</h2>
+<p>Context window: system instructuions -> conversation history -> retrieved knowledge -> tool descriptions -> tool outputs -> user input</p>
+<blockquote>
+<p>more context!=better results</p>
+<p>the U-shaped performance curve: performance first decreases as more context is added, then increases after a certain point.</p>
+</blockquote>
+<blockquote>
+<p>prompt engineering: Best practices - assign a role, define the task, provide context, specify the output format, set success criteria</p>
+</blockquote>
+<blockquote>
+<p>context engineering: retrieval augmented generation</p>
+</blockquote>
+<blockquote>
+<p>what is AI memory: AI memory lets a chatbot remember useful information from past chats, so future responses feel more personal and less repetitive</p>
+</blockquote>
+<h3 id="model-context-protocol">Model context protocol</h3>
+<p>MCP is a standardized method for integrating external data and tools with large language models it is often compared to USB-C for LLMs, providing a universal interface for connecting various sources of information and capabilities.</p>
+<blockquote>
+<p>how does it work: MCP server, MCP client, MCP protocol, MCP tools, MCP memory, MCP agent</p>
+<p>you can use existing MCP servers or build your own</p>
+</blockquote>
+<blockquote>
+<p>MCP useful servers: GitHub MCP, Playwright MCP, Azure DevOps MCP, Context7</p>
+</blockquote>
+<blockquote>
+<p>MCP is fairly new and thus has security flaws. There are several techniques hackers exploit to execute illegitimate actions. and it can also be token theft.</p>
+</blockquote>
+<h3 id="what-is-an-ai-workspace">what is an AI workspace</h3>
+<p>Core features: files, project memory, custom instructions, shared workflows</p>
+<blockquote>
+<p>why they matter: faster onboarding, better continuity, more accurate assistance, personalized workflows, team collaboration.</p>
+</blockquote>
+<h3 id="skills-for-ai-assisted-software-development">Skills for AI-assisted software development</h3>
+<ul>
+<li>anatomy of a skill folder: skill.md (required), script.py (optional), test.py (optional), README.md (optional), data/ (optional)</li>
+</ul>
+<h2 id="a-second-brain">A second brain</h2>
+<blockquote>
+<p>a persistent memory layer you agent can access and update over time, allowing it to remember important information, learn from past interactions, and provide more personalized and context-aware responses.</p>
+</blockquote>
+<blockquote>
+<p>knowledge graph: import from other apps and file formats</p>
+</blockquote>
+<h2 id="ai-workflow">AI workflow</h2>
+<ol>
+<li>build your knowledge graphe</li>
+<li>query your knowledge graph</li>
+<li>use as research basis</li>
+</ol>
+<h2 id="ai-assisted-development">AI-assisted development</h2>
+<ul>
+<li>chat in VS Code, ask mode</li>
+<li>github copilot coding agent - cloud based -> assign issues to the coding agent as you would assign it to a colleague</li>
+</ul>
+<h2 id="spec-driven-development">Spec-driven development</h2>
+<ol>
+<li>software methodology</li>
+<li>detailed requirements specifications defined upfront</li>
+<li>tries to prevent</li>
+</ol>
+<h2 id="automation-cli">Automation (CLI)</h2>
+<blockquote>
+<p>you, as the developer, are still responsible for the code, even if it's generated.</p>
+</blockquote>
+<h2 id="pitfalls">Pitfalls</h2>
+<ul>
+<li>overtrusting AI and is output</li>
+<li>having no guardrials</li>
+<li>losing context</li>
+</ul>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Sai (Emily) Peng</p>
+  </footer>
+</body>
+</html>

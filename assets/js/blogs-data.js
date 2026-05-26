@@ -1,5 +1,11 @@
 window.BLOG_POSTS = [
   {
+    "title": "AI-assisted software development (By Delaware)",
+    "date": "2026-05-26",
+    "categories": "seminars / notes",
+    "url": "2026/05/26/Seminar-Notes-2026-05-26/"
+  },
+  {
     "title": "Paper Reading Notes — Prof. Cecilia Mascolo Lab",
     "date": "2026-05-13",
     "categories": "readings / paper_notes",
