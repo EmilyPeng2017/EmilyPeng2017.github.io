@@ -92,6 +92,13 @@
       gap: 2rem;
     }
 
+    .blog-browser {
+      display: grid;
+      grid-template-columns: 260px minmax(0, 1fr);
+      gap: 2rem;
+      align-items: start;
+    }
+
     /* card styling */
     .card {
       background: #ffffff;
@@ -154,6 +161,73 @@
       transition: background 0.2s;
     }
 
+    .timeline-card {
+      position: sticky;
+      top: 92px;
+      padding: 1.5rem;
+    }
+
+    .timeline-title {
+      font-family: 'Fira Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #1f3b4a;
+      margin-bottom: 1rem;
+    }
+
+    .timeline-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+    }
+
+    .timeline-year {
+      border-left: 3px solid #1f6e8c;
+      padding-left: 0.85rem;
+    }
+
+    .timeline-year-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 0.75rem;
+      color: #1f3b4a;
+      font-family: 'Fira Sans', sans-serif;
+      font-weight: 800;
+      text-decoration: none;
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-months {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .timeline-month {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding: 0.22rem 0;
+      color: #4a6272;
+      font-size: 0.86rem;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+
+    .timeline-month:hover,
+    .timeline-month.is-active {
+      color: #1f6e8c;
+      border-bottom-color: #d9e9ef;
+    }
+
+    .timeline-count {
+      color: #8a9ba8;
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.72rem;
+      white-space: nowrap;
+    }
+
     /* Blog list styling - matches original structure */
     #blog-list {
       display: flex;
@@ -161,15 +235,36 @@
       gap: 0.5rem;
     }
 
-    .blog-item {
-      padding: 0.75rem 0;
+    .publication {
+      display: flex;
+      gap: 1rem;
+      padding: 1rem 0;
       border-bottom: 1px solid #f0f2f5;
+      scroll-margin-top: 110px;
     }
-    .blog-item:last-child {
+    .publication:last-child {
       border-bottom: none;
     }
 
-    .blog-title {
+    .pub-cover {
+      flex: 0 0 96px;
+      font-family: 'Source Code Pro', monospace;
+      font-weight: 700;
+      background: #eef3f6;
+      border-radius: 12px;
+      padding: 0.45rem 0.6rem;
+      font-size: 0.72rem;
+      color: #1f6e8c;
+      text-align: center;
+      align-self: flex-start;
+    }
+
+    .publication h3 {
+      line-height: 1.25;
+      margin-bottom: 0.45rem;
+    }
+
+    .publication h3 a {
       font-family: 'Fira Sans', sans-serif;
       font-weight: 700;
       font-size: 1rem;
@@ -177,16 +272,23 @@
       text-decoration: none;
       transition: color 0.2s;
     }
-    .blog-title:hover {
+    .publication h3 a:hover {
       color: #1f6e8c;
       text-decoration: underline;
     }
 
-    .blog-date {
+    .archive-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .meta-chip {
       font-size: 0.75rem;
-      font-family: 'Source Code Pro', monospace;
-      color: #8a9ba8;
-      margin-left: 0.75rem;
+      color: #4a6272;
+      background: #f5f7f8;
+      border-radius: 999px;
+      padding: 0.2rem 0.55rem;
     }
 
     @media (max-width: 700px) {
@@ -200,10 +302,26 @@
       .card {
         padding: 1.5rem;
       }
-      .blog-date {
-        display: block;
-        margin-left: 0;
-        margin-top: 0.25rem;
+      .blog-browser {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 1rem;
+      }
+      .timeline-card {
+        position: static;
+        width: 100%;
+      }
+      .timeline-nav {
+        max-height: 230px;
+        overflow: auto;
+      }
+      .publication {
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+      .pub-cover {
+        flex: none;
+        width: fit-content;
       }
     }
   </style>
@@ -232,13 +350,20 @@
       <p class="archive-summary">This page collects posts from the previous Hexo site and links to their published URLs.</p>
     </section>
 
-    <section class="card section">
-      <div class="section-header">
-        <h2>All Posts</h2>
-        <span id="blog-count" class="link-pill">0 posts</span>
-      </div>
-      <div id="blog-list"></div>
-    </section>
+    <div class="blog-browser">
+      <aside class="card timeline-card" aria-label="Blog chronology">
+        <h2 class="timeline-title">Browse by Year</h2>
+        <nav id="blog-timeline" class="timeline-nav"></nav>
+      </aside>
+
+      <section class="card section">
+        <div class="section-header">
+          <h2>All Posts</h2>
+          <span id="blog-count" class="link-pill">0 posts</span>
+        </div>
+        <div id="blog-list"></div>
+      </section>
+    </div>
   </section>
 </main>
 
