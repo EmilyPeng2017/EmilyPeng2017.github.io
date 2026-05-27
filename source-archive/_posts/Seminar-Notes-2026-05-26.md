@@ -55,18 +55,10 @@ widgets:
 <!-- more -->
 
 ## Seminar information
-- **Speaker:** TODO
-- **Affiliation:** TODO
 - **Title:** AI-assisted software development
 - **Date:** 2026-05-26
-- **Venue / event:** TODO
-- **Topic keywords:** TODO
-
-## One-sentence takeaway
-TODO: Write the central message of the seminar in one sentence.
-
-## Why this seminar matters
-- 
+- **Venue / event:** M-Group seminar
+- **Topic keywords:** AI Agent, LLM 
 
 ## Key ideas
 - what happens when you send a message to a large language model (LLM) and it responds with code?
