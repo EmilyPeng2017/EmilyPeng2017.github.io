@@ -271,6 +271,42 @@
       flex-direction: column;
       gap: 1.5rem;
     }
+    .news-roll {
+      --roll-distance: 0px;
+      max-height: 520px;
+      overflow: hidden;
+      position: relative;
+    }
+    .news-roll::before,
+    .news-roll::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 2rem;
+      pointer-events: none;
+      z-index: 2;
+    }
+    .news-roll::before {
+      top: 0;
+      background: linear-gradient(#ffffff, rgba(255,255,255,0));
+    }
+    .news-roll::after {
+      bottom: 0;
+      background: linear-gradient(rgba(255,255,255,0), #ffffff);
+    }
+    .news-roll-track {
+      animation: newsRoll 34s linear infinite;
+      will-change: transform;
+    }
+    .news-roll:hover .news-roll-track,
+    .news-roll:focus-within .news-roll-track {
+      animation-play-state: paused;
+    }
+    @keyframes newsRoll {
+      from { transform: translateY(0); }
+      to { transform: translateY(calc(-1 * var(--roll-distance))); }
+    }
     .news-group {
       border-left: 3px solid #1f6e8c;
       padding-left: 1rem;
@@ -395,6 +431,15 @@
       }
       .card {
         padding: 1.5rem;
+      }
+      .news-roll {
+        max-height: 430px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .news-roll-track {
+        animation: none;
       }
     }
   </style>
@@ -535,6 +580,8 @@
       <div class="section-header">
         <h2>News</h2>
       </div>
+      <div class="news-roll" aria-label="Automatically scrolling news">
+        <div class="news-roll-track">
       <div class="news-groups">
         <div class="news-group">
           <div class="news-year">2026</div>
@@ -586,7 +633,7 @@
               <span class="news-text"><strong>EWSN conference paper accepted!</strong> "Navigating Multidisciplinary Challenges: Taking A Low-power Wireless Plantar Pressure Monitoring System." accepted for presentation. Thank you for all the coauthors!</span>
               <span class="news-date">July 10</span>
             </li>
-            <li class="news-item>
+            <li class="news-item">
               <span class="news-text"><strong>Attended summer school!</strong> International Summer School on Wearable Sensors at Università Campus Bio-Medico di Roma.</span>
               <span class="news-date">July 10</span>
             </li>
@@ -596,6 +643,9 @@
             </li>
           </ul>
         </div>
+      </div>
+        </div>
+      </div>
       </div>
     </section>
 
@@ -644,6 +694,35 @@
         link.classList.add('active');
       }
     });
+
+    // Auto-roll the news list only when there is enough content to scroll.
+    const newsRoll = document.querySelector('.news-roll');
+    const newsTrack = document.querySelector('.news-roll-track');
+
+    if (newsRoll && newsTrack && window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+      const updateNewsRoll = () => {
+        const originalCopy = newsTrack.querySelector('.news-groups:not([aria-hidden="true"])');
+        const duplicateCopy = newsTrack.querySelector('.news-groups[aria-hidden="true"]');
+
+        if (duplicateCopy) {
+          duplicateCopy.remove();
+        }
+
+        if (!originalCopy || originalCopy.scrollHeight <= newsRoll.clientHeight) {
+          newsTrack.style.animation = 'none';
+          return;
+        }
+
+        const clone = originalCopy.cloneNode(true);
+        clone.setAttribute('aria-hidden', 'true');
+        newsTrack.appendChild(clone);
+        newsTrack.style.setProperty('--roll-distance', `${originalCopy.offsetHeight + 24}px`);
+        newsTrack.style.animation = '';
+      };
+
+      updateNewsRoll();
+      window.addEventListener('resize', updateNewsRoll);
+    }
   })();
 </script>
 
