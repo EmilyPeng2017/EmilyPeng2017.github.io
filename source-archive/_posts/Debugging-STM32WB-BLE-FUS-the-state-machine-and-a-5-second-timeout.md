@@ -1,5 +1,5 @@
 ---
-title: "Debugging STM32WB BLE: FUS, the state machine, and a 5-second timeout"
+title: Debugging STM32WB BLE: FUS, the state machine, and a 5-second timeout
 categories:
   - keeplearning
   - embedded
@@ -59,7 +59,7 @@ date: 2026-09-23 12:50:00
 
 <!-- toc -->
 
-硬件就是玄学。Hardware is a mystery. >_/<
+硬件就是玄学。Hardware is a mystery. >_<
 
 Finally, after months of troubleshooting, I found the root cause.
 
@@ -85,7 +85,7 @@ The IMU is a **BMI088** in an LGA-16 package. If you have never met one: it is a
 
 So the procedure goes:
 
-1. **Flux everything.** Then flux it again. Flux is not a step, it is a lifestyle >_< >.
+1. **Flux everything.** Then flux it again. Flux is not a step, it is a lifestyle >_<.
 2. **Hot air to lift the donor part** off the old board, without cooking the four neighbours sitting 2 mm away, which mostly means moving the nozzle in small circles and resisting the urge to turn the temperature up.
 3. **Clean both sets of pads** — the part's and the new board's. Old solder has to come off; wick and patience.
 4. **Fresh solder paste** on the destination footprint, a thin even film.
@@ -117,7 +117,7 @@ I hate to say that, but it took me a whole Saturday to fix the first board and m
 
 ---
 
-# Act 1 — Nothing advertises at all
+# Nothing advertises at all
 
 Board alive, firmware flashed, phone in hand. Nothing. No `Orteada-03` in the scanner, not in our app, not in ST BLE Toolbox, not in anything.
 
@@ -276,8 +276,7 @@ At this point I stopped theorising and went to get the phone's side of the story
 <details>
 <summary>Full Android logcat capture</summary>
 
-<pre><code>
-2026-09-23 11:25:55.653 17068-17068 BLE                     com.example.orteada                  I  New device found: Orteada-03 - 00:80:E1:27:E4:1E - true
+<pre><code>2026-09-23 11:25:55.653 17068-17068 BLE                     com.example.orteada                  I  New device found: Orteada-03 - 00:80:E1:27:E4:1E - true
 2026-09-23 11:25:55.732 17068-17068 BLE                     com.example.orteada                  I  New device found: DESKTOP-GS0D6RR - 55:A3:89:1C:84:4F - true
 2026-09-23 11:25:55.851  2030-4964  Compatibil...geReporter system_server                        D  Compat change id reported: 135634846; UID 10114; state: DISABLED
 2026-09-23 11:25:55.851  2030-4964  Compatibil...geReporter system_server                        D  Compat change id reported: 177438394; UID 10114; state: DISABLED
@@ -1048,8 +1047,7 @@ At this point I stopped theorising and went to get the phone's side of the story
                                                                                                     	at java.lang.reflect.Method.invoke(Native Method)
                                                                                                     	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:561)
                                                                                                     	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:932)
-2026-09-23 11:34:49.553 19889-19889 BLE                     com.example.orteada                  D  Starting Ble scan
-</code></pre>
+2026-09-23 11:34:49.553 19889-19889 BLE                     com.example.orteada                  D  Starting Ble scan</code></pre>
 
 </details>
 

@@ -268,3 +268,41 @@ hr {
     padding: 0 1rem;
   }
 }
+
+
+.post-content pre {
+  margin: 1rem 0;
+  padding: 1rem;
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #0f1720;
+  color: #e6edf3;
+  font-family: "Source Code Pro", monospace;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.post-content pre code {
+  display: block;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font-size: inherit;
+  white-space: pre;
+}
+
+.post-content details {
+  margin: 1rem 0;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #f8fafb;
+}
+
+.post-content summary {
+  cursor: pointer;
+  font-weight: 800;
+  color: #0f2c3b;
+}
