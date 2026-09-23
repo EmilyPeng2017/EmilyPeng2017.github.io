@@ -1,5 +1,11 @@
 window.BLOG_POSTS = [
   {
+    "title": "\"Debugging STM32WB BLE: FUS, the state machine, and a 5-second timeout\"",
+    "date": "2026-09-23",
+    "categories": "keeplearning / embedded",
+    "url": "2026/09/23/Debugging-STM32WB-BLE-FUS-the-state-machine-and-a-5-second-timeout/"
+  },
+  {
     "title": "AI-assisted software development (By Delaware)",
     "date": "2026-05-26",
     "categories": "seminars / notes",
